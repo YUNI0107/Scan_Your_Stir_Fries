@@ -1,0 +1,112 @@
+.nav{
+    background-color: #FFF4E8;
+}
+
+.logo{
+    width: 150px;
+}
+
+.navbar-toggler{
+    width: 60px;
+}
+
+.navbar-toggler:focus{
+    box-shadow: none;
+    animation: bigger .5s;
+    transition: .5s;
+}
+
+.chart:hover .chart_img{
+    animation: bigger .5s;
+}
+
+@keyframes bigger{
+    0%{
+        transform: scale(1);
+    }
+    70%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.navbar-collapse{
+    width: auto;
+}
+
+.nav-link p{
+    color: #242424;
+}
+
+.nav_img{
+    width: 40px;
+}
+
+.nav_img .img_active{
+    display: none;
+}
+
+.nav-link:hover .img_normal{
+    display: none;
+}
+
+.nav-link:hover .img_active{
+    display: block;
+}
+
+.nav-link:hover p{
+    color: #525252;
+}
+
+/* 右側欄位 */
+.lang_item{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    width: 30px;
+}
+
+.chart{
+    position: relative;
+}
+
+.chart_img{
+    width: 45px;
+}
+
+.chart .num{
+    width: 15px;
+    height: 15px;
+    padding: 12px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF7A00;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 12px;
+    right: -5px;
+}
+
+
+@media (max-width: 992px) { 
+    .navbar-collapse{
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .nav_img{
+        width: 35px;
+    }
+
+    .nav-link p{
+        font-size: 15px;
+    }
+}
+
+

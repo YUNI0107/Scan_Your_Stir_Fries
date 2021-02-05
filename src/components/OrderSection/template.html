@@ -1,0 +1,45 @@
+<div class="oreder_section mt-5 mt-lg-0">
+    <div class="big_button mx-auto mb-4" @click="soundPlay($refs.odersound)">
+        <audio ref="odersound" src="../../assets/sound/order_dishes/order-C02.mp3" class="d-none"></audio>
+        <div class="orange w-100 h-100"></div>
+    </div>
+    <div class="hot_section d-flex justify-content-between ps-4 pe-4">
+        <div class="hot_item d-flex justify-content-center d-flex justify-content-center">
+            <input type="radio" class="hotinput d-none" value="n" name="hot" id="n_hot" v-model="hot_check">
+            <audio ref="nhot" src="../../assets/sound/n-hot.mp3" class="d-none"></audio>
+            <label for="n_hot">
+                <div class="item_pic mx-auto" @click="soundPlay($refs.nhot)">
+                    <img src="../../assets/Dishes_element/n-hot.png" class="w-100">
+                </div>
+                <p class="text-center">Not spicy</p>
+            </label>
+        </div>
+        <div class="hot_item d-flex justify-content-center">
+            <input type="radio" class="hotinput d-none" value="m" name="hot" id="m_hot" v-model="hot_check">
+            <audio ref="mhot" src="../../assets/sound/m-hot.mp3" class="d-none"></audio>
+            <label for="m_hot">
+                <div class="item_pic mx-auto" @click="soundPlay($refs.mhot)">
+                    <img src="../../assets/Dishes_element/m-hot.png" class="w-100">
+                </div>
+                <p class="text-center">Mild</p>
+            </label>
+        </div>
+        <div class="hot_item d-flex justify-content-center">
+            <input type="radio" class="hotinput d-none" value="v" name="hot" id="v_hot" v-model="hot_check">
+            <audio ref="vhot" src="../../assets/sound/v-hot.mp3" class="d-none"></audio>
+            <label for="v_hot">
+                <div class="item_pic mx-auto" @click="soundPlay($refs.vhot)">
+                    <img src="../../assets/Dishes_element/v-hot.png" class="w-100">
+                </div>
+                <p class="text-center">Spicy</p>
+            </label>
+        </div>
+    </div>
+    <div class="text_section ms-4 me-4">
+        <div class="orange_line"></div>
+        <h2 class="order_title mt-2">Order Section</h2>
+        <p>Click the button above to order in Chinese!
+            <br>
+            Click the button below to adjust the spiciness.</p>
+    </div>
+</div>

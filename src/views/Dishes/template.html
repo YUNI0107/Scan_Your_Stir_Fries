@@ -1,0 +1,55 @@
+<div class="dishes overflow-hidden">
+    <div class="container">
+        <div class="top_dishes container my-5 mb-0">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-between position-relative">
+                    <div class="left position-relative">
+                        <div class="big_name position-relative">
+                            <img :src="require(`../../assets/Dishes/${dishes_id}/${lang}/big_name.png`)" alt="name" class="w-100">
+                        </div>
+                        <div class="back position-absolute">
+                            <BackAnimation class="w-100"/>
+                        </div>
+                    </div>
+                    <div class="info d-flex flex-column align-items-end">
+                        <div class="dishes_id">
+                            <img :src="require(`../../assets/Dishes/${dishes_id}/id.png`)" alt="id" class="h-100">
+                        </div>
+                        <p class="mt-2 mb-2 ms-0 me-0">三杯雞</p>
+                        <button class="sound p-0" @click="dishesSoundPlay">
+                            <audio ref="dishes_name" src="../../assets/Dishes/C02/dishes_name.mp3" ></audio>
+                            <img src="../../assets/Dishes_element/sound.png" alt="sound" class="w-100">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row down_part">
+                <div class="dishes_bottom col-12 col-lg-7 d-flex flex-column justify-content-end align-items-center position-relative">
+                    <div class="food_pic d-flex align-items-center" :style="{marginTop: img_top}" @click="replayGif">
+                        <img ref="food_gif" :src="require(`../../assets/Dishes/${dishes_id}/food.gif`)" alt="food" class="w-100">
+                    </div>
+                    <div class="cook_info mt-3 mt-lg-0 w-100 ps-lg-5 pe-lg-5 d-flex">
+                        <div class="cook_item" v-for="item in dishesIcon">
+                            <div class="cook_icon mx-auto">
+                                <img :src="item.img" alt="icon" class="w-100">
+                            </div>
+                            <p class="text-center">{{item.class}} | {{item.type}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="order_section col-12 col-lg-5">
+                    <OrderSection/>
+                </div>
+            </div>
+        </div>
+        <div class="container ingredients_section mt-4">
+            <div class="in_title position-relative">
+                <img :src="require(`../../assets/Dishes_element/${lang}/in_title.png`)" class="w-100">
+            </div>
+            <div class="row ingredient_row position-relative">
+                <IngredientBlock v-for="item in ingredient_list" :item="item"/>
+            </div>
+        </div>
+    </div>
+
+</div>

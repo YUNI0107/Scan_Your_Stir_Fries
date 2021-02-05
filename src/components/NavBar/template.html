@@ -1,0 +1,80 @@
+<div class="nav fixed-top">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg justify-content-between">
+            <!-- 按鈕 -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="../../assets/NavBar/hamicon.png" alt="ham" class="w-100">
+            </button>
+
+            <!-- 右邊欄位 -->
+            <div class="nav-left order-10 order-lg-last d-flex align-items-center">
+                <div class="lang">
+                    <button class="lang_item m-1 p-0" @click="langToogle('ch')">
+                        <img class="w-100" v-if="lang == 'ch'" src="../../assets/NavBar/chinese_active.png">
+                        <img class="w-100" v-else src="../../assets/NavBar/chinese.png">
+                    </button>
+                    <button class="lang_item m-1 p-0" @click="langToogle('en')">
+                        <img class="w-100" v-if="lang == 'en'" src="../../assets/NavBar/english_active.png">
+                        <img class="w-100" v-else src="../../assets/NavBar/english.png">
+                    </button>
+                    <button class="lang_item m-1 p-0" @click="langToogle('ja')">
+                        <img class="w-100" v-if="lang == 'ja'" src="../../assets/NavBar/japan_active.png">
+                        <img class="w-100" v-else src="../../assets/NavBar/japan.png">
+                    </button>
+                    <button class="lang_item m-1 p-0" @click="langToogle('ko')">
+                        <img class="w-100" v-if="lang == 'ko'" src="../../assets/NavBar/korea_active.png">
+                        <img class="w-100" v-else src="../../assets/NavBar/korea.png">
+                    </button>
+                </div>
+                <div class="chart">
+                    <div class="chart_img">
+                        <img src="../../assets/NavBar/chart.png" class="w-100">
+                    </div>
+                    <div class="num position-absolute bottom-0 " v-if="totalNum !== 0">{{totalNum}}</div>
+                </div>
+            </div>
+
+            <!-- 下拉連結 -->
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="logo d-none d-lg-block">
+                    <router-link :to="{name: 'home'}" class=" w-100">
+                        <img src="../../assets/NavBar/logo.png" alt="logo" class="w-100">
+                    </router-link>
+                </div>
+                <div class="navbar-nav flex-row justify-content-between mt-3 mt-lg-0">
+                    <a class="nav-link ms-3 me-3 m-lg-2  d-flex align-items-center justify-content-center flex-column flex-lg-row"
+                        aria-current="page" href="#">
+                        <div class="nav_img">
+                            <img src="../../assets/NavBar/home.png" class="w-100 img_normal">
+                            <img src="../../assets/NavBar/homechange.gif" class="w-100 img_active">
+                        </div>
+                        <p class="m-0 ps-lg-2">Home</p>
+                    </a>
+                    <a class="nav-link ms-3 me-3 m-lg-2 d-flex align-items-center justify-content-center flex-column flex-lg-row" aria-current="page" href="#">
+                        <div class="nav_img">
+                            <img src="../../assets/NavBar/all dishes.png" class="w-100 img_normal">
+                            <img src="../../assets/NavBar/disheschange.gif" class="w-100 img_active">
+                        </div>
+                        <p class="m-0 ps-lg-2">Dishes</p>
+                    </a>
+                    <a class="nav-link ms-3 me-3 m-lg-2 d-flex align-items-center justify-content-center flex-column flex-lg-row" aria-current="page" href="#">
+                        <div class="nav_img">
+                            <img src="../../assets/NavBar/game.png" class="w-100 img_normal">
+                            <img src="../../assets/NavBar/gamechange.gif" class="w-100 img_active">
+                        </div>
+                        <p class="m-0 ps-lg-2">Games</p>
+                    </a>
+                    <a class="nav-link ms-3 me-3 m-lg-2 d-flex align-items-center justify-content-center flex-column flex-lg-row" aria-current="page" href="#">
+                        <div class="nav_img">
+                            <img src="../../assets/NavBar/about.png" class="w-100 img_normal">
+                            <img src="../../assets/NavBar/aboutchange.gif" class="w-100 img_active">
+                        </div>
+                        <p class="m-0 ps-lg-2">About</p>
+                    </a>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+</div>

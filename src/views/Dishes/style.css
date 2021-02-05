@@ -1,0 +1,136 @@
+/* 菜色左側 */
+.dishes{
+    background-color: #FFF4E8;
+}
+
+.top_dishes{
+    padding-top: 80px;
+}
+
+.top_dishes .big_name{
+    z-index: 2;
+    width: 450px;
+}
+
+.top_dishes .back{
+    z-index: 0;
+    width: 1400px;
+    margin: auto;
+    margin-left: -700px;
+    /* 動畫背景高度 */
+    margin-top: -255px;
+}
+
+.top_dishes .info{
+    z-index: 4;
+    position: absolute;
+    right: 0;
+}
+
+
+.top_dishes .info .dishes_id{
+    height: 65px;
+}
+
+.top_dishes .info .sound{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    width: 30px;
+}
+
+.top_dishes .info p{
+    writing-mode: vertical-rl;
+    letter-spacing: 10px;
+}
+
+.down_part{
+    /* 下半部上移 */
+    margin-top: -252px; 
+}
+
+.dishes_bottom {
+    position: relative;   
+}
+
+.dishes_bottom .food_pic{
+    z-index: 3;
+    width: 700px;
+    /* 用高度限制移動 */
+    height: 620px;
+    cursor: pointer;
+}
+
+.dishes_bottom .cook_info{
+    z-index: 3;
+}
+
+.dishes_bottom .cook_item{
+    width: calc(100% / 3);
+}
+
+.dishes_bottom .cook_icon{
+    width: 50px;
+}
+
+.oreder_section{
+    position: relative;
+    z-index: 2;
+}
+
+.in_title{
+    width: 550px;
+    margin-left: -135px;
+}
+
+.ingredient_row{
+    margin-top: -80px;
+}
+
+
+@media (max-width: 576px){
+    .top_dishes{
+        padding-top: 60px;
+    }
+
+    .top_dishes .big_name{
+        width: 350px;
+    }
+
+    .top_dishes .back{
+        width: 300%;
+        margin-left: calc(-300% / 2);
+        /* 動畫背景高度 */
+        margin-top: -195px;
+    }
+
+    .top_dishes .info .dishes_id{
+        height: 50px;
+    }
+
+    .dishes_bottom .food_pic{
+        width: 120%;
+        /* 用高度限制移動 */
+        height: 400px;
+        min-width: 450px;
+    }
+
+    .dishes_bottom .cook_icon{
+        width: 40px;
+    }
+
+    .dishes_bottom .cook_item p{
+        font-size: 12px;
+    }
+
+    .in_title{
+        width: 450px;
+        margin-left: -105px;
+    }
+    
+    .ingredient_row{
+        margin-top: -70px;
+    }
+
+}
+

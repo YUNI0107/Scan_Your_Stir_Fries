@@ -1,0 +1,35 @@
+.big_button {
+    width: 250px;
+    height: 250px;
+}
+
+.big_button .orange {
+    border-radius: 50%;
+    background-color: #FF7A00;
+}
+
+.hot_section .hot_item {
+    width: calc(100% / 3);
+}
+
+.hot_section .item_pic {
+    width: 50px;
+}
+
+.orange_line {
+    height: 2px;
+    border-radius: 5px;
+    background-color: #FF7A00;
+}
+
+.order_title {
+    font-size: 25px;
+}
+
+.hotinput:hover~label {
+    filter: brightness(0.95);
+}
+
+.hotinput:checked~label {
+    filter: hue-rotate(134deg);
+}

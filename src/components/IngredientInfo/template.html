@@ -1,0 +1,30 @@
+<!-- Modal -->
+<div class="modal fade" :id="`${item.ingredient_name}Modal`" tabindex="-1" :aria-labelledby="`${item.ingredient_name}Modal`" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-body p-0" :class="color">
+                <div class="row m-0">
+                    <div class="left col-12 col-lg-5 d-flex align-items-center position-relative">
+                        <div class="plus_pic p-3">
+                            <img :src="require(`../../assets/Ingredient/${lang}/${ingredient_name}_plus.png`)"
+                                class="w-100" v-if="plus_lang">
+                            <img :src="require(`../../assets/Ingredient/${ingredient_name}_plus.png`)" class="w-100" v-else>
+                        </div>
+                    </div>
+                    <div class="right col-12 col-lg-7 position-relative">
+                        <div class="tri position-absolute top-50 start-0 d-none d-lg-block"></div>
+                        <div class="tri tri_small position-absolute top-0 start-50 d-lg-none"></div>
+                        <div class="text_section h-100 d-flex flex-column justify-content-center ">
+                            <h3>{{item.ingredient_showname}}</h3>
+                            <p>{{item.info.info_text}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="close_btn btn position-absolute top-100 start-50"
+                data-bs-dismiss="modal">
+                <img :src="require(`../../assets/Dishes_element/close_${color}.png`)" class="w-100">
+            </button>
+        </div>
+    </div>
+</div>

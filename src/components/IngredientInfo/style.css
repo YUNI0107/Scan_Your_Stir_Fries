@@ -1,0 +1,93 @@
+.modal-dialog {
+    max-width: 60%;
+}
+
+.modal-dialog-scrollable .modal-content {
+    overflow: visible;
+    border: none;
+}
+
+.left {
+    min-height: 400px;
+}
+
+.green .left {
+    background-color: #00C7A4;
+}
+
+.orange .left {
+    background-color: #FF7A00;
+}
+
+.yellow .left {
+    background-color: #FFC832;
+}
+
+.tri{
+    border: 20px solid;
+    transform: translateY(-50%);
+}
+
+.tri.tri_small{
+    border: 20px solid;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.green .tri {
+    border-color: transparent transparent transparent #00C7A4;
+}
+.orange .tri {
+    border-color: transparent transparent transparent #FF7A00;
+}
+.yellow .tri {
+    border-color: transparent transparent transparent #FFC832;
+}
+
+.right {
+    min-height: 400px;
+    background-color: #FFF4E8;
+}
+
+.text_section {
+    padding: 20px;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+.close_btn {
+    width: 80px;
+    transform: translate(-50%, -50%);
+    transition: .5s;
+}
+
+.close_btn:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+@media (max-width: 992px) {
+    .modal-dialog {
+        max-width: 350px;
+    }
+
+    .left,
+    .right {
+        min-height: 0;
+    }
+
+    .text_section {
+        padding: 30px 20px 20px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .modal-dialog {
+        max-width: 300px;
+        margin: 0.5rem auto;
+    }
+
+    .text_section {
+        padding: 20px 10px 20px 10px;
+    }
+}
