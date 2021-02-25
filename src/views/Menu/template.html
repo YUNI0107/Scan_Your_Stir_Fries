@@ -1,0 +1,102 @@
+<div class="menu">
+    <div class="container menu_title d-flex align-items-center">
+        <div class="menu_text">
+            <div class="img_title mb-2">
+                <img :src="require(`../../assets/Menu/${lang}/title.png`)" class="w-100">
+            </div>
+            <p>{{$t('menu.title_text_1')}}<br>{{$t('menu.title_text_2')}}</p>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="menu_block col-7 lamb position-relative">
+                <router-link :to="{name: 'menulist', params:{ id: 'lamb'}}" class="w-100 h-100 d-block">
+                    <div class="icon_img position-absolute top-50 start-50 translate-middle">
+                        <img src="../../assets/Menu/lamb.gif" class="h-100">
+                    </div>
+                    <div class="icon_img_hide position-absolute top-50 start-50 translate-middle">
+                        <img src="../../assets/Menu/lamb.png" class="h-100">
+                    </div>
+                    <h2 class="m-0 position-absolute top-50 start-50 translate-middle">{{$t('menu.lamb')}}</h2>
+                </router-link>
+            </div>
+            <div class="menu_block col-5 veg position-relative">
+                <router-link :to="{name: 'menulist', params:{ id: 'veg'}}" class="w-100 h-100 d-block">
+                    <div class="icon_img position-absolute top-50 start-50 translate-middle">
+                        <img src="../../assets/Menu/veg.gif" class="h-100">
+                    </div>
+                    <div class="icon_img_hide position-absolute top-50 start-50 translate-middle">
+                        <img src="../../assets/Menu/veg.png" class="h-100">
+                    </div>
+                    <h2 class="m-0 position-absolute top-50 start-50 translate-middle">{{$t('menu.veg')}}</h2>
+                </router-link>
+            </div>
+            <div class="menu_block col-6 pork position-relative">
+                <router-link :to="{name: 'menulist', params:{ id: 'pork'}}" class="w-100 h-100 d-block">
+                    <div class="icon_img position-absolute top-50 start-50 translate-middle">
+                        <img src="../../assets/Menu/pork.gif" class="h-100">
+                    </div>
+                    <div class="icon_img_hide position-absolute top-50 start-50 translate-middle">
+                        <img src="../../assets/Menu/pork.png" class="h-100">
+                    </div>
+                    <h2 class="m-0 position-absolute top-50 start-50 translate-middle">{{$t('menu.pork')}}</h2>
+                </router-link>
+            </div>
+            <div class="menu_block col-6 beef position-relative">
+                <router-link :to="{name: 'menulist', params:{ id: 'beef'}}" class="w-100 h-100 d-block">
+                    <div class="icon_img position-absolute top-50 start-50 translate-middle">
+                        <img src="../../assets/Menu/beef.gif" class="h-100">
+                    </div>
+                    <div class="icon_img_hide position-absolute top-50 start-50 translate-middle">
+                        <img src="../../assets/Menu/beef.png" class="h-100">
+                    </div>
+                    <h2 class="m-0 position-absolute top-50 start-50 translate-middle">{{$t('menu.beef')}}</h2>
+                </router-link>
+            </div>
+            <div class="menu_block col-5 main position-relative">
+                <router-link :to="{name: 'menulist', params:{ id: 'main'}}" class="w-100 h-100 d-block">
+                    <div class="icon_img position-absolute top-50 start-50 translate-middle">
+                        <img src="../../assets/Menu/main.gif" class="h-100">
+                    </div>
+                    <div class="icon_img_hide position-absolute top-50 start-50 translate-middle">
+                        <img src="../../assets/Menu/main.png" class="h-100">
+                    </div>
+                    <h2 class="m-0 position-absolute top-50 start-50 translate-middle">{{$t('menu.main')}}</h2>
+                </router-link>
+            </div>
+            <div class="menu_block col-7 chicken position-relative">
+                <router-link :to="{name: 'menulist', params:{ id: 'chicken'}}" class="w-100 h-100 d-block">
+                    <div class="icon_img position-absolute top-50 start-50 translate-middle">
+                        <img src="../../assets/Menu/chicken.gif" class="h-100">
+                    </div>
+                    <div class="icon_img_hide position-absolute top-50 start-50 translate-middle">
+                        <img src="../../assets/Menu/chicken.png" class="h-100">
+                    </div>
+                    <h2 class="m-0 position-absolute top-50 start-50 translate-middle">{{$t('menu.chicken')}}</h2>
+                </router-link>
+            </div>
+            <div class="menu_block col-6 sea position-relative">
+                <router-link :to="{name: 'menulist', params:{ id: 'sea'}}" class="w-100 h-100 d-block">
+                    <div class="icon_img position-absolute top-50 start-50 translate-middle">
+                        <img src="../../assets/Menu/sea.gif" class="h-100">
+                    </div>
+                    <div class="icon_img_hide position-absolute top-50 start-50 translate-middle">
+                        <img src="../../assets/Menu/sea.png" class="h-100">
+                    </div>
+                    <h2 class="m-0 position-absolute top-50 start-50 translate-middle">{{$t('menu.sea')}}</h2>
+                </router-link>
+            </div>
+            <div class="menu_block col-6 side position-relative">
+                <router-link :to="{name: 'menulist', params:{ id: 'side'}}" class="w-100 h-100 d-block">
+                    <div class="icon_img position-absolute top-50 start-50 translate-middle">
+                        <img src="../../assets/Menu/other.gif" class="h-100">
+                    </div>
+                    <div class="icon_img_hide position-absolute top-50 start-50 translate-middle">
+                        <img src="../../assets/Menu/other.png" class="h-100">
+                    </div>
+                    <h2 class="m-0 position-absolute top-50 start-50 translate-middle">{{$t('menu.side')}}</h2>
+                </router-link>
+            </div>
+        </div>
+    </div>
+</div> 

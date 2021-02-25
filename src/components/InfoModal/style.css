@@ -1,0 +1,13 @@
+.modal-body{
+    background-color: #FFC832;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: bolder;
+}
+
+.tri{
+    transform: translateX(-50%);
+    border: 20px solid;
+    border-color:  #FFC832 transparent  transparent transparent ;
+}

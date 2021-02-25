@@ -1,0 +1,53 @@
+<div class="add_modal modal fade"  id="plusModal" tabindex="-1" aria-labelledby="plusModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body position-relative">
+          <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal" aria-label="Close" @click="clearInfo"></button>
+          <div class="top d-flex align-items-center mt-2">
+            <div class="dishes_pic">
+              <img :src="require(`../../assets/MenuList/${id}.png`)" alt="Dishes" class="w-100">
+            </div>
+            <div class="dishes_name ms-2 mx-2">
+              <h3 class="info-title">{{ $t(`dishes.${id}.dishes_name`) }}</h3>
+              <p class="warn mb-1" v-if="warn">{{ $t("menu.warn") }}</p>
+              <p class="warn mb-1" v-if="hot_check_warn">{{ $t("menu.hot_warn") }}</p>
+            </div>       
+          </div>
+          <div class="hot_section d-flex justify-content-between ps-4 pe-4 mt-2 mb-2">
+            <div class=" hot_item d-flex justify-content-center d-flex justify-content-center">
+              <input type="radio" class="hotinput d-none" value="n" name="hot" id="n_hot" v-model="hot_check">
+              <label for="n_hot">
+                <p class="text-center ">{{$tc('dishes_element.order_arr', 0)}}</p>
+              </label>
+            </div>
+            <div class="hot_item d-flex justify-content-center">
+              <input type="radio" class="hotinput d-none" value="m" name="hot" id="m_hot" v-model="hot_check">
+              <label for="m_hot">
+                <p class="text-center ms-2 me-2">{{$tc('dishes_element.order_arr', 1)}}</p>
+              </label>
+            </div>
+            <div class="hot_item d-flex justify-content-center">
+              <input type="radio" class="hotinput d-none" value="v" name="hot" id="v_hot" v-model="hot_check">
+              <label for="v_hot">
+                <p class="text-center">{{$tc('dishes_element.order_arr', 2)}}</p>
+              </label>
+            </div>
+          </div>
+          <div class="add_section d-flex justify-content-between align-items-center ps-4 pe-4 mt-2 mb-3">
+            <div class="left d-flex justify-content-center align-items-center">
+              <div class="click_block" @click="toggleNum('minus')">
+                <img src="../../assets/MenuList/minus.png" alt="minus" class="w-100">
+              </div>
+              <h2 class="num">{{dishes_num}}</h2>
+              <div class="click_block" @click="toggleNum('plus')">
+                <img src="../../assets/MenuList/plus.png" alt="plus" class="w-100">
+              </div>
+            </div>
+            <div class="right">
+              <button @click="addCart">+ADD</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

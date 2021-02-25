@@ -6,9 +6,13 @@
     transition: .5s;
 }
 
-.block_item.plus_yellow{
+.block_item_click{
     cursor: pointer;
 }
+
+/* .block_item.plus_yellow{
+    cursor: pointer;
+} */
 
 .block_item.plus_yellow:hover{
     background-color: #fed567;

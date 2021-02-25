@@ -1,4 +1,4 @@
-<div class="nav fixed-top">
+<div class="nav fixed-top" :class="navcolor">
     <div class="container">
         <nav class="navbar navbar-expand-lg justify-content-between">
             <!-- 按鈕 -->
@@ -10,29 +10,31 @@
             <!-- 右邊欄位 -->
             <div class="nav-left order-10 order-lg-last d-flex align-items-center">
                 <div class="lang">
-                    <button class="lang_item m-1 p-0" @click="langToogle('ch')">
+                    <button class="lang_item m-1 p-0" @click="langToogle('ch','語言：中文')" data-bs-toggle="modal" data-bs-target="#infoModal">
                         <img class="w-100" v-if="lang == 'ch'" src="../../assets/NavBar/chinese_active.png">
                         <img class="w-100" v-else src="../../assets/NavBar/chinese.png">
                     </button>
-                    <button class="lang_item m-1 p-0" @click="langToogle('en')">
+                    <button class="lang_item m-1 p-0" @click="langToogle('en','Language: English')" data-bs-toggle="modal" data-bs-target="#infoModal">
                         <img class="w-100" v-if="lang == 'en'" src="../../assets/NavBar/english_active.png">
                         <img class="w-100" v-else src="../../assets/NavBar/english.png">
                     </button>
-                    <button class="lang_item m-1 p-0" @click="langToogle('ja')">
+                    <button class="lang_item m-1 p-0" @click="langToogle('ja','言語: 日本語')" data-bs-toggle="modal" data-bs-target="#infoModal">
                         <img class="w-100" v-if="lang == 'ja'" src="../../assets/NavBar/japan_active.png">
                         <img class="w-100" v-else src="../../assets/NavBar/japan.png">
                     </button>
-                    <button class="lang_item m-1 p-0" @click="langToogle('ko')">
+                    <button class="lang_item m-1 p-0" @click="langToogle('ko','언어: 한국어')" data-bs-toggle="modal" data-bs-target="#infoModal">
                         <img class="w-100" v-if="lang == 'ko'" src="../../assets/NavBar/korea_active.png">
                         <img class="w-100" v-else src="../../assets/NavBar/korea.png">
                     </button>
                 </div>
-                <div class="chart">
-                    <div class="chart_img">
-                        <img src="../../assets/NavBar/chart.png" class="w-100">
+                <router-link :to="{name: 'cart'}">
+                    <div class="chart">
+                        <div class="chart_img">
+                            <img src="../../assets/NavBar/chart.png" class="w-100">
+                        </div>
+                        <div class="num position-absolute bottom-0 " v-if="cart_num !== 0">{{cart_num}}</div>
                     </div>
-                    <div class="num position-absolute bottom-0 " v-if="totalNum !== 0">{{totalNum}}</div>
-                </div>
+                </router-link>
             </div>
 
             <!-- 下拉連結 -->
@@ -49,32 +51,32 @@
                             <img src="../../assets/NavBar/home.png" class="w-100 img_normal">
                             <img src="../../assets/NavBar/homechange.gif" class="w-100 img_active">
                         </div>
-                        <p class="m-0 ps-lg-2">Home</p>
+                        <p class="m-0 ps-lg-2">{{$t('nav.home')}}</p>
                     </a>
-                    <a class="nav-link ms-3 me-3 m-lg-2 d-flex align-items-center justify-content-center flex-column flex-lg-row" aria-current="page" href="#">
+                    <router-link :to="{name:'menu'}" class="nav-link ms-3 me-3 m-lg-2 d-flex align-items-center justify-content-center flex-column flex-lg-row" aria-current="page" href="#">
                         <div class="nav_img">
                             <img src="../../assets/NavBar/all dishes.png" class="w-100 img_normal">
                             <img src="../../assets/NavBar/disheschange.gif" class="w-100 img_active">
                         </div>
-                        <p class="m-0 ps-lg-2">Dishes</p>
-                    </a>
+                        <p class="m-0 ps-lg-2">{{$t('nav.dishes')}}</p>
+                    </router-link> 
                     <a class="nav-link ms-3 me-3 m-lg-2 d-flex align-items-center justify-content-center flex-column flex-lg-row" aria-current="page" href="#">
                         <div class="nav_img">
                             <img src="../../assets/NavBar/game.png" class="w-100 img_normal">
                             <img src="../../assets/NavBar/gamechange.gif" class="w-100 img_active">
                         </div>
-                        <p class="m-0 ps-lg-2">Games</p>
+                        <p class="m-0 ps-lg-2">{{$t('nav.game')}}</p>
                     </a>
                     <a class="nav-link ms-3 me-3 m-lg-2 d-flex align-items-center justify-content-center flex-column flex-lg-row" aria-current="page" href="#">
                         <div class="nav_img">
                             <img src="../../assets/NavBar/about.png" class="w-100 img_normal">
                             <img src="../../assets/NavBar/aboutchange.gif" class="w-100 img_active">
                         </div>
-                        <p class="m-0 ps-lg-2">About</p>
+                        <p class="m-0 ps-lg-2">{{$t('nav.about')}}</p>
                     </a>
                 </div>
             </div>
-
         </nav>
     </div>
+    
 </div>

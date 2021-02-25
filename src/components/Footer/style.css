@@ -1,0 +1,22 @@
+.footer{
+    background-color: #FFC832;
+    min-height: 250px;
+}
+
+.logo{
+    width: 250px;
+}
+
+.link{
+    width: 45px;
+}
+
+@media (max-width: 576px){
+    .logo{
+        width: 200px;
+    }
+
+    .link{
+        width: 40px;
+    }
+}

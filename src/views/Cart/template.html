@@ -1,0 +1,37 @@
+<div class="cart w-100">
+    <div class="top w-100 d-flex justify-content-between align-items-center">
+        <div class="container d-flex justify-content-between align-items-center h-100">
+            <div class="title">
+                <h2>{{ $t("cart.title") }}</h2>
+                <p>{{ $t("cart.title_info") }}</p>
+            </div>
+            <div class="sound" @click="soudPlay">
+                <div class="sound_btn" :class="{sound_ani: playing}">
+                    <img src="../../assets/Cart/sound.png" alt="sound" class="w-100">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="list position-relative">
+        <div class="container">
+            <div class="row">
+                <CartBlock v-for="item in cart" :item="item" :key="item.id" :sound_id="sound_id" :playing="playing"/>
+            </div>
+        </div>
+        <!-- <div class="w-100 h-100 position-absolute" :class="{hold_list: playing}"> 
+        </div> -->
+    </div>
+    <div class="audio_section">
+        <audio ref="num" :src="require(`../../assets/sound/num_${sound_num}.mp3`)"></audio>
+        <audio ref="hot" :src="require(`../../assets/sound/${sound_hot}-hot.mp3`)"></audio>
+        <audio ref="id" :src="require(`../../assets/Dishes/${sound_id}/dishes_name.mp3`)"></audio>
+    </div>
+    <div class="total_section position-fixed w-100">
+        <div class="container">
+            <div class="total_text w-100 d-flex justify-content-end align-items-end">
+                <h2 class="m-0">Total<span class="num">{{cart_num}}</span><span class="end">Dishes</span></h2>
+            </div>
+        </div>
+    </div>
+
+</div>

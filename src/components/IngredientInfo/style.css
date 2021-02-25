@@ -1,3 +1,4 @@
+
 .modal-dialog {
     max-width: 60%;
 }
@@ -50,6 +51,23 @@
 
 .text_section {
     padding: 20px;
+    font-size: 15px;
+}
+
+.FYI_title{
+    display: inline-block;
+    padding: 0px 10px;
+    font-weight: bolder;
+}
+
+.green .FYI_title{
+    background-color: #00C7A4;
+}
+.orange .FYI_title{
+    background-color:#FF7A00;
+}
+.yellow .FYI_title{
+    background-color: #FFC832;
 }
 
 .btn:focus {
@@ -83,8 +101,9 @@
 
 @media (max-width: 576px) {
     .modal-dialog {
-        max-width: 300px;
-        margin: 0.5rem auto;
+        width: 90%;
+        min-width: 280px;
+        margin: 0.3rem auto;
     }
 
     .text_section {

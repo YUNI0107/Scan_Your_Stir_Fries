@@ -1,0 +1,132 @@
+.cartblock {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.cartblock.light {
+    filter: opacity(0.2);
+}
+
+.cartblock::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    width: 98%;
+    height: .5px;
+    background-color: black;
+}
+
+
+.dish_id h2 {
+    font-size: 18px;
+    width: 50px;
+}
+
+.title {
+    width: 200px;
+    min-width: 200px;
+}
+
+.hot p {
+    font-size: 15px;
+}
+
+.numblock {
+    width: 35px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.num_section.disabled {
+    pointer-events: none;
+    cursor: auto;
+}
+
+.trash {
+    width: 30px;
+    padding: 8px;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.trash:hover {
+    filter: brightness(0.1);
+}
+
+@media(max-width: 1200px) {
+    .title {
+        width: 150px;
+        min-width: 150px;
+    }
+}
+
+@media(max-width: 922px) {
+    .title {
+        width: 250px;
+        min-width: 250px;
+    }
+}
+
+@media(max-width: 768px) {
+    .title {
+        width: 200px;
+        min-width: 200px;
+    }
+}
+
+@media(max-width: 576px) {
+    .cartblock::after {
+        width: 95%;
+        height: .25px;
+    }
+
+    .dish_id h2 {
+        font-size: 15px;
+        width: 30px;
+    }
+
+    .title {
+        width: 150px;
+        min-width: 150px;
+    }
+
+    .title p {
+        font-size: 15px;
+    }
+
+    .hot p {
+        font-size: 12px;
+    }
+
+    .numblock {
+        width: 35px;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    .num h2{
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 450px){
+    .cartblock{
+        flex-direction: column;
+    }
+
+    .hot p {
+        text-align: right;
+    }
+
+    .num_section{
+        justify-content: end;
+    }
+
+    .num_toogle{
+        padding-left: 35px;
+    }
+}

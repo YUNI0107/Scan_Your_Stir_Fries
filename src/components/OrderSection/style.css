@@ -3,17 +3,35 @@
     height: 250px;
 }
 
-.big_button .orange {
-    border-radius: 50%;
-    background-color: #FF7A00;
+/* .big_button .orange {
+    background-color: #ffc58f;
+} */
+
+.big_button .order_ani_title{
+    letter-spacing: 1.2px;
+    font-weight: bold;
+    font-size: 3rem;
+    pointer-events: none;
+}
+
+.big_button .orange svg{
+    width: 100%;
+    margin-top: -30px;
+    cursor: pointer;
 }
 
 .hot_section .hot_item {
     width: calc(100% / 3);
 }
 
+.hot_section .hot_item p{
+    font-weight: bolder;
+}
+
 .hot_section .item_pic {
     width: 50px;
+    margin-bottom: 5px;
+    cursor: pointer;
 }
 
 .orange_line {
@@ -32,4 +50,18 @@
 
 .hotinput:checked~label {
     filter: hue-rotate(134deg);
+}
+
+@media (max-width: 576px){
+    .hot_section .hot_item p{
+        font-size: 12px;
+    }
+
+    .order_title {
+        font-size: 20px;
+    }
+
+    .text_section p{
+        font-size: 14px;
+    }
 }

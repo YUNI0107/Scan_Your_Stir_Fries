@@ -3,42 +3,45 @@
         <div class="top_dishes container my-5 mb-0">
             <div class="row">
                 <div class="col-12 d-flex justify-content-between position-relative">
-                    <div class="left position-relative">
+                    <div class="left position-relative w-100">
                         <div class="big_name position-relative">
-                            <img :src="require(`../../assets/Dishes/${dishes_id}/${lang}/big_name.png`)" alt="name" class="w-100">
+                            <img :src="require(`../../assets/Dishes/${dishes_id}/${lang}/big_name.png`)" alt="name"
+                                class="w-100">
                         </div>
                         <div class="back position-absolute">
-                            <BackAnimation class="w-100"/>
+                            <BackAnimation class="w-100" />
                         </div>
                     </div>
-                    <div class="info d-flex flex-column align-items-end">
+                    <div class="info position-absolute d-flex flex-column align-items-end">
                         <div class="dishes_id">
                             <img :src="require(`../../assets/Dishes/${dishes_id}/id.png`)" alt="id" class="h-100">
                         </div>
-                        <p class="mt-2 mb-2 ms-0 me-0">三杯雞</p>
+                        <p class="mt-2 mb-2 ms-0 me-0">{{ $t(`dishes.${dishes_id}.chi_name`) }}</p>
                         <button class="sound p-0" @click="dishesSoundPlay">
-                            <audio ref="dishes_name" src="../../assets/Dishes/C02/dishes_name.mp3" ></audio>
+                            <audio ref="dishes_name" :src="require(`../../assets/Dishes/${dishes_id}/dishes_name.mp3`)"></audio>
                             <img src="../../assets/Dishes_element/sound.png" alt="sound" class="w-100">
                         </button>
                     </div>
                 </div>
             </div>
             <div class="row down_part">
-                <div class="dishes_bottom col-12 col-lg-7 d-flex flex-column justify-content-end align-items-center position-relative">
+                <div
+                    class="dishes_bottom col-12 col-lg-7 d-flex flex-column justify-content-end align-items-center position-relative">
                     <div class="food_pic d-flex align-items-center" :style="{marginTop: img_top}" @click="replayGif">
-                        <img ref="food_gif" :src="require(`../../assets/Dishes/${dishes_id}/food.gif`)" alt="food" class="w-100">
+                        <img ref="food_gif" :src="require(`../../assets/Dishes/${dishes_id}/food.gif`)" alt="food"
+                            class="w-100">
                     </div>
                     <div class="cook_info mt-3 mt-lg-0 w-100 ps-lg-5 pe-lg-5 d-flex">
                         <div class="cook_item" v-for="item in dishesIcon">
                             <div class="cook_icon mx-auto">
                                 <img :src="item.img" alt="icon" class="w-100">
                             </div>
-                            <p class="text-center">{{item.class}} | {{item.type}}</p>
+                            <p class="text-center">{{ $t(`dishes_element.${item.class_name}`) }} | {{ $t(`dishes_element.${item.type}`) }}</p>
                         </div>
                     </div>
                 </div>
                 <div class="order_section col-12 col-lg-5">
-                    <OrderSection/>
+                    <OrderSection :dishes_id="dishes_id"/>
                 </div>
             </div>
         </div>
@@ -47,9 +50,55 @@
                 <img :src="require(`../../assets/Dishes_element/${lang}/in_title.png`)" class="w-100">
             </div>
             <div class="row ingredient_row position-relative">
-                <IngredientBlock v-for="item in ingredient_list" :item="item"/>
+                <IngredientBlock v-for="item in ingredient_list" :item="item" data-aos="fade-right"
+                data-aos-duration="1200" />
+                <!-- 附加資訊模組 -->
+                <IngredientInfo v-for="item in ingredient_list" v-if="item.plus_info" :item="item" />
+            </div>
+        </div>
+        <div class="container comic_section" v-if="article">
+            <div class="comic_title position-relative ms-auto" :class="{nocomic: !comic}">
+                <img :src="require(`../../assets/Dishes_element/${lang}/comic_title.png`)" class="w-100" v-if="comic">
+            </div>
+            <div class="row comic_row position-relative">
+                <div class="col-12 col-lg-7 mb-3" v-if="comic">
+                    <div class="row">
+                        <div class="comic_pic col-12 col-md-6 ">
+                            <img :src="require(`../../assets/Dishes/${dishes_id}/${lang}/comic1.gif`)" alt="comic"
+                                class="w-100">
+                        </div>
+                        <div class="comic_pic col-12 col-md-6">
+                            <img :src="require(`../../assets/Dishes/${dishes_id}/${lang}/comic2.gif`)" alt="comic"
+                                class="w-100">
+                        </div>
+                        <div class="comic_pic col-12 col-md-6">
+                            <img :src="require(`../../assets/Dishes/${dishes_id}/${lang}/comic3.gif`)" alt="comic"
+                                class="w-100">
+                        </div>
+                        <div class="comic_pic col-12 col-md-6" v-if="dishes_id !=='SD02' && dishes_id!=='S02'">
+                            <img :src="require(`../../assets/Dishes/${dishes_id}/${lang}/comic4.gif`)" alt="comic"
+                                class="w-100">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-5 d-flex flex-column justify-content-center" v-if="comic">
+                    <div class="comic_text p-2">
+                        <h3 class="mb-3">{{ $t(`dishes.${dishes_id}.comic_title`) }}</h3>
+                        <p>
+                            {{ $t(`dishes.${dishes_id}.comic_text`) }}
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 d-flex flex-column justify-content-center" v-if="!comic">
+                    <div class="comic_text p-2">
+                        <h3 class="mb-3">{{ $t(`dishes.${dishes_id}.comic_title`) }}</h3>
+                        <p>
+                            {{ $t(`dishes.${dishes_id}.comic_text`) }}
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
+    <Footer_section/>
 </div>

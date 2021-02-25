@@ -1,0 +1,33 @@
+<div class="list">
+    <div class="row p-0 m-0 position-relative" v-if="correct_cate_id">
+        <transition-group name="fade" mode="out-in">
+            <div class="dishes_block col-12 col-lg-6 p-0" v-for="(item,index) in dishesList" :key="index">
+                <div
+                    class="dishes_block_content m-2 position-relative d-flex align-items-center justify-content-center">
+                    <h2 class="dishes_id position-absolute top-0 start-0">{{item.dishes_id}}</h2>
+                    <div class="left d-flex align-items-center flex-grow-1 ">
+                        <div class="pic">
+                            <img :src="require(`../../assets/MenuList/${item.dishes_id}.png`)" class="w-100">
+                        </div>
+                        <div class="info  ms-3 me-3">
+                            <h2 class="info_title">{{ $t(`dishes.${item.dishes_id}.dishes_name`) }}</h2>
+                            <router-link class="info_btn" :to="{name: 'dishes', params:{ id: item.dishes_id } }">Learn more</router-link>
+                        </div>
+                    </div>
+                    <button class="add" @click="openInfo(item.dishes_id)" data-bs-toggle="modal" data-bs-target="#plusModal">
+                        <div class="add_img">
+                            <img src="../../assets/MenuList/add.png" class="w-100">
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </transition-group>
+    </div>
+    <div class="row p-0 m-0" v-else>
+        <div class="col-12">
+            <div class="col-12">
+                <h4>沒有{{cate_id}}這個分類的菜色</h4>
+            </div>
+        </div>
+    </div>
+</div>

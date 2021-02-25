@@ -1,0 +1,136 @@
+.dishes_block{
+    display: inline-block;
+}
+
+.dishes_block_content{
+    background-color: #FDF9F7;
+    box-shadow: 1px 1px 5px #1717171e;
+    min-height: 150px;
+    padding: 15px;
+}
+
+.dishes_block_content .dishes_id{
+    padding-left: 10px;
+    padding-top: 5px;
+    font-size: 18px;
+}
+
+.pic{
+    width: 150px;
+    min-width: 150px;
+}
+
+.info_title{
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.info_btn{
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    background-color: #FF7A00;
+    padding: 5px 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.info_btn:hover{
+    color: black;
+    background-color: #FFC832;
+}
+
+.add{
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.add_img{
+    width: 30px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.add_img:hover{
+    transform: scale(1.2);
+}
+
+.fade-enter-active {
+    transition: all 1s;
+}
+
+.fade-leave-active{
+    transition: all 0s;
+}
+
+.fade-leave-to{
+    position: absolute;
+}
+
+.fade-enter, .fade-leave-to
+/* .list-leave-active for below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+@media (max-width: 576px){
+    .dishes_block_content{
+        padding: 10px;
+    }
+
+    .pic{
+        width: 150px;
+        min-width: 150px;
+    }
+
+    .info_title{
+        font-size: 18px;
+    }
+    
+    .info_btn{
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 350px){
+    .dishes_block_content{
+        padding: 10px;
+    }
+
+    .pic{
+        width: 50%;
+        min-width: 50%;
+    }
+
+    .left{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info_title{
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .info_btn{
+        font-size: 13px;
+        padding: 5px 10px;
+        width: 150px;
+        text-align: center;
+    }
+
+    .add_img{
+        width: 25px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+}

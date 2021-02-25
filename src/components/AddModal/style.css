@@ -1,0 +1,119 @@
+.btn-close:focus{
+    box-shadow: none;
+}
+
+.btn-close{
+    right: 15px;
+}
+
+.dishes_pic{
+    width: 180px;
+    min-width: 180px;
+}
+
+.warn{
+    color: rgb(230, 54, 54);
+}
+
+.hot_item label p{
+    display: inline-block;
+    border: solid 2px #222222;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+
+.hotinput:checked~label p {
+    background-color: #FF7A00;
+    color: #fff;
+    border: solid 2px #FF7A00;
+}
+
+.click_block{
+    width: 50px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.num{
+    margin: 0 10px;
+}
+
+.right button{
+    border: none;
+    background-color: #FFC832;
+    font-weight: bolder;
+    font-size: 18px;
+    padding: 10px 20px;
+    outline: none;
+}
+
+.right button:hover{
+    filter: brightness(1.05);
+}
+
+@media (max-width: 576px){
+    .dishes_pic{
+        width: 180px;
+        min-width: 180px;
+    }
+
+
+    .click_block{
+        width: 40px;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    .hot_item label p{
+        padding: 5px 10px;
+        font-size: 15px;
+    }
+
+
+    
+    .right button{
+        border: none;
+        background-color: #FFC832;
+        font-weight: bolder;
+        font-size: 15px;
+        padding: 10px 15px;
+        outline: none;
+    }
+
+
+    .info-title{
+        font-size: 18px;
+    }
+
+    
+}
+
+@media (max-width: 350px){
+    .top{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .dishes_pic{
+        width: 150px;
+        min-width: 150px;
+    }
+
+    .hot_section{
+        flex-direction: column;
+    }
+
+    .hot_item label p{
+        padding: 5px 10px;
+        box-sizing: border-box;
+        font-size: 15px;
+        letter-spacing: 1px;
+        cursor: pointer;
+    }
+}

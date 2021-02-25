@@ -1,136 +1,193 @@
 /* 菜色左側 */
-.dishes{
+.dishes {
     background-color: #FFF4E8;
 }
 
-.top_dishes{
+.top_dishes {
     padding-top: 80px;
 }
 
-.top_dishes .big_name{
+.top_dishes .big_name {
     z-index: 2;
     width: 450px;
+    animation: fade_down 1s backwards ease-out 2.8s;
 }
 
-.top_dishes .back{
+@keyframes fade_down {
+    0% {
+        transform: translateY(-150px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.left {
+    position: relative;
+}
+
+.top_dishes .back {
     z-index: 0;
     width: 1400px;
-    margin: auto;
-    margin-left: -700px;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-91%);
     /* 動畫背景高度 */
-    margin-top: -255px;
+    margin-top: -251px;
 }
 
-.top_dishes .info{
+.top_dishes .info {
     z-index: 4;
     position: absolute;
     right: 0;
+    animation: fade_down 1s backwards ease-out 3s;
 }
 
 
-.top_dishes .info .dishes_id{
+.top_dishes .info .dishes_id {
     height: 65px;
 }
 
-.top_dishes .info .sound{
+.top_dishes .info .sound {
     background-color: transparent;
     outline: none;
     border: none;
     width: 30px;
 }
 
-.top_dishes .info p{
+.top_dishes .info p {
     writing-mode: vertical-rl;
     letter-spacing: 10px;
 }
 
-.down_part{
+.down_part {
     /* 下半部上移 */
-    margin-top: -252px; 
+    margin-top: -240px;
 }
 
 .dishes_bottom {
-    position: relative;   
+    position: relative;
 }
 
-.dishes_bottom .food_pic{
+.dishes_bottom .food_pic {
     z-index: 3;
-    width: 700px;
+    width: 600px;
     /* 用高度限制移動 */
     height: 620px;
     cursor: pointer;
 }
 
-.dishes_bottom .cook_info{
+.dishes_bottom .cook_info {
     z-index: 3;
 }
 
-.dishes_bottom .cook_item{
+.dishes_bottom .cook_item {
     width: calc(100% / 3);
 }
 
-.dishes_bottom .cook_icon{
+.dishes_bottom .cook_icon {
     width: 50px;
+    margin-bottom: 5px;
 }
 
-.oreder_section{
+.oreder_section {
     position: relative;
     z-index: 2;
 }
 
-.in_title{
+.in_title {
     width: 550px;
     margin-left: -135px;
 }
 
-.ingredient_row{
+.comic_title {
+    width: 550px;
+    margin-right: -135px;
+}
+
+.comic_title.nocomic {
+    height: 100px;
+}
+
+.ingredient_row {
     margin-top: -80px;
 }
 
+.comic_row {
+    margin-top: -80px;
+}
 
-@media (max-width: 576px){
-    .top_dishes{
+.comic_text h3 {
+    line-height: 30px;
+}
+
+.comic_text p {
+    line-height: 28px;
+}
+
+@media (max-width: 992px) {
+    .top_dishes .back {
+        transform: translateX(-72%);
+    }
+}
+
+
+@media (max-width: 576px) {
+    .top_dishes {
         padding-top: 60px;
     }
 
-    .top_dishes .big_name{
+    .top_dishes .big_name {
         width: 350px;
     }
 
-    .top_dishes .back{
-        width: 300%;
-        margin-left: calc(-300% / 2);
-        /* 動畫背景高度 */
+
+    .top_dishes .back {
+        width: 1150px;
         margin-top: -195px;
     }
 
-    .top_dishes .info .dishes_id{
+    .top_dishes .info .dishes_id {
         height: 50px;
     }
 
-    .dishes_bottom .food_pic{
+    .dishes_bottom .food_pic {
         width: 120%;
         /* 用高度限制移動 */
         height: 400px;
-        min-width: 450px;
+        max-width: 500px;
+        min-width: 400px;
     }
 
-    .dishes_bottom .cook_icon{
+    .dishes_bottom .cook_icon {
         width: 40px;
     }
 
-    .dishes_bottom .cook_item p{
+    .dishes_bottom .cook_item p {
         font-size: 12px;
     }
 
-    .in_title{
+    .in_title {
         width: 450px;
         margin-left: -105px;
     }
-    
-    .ingredient_row{
+
+    .comic_title {
+        width: 450px;
+        transform: translateX(-50%);
+        margin-right: -320px;
+    }
+
+    .comic_title.nocomic {
+        height: 80px;
+    }
+
+    .ingredient_row {
         margin-top: -70px;
     }
 
 }
-

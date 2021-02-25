@@ -1,6 +1,4 @@
 <script>
-import IngredientInfo from '../IngredientInfo/IngredientInfo'
-
 export default {
   props: ['item',],
   data() {
@@ -10,7 +8,7 @@ export default {
     }
   },
   components:{
-      IngredientInfo,
+    
   }
 };
 </script>

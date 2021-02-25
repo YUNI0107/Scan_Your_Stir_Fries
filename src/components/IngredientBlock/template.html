@@ -1,15 +1,15 @@
 <div class="food_block  col-12 col-md-6 col-lg-4 col-xl-3">
     <!-- 有附加資訊的 -->
-    <div v-if="plus_info" class="block_item mb-4 p-2 position-relative d-flex align-items-center" :class="{plus_yellow : plus_info}" data-bs-toggle="modal" :data-bs-target="`#${item.ingredient_name}Modal`">
+    <div v-if="plus_info" class="block_item block_item_click mb-4 p-2 position-relative d-flex align-items-center" :class="{plus_yellow : plus_info}" data-bs-toggle="modal" :data-bs-target="`#${item.ingredient_name}Modal`">
         <div class="plus position-absolute" v-if="plus_info">
             <img src="../../assets/Dishes_element/plus.png" class="w-100">
         </div>
-        <div class="row d-flex align-items-center">
-            <div class="col-5 left p-0">
+        <div class="row d-flex align-items-center pe-2">
+            <div class="col-6 left p-1">
                 <img class="w-100" :src="require(`../../assets/Ingredient/${item.ingredient_name}.png`)">
             </div>
-            <div class="col-7 right p-0">
-                <p class="m-0">{{item.ingredient_showname}}</p>
+            <div class="col-6 right p-0">
+                <p class="m-0">{{ $t(`ingredients.${item.ingredient_name}.name`)}}</p>
             </div>
         </div>
     </div>
@@ -18,15 +18,13 @@
         <div class="plus position-absolute" v-if="plus_info">
             <img src="../../assets/Dishes_element/plus.png" class="w-100">
         </div>
-        <div class="row d-flex align-items-center">
-            <div class="col-5 left p-0">
+        <div class="row d-flex align-items-center pe-2">
+            <div class="col-6 left p-1">
                 <img class="w-100" :src="require(`../../assets/Ingredient/${item.ingredient_name}.png`)">
             </div>
-            <div class="col-7 right p-0">
-                <p class="m-0">{{item.ingredient_showname}}</p>
+            <div class="col-6 right p-0">
+                <p class="m-0">{{ $t(`ingredients.${item.ingredient_name}.name`)}}</p>
             </div>
         </div>
     </div>
-    <!-- 附加資訊模組 -->
-    <IngredientInfo v-if="plus_info" :item="item"/>
 </div>

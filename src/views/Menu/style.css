@@ -1,0 +1,123 @@
+.menu{
+    background-color: #FFF4E8;
+    overflow: hidden;
+}
+
+.menu_title{
+    padding-top: 10vh;
+    height: 35vh;
+}
+
+.menu_title .img_title{
+    width: 280px;
+}
+
+.menu_title p{
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.menu_block{
+    box-sizing: border-box;
+    height: calc( (100vh - 35vh) / 4);
+    cursor: pointer;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.menu_block h2{
+    font-size: 20px;
+    color: #fff;
+}
+
+.icon_img, .icon_img_hide{
+    height: calc( (100vh - 35vh) / 4);
+}
+
+/* .sea .icon_img{
+    min-width: 500px;
+} */
+
+.icon_img_hide, .menu_block h2{
+    display: none;
+}
+
+
+.menu_block:hover h2, .menu_block:hover .icon_img_hide{
+    display: block;
+}
+
+.menu_block:hover .icon_img{
+    display: none;
+}
+
+.lamb, .chicken{
+    background-color: #00C7A4;
+}
+.lamb:hover, .chicken:hover{
+    background-color: #008e74;
+}
+
+.veg, .main{
+    background-color: #FF7A00;
+}
+
+.veg:hover, .main:hover{
+    background-color: #be5c01;
+}
+
+.pork, .side{
+    background-color: #FFF4E8;
+}
+
+.pork:hover, .side:hover{
+    background-color: #ccc1b5;
+}
+
+.beef, .sea{
+    background-color: #FFC832;
+}
+
+.beef:hover, .sea:hover{
+    background-color: #d8a71e;
+}
+
+
+
+@media (max-width: 576px){
+    .menu_title{
+        padding-top: 80px;
+        height: 200px;
+    }
+
+    .menu_title .img_title{
+        width: 200px;
+    }
+
+    .menu_title p{
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .menu_block{
+        height: calc( (100vh - 200px) / 4);
+    }
+}
+
+
+@media (max-width: 280px){
+    .menu_title{
+        padding-top: 100px;
+        height: 200px;
+    }
+
+    .menu_title .img_title{
+        width: 100%;
+    }
+
+    .menu_title p{
+        display: none;
+    }
+}
+
+

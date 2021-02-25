@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade" :id="`${item.ingredient_name}Modal`" tabindex="-1" :aria-labelledby="`${item.ingredient_name}Modal`" aria-hidden="true">
+<div class="modal fade" :id="`${item.ingredient_name}Modal`" tabindex="-1" :aria-labelledby="`${item.ingredient_name}Modal`" aria-hidden="true" style="padding-right: 0%; padding-left: 0%;">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-body p-0" :class="color">
@@ -14,9 +14,13 @@
                     <div class="right col-12 col-lg-7 position-relative">
                         <div class="tri position-absolute top-50 start-0 d-none d-lg-block"></div>
                         <div class="tri tri_small position-absolute top-0 start-50 d-lg-none"></div>
-                        <div class="text_section h-100 d-flex flex-column justify-content-center ">
-                            <h3>{{item.ingredient_showname}}</h3>
-                            <p>{{item.info.info_text}}</p>
+                        <div class="text_section h-100 d-flex flex-column justify-content-center mb-4">
+                            <h3>{{ $t(`ingredients.${item.ingredient_name}.name`)}}</h3>
+                            <p class="mb-0">{{ $t(`ingredients.${item.ingredient_name}.info`)}}</p>
+                            <div class="FYI_part mt-4" v-if="item.info.FYI">
+                                <p class="FYI_title mb-2">{{ $t(`ingredients.FYI`)}}</p>
+                                <p class="mb-0">{{ $t(`ingredients.${item.ingredient_name}.FYI`)}}</p>
+                            </div>
                         </div>
                     </div>
                 </div>

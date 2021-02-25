@@ -1,0 +1,272 @@
+{
+    "P01":{
+        "dishes_id": "P01",
+        "cate": "pork",
+        "dishes_name": "Chitterlings in Pot",
+        "dishes_icon_info": ["hot", "spicy", "boil"],
+        "ingredient": ["pork_intestines", "duck_blood_cubes","pickled_cabbage","chili","garlic","garlic_sprout","fagara"],
+        "comic": true,
+        "article": true
+    },
+    "P02":{
+        "dishes_id": "P02",
+        "cate": "pork",
+        "dishes_name": "Sliced Pork Belly with Garlic Sauce",
+        "dishes_icon_info": ["cold", "salty", "poach"],
+        "ingredient": ["pork","garlic","thick_soy_sauce"],
+        "comic": false,
+        "article": false
+    },
+    "P03":{
+        "dishes_id": "P03",
+        "cate": "pork",
+        "dishes_name": "The Hakka Stir-fries",
+        "dishes_icon_info": ["hot", "salty", "fry"],
+        "ingredient": ["pork","dried_squid","dried_tofu","celery","scallion"],
+        "comic": false,
+        "article": true
+    },
+    "P04":{
+        "dishes_id": "P04",
+        "cate": "pork",
+        "dishes_name": "Pork Liver with Sesame Oil",
+        "dishes_icon_info": ["hot", "salty", "fry"],
+        "ingredient": ["pork_liver","sesame_oil","ginger","wolfberry"],
+        "comic": false,
+        "article": false
+    },
+    "P05":{
+        "dishes_id": "P05",
+        "cate": "pork",
+        "dishes_name": "Crispy Intestines",
+        "dishes_icon_info": ["hot", "salty", "deep"],
+        "ingredient": ["pork_intestines","garlic_sprout","pepper"],
+        "comic": false,
+        "article": false
+    },
+    "L01":{
+        "dishes_id": "L01",
+        "cate": "lamb",
+        "dishes_name": "Water Spinach with Lamb",
+        "dishes_icon_info": ["hot", "salty", "fry"],
+        "ingredient": ["lamb","water_spinach","garlic","chili","taiwanese_satay_sauce"],
+        "comic": false,
+        "article": false
+    },
+    "L02":{
+        "dishes_id": "L02",
+        "cate": "lamb",
+        "dishes_name": "Fried lamb with sesame oil and ginger",
+        "dishes_icon_info": ["hot", "salty", "fry"],
+        "ingredient": ["lamb","ginger","wolfberry","sesame_oil"],
+        "comic": false,
+        "article": false
+    },
+    "L03":{
+        "dishes_id": "L03",
+        "cate": "lamb",
+        "dishes_name": "Lamb Kebab",
+        "dishes_icon_info": ["hot", "salty", "fry"],
+        "ingredient": ["lamb","chili","pepper"],
+        "comic": false,
+        "article": false
+    },
+    "B01":{
+        "dishes_id": "B01",
+        "cate": "beef",
+        "dishes_name": "Fried Beef with Green Onions",
+        "dishes_icon_info": ["hot", "salty", "fry"],
+        "ingredient": ["beef","soy_sauce","green_onion","garlic","chili"],
+        "comic": false,
+        "article": false
+    },
+    "B02":{
+        "dishes_id": "B02",
+        "cate": "beef",
+        "dishes_name": "Pan-fried Beef Strips",
+        "dishes_icon_info": ["hot", "salty", "fry"],
+        "ingredient": ["beef","black_pepper","onion","garlic","butter"],
+        "comic": false,
+        "article": false
+    },
+    "B03":{
+        "dishes_id": "B03",
+        "cate": "beef",
+        "dishes_name": "Spicy Braised Beef Tripe",
+        "dishes_icon_info": ["hot", "spicy", "braise"],
+        "ingredient": ["beef_tripe","ginger","garlic","green_onion","fagara"],
+        "comic": false,
+        "article": false
+    },
+    "C01":{
+        "dishes_id": "C01",
+        "cate": "chicken",
+        "dishes_name": "Gong Bao Chicken",
+        "dishes_icon_info": ["hot", "salty", "fry"],
+        "ingredient": ["chicken","chili","green_onion","garlic","peanuts"],
+        "comic": false,
+        "article": true
+    },
+    "C02":{
+        "dishes_id": "C02",
+        "cate": "chicken",
+        "dishes_name": "Three-cup Chicken",
+        "dishes_icon_info": ["hot", "salty", "poach"],
+        "ingredient": ["chicken","ginger","rice_wine","sesame_oil"],
+        "comic": true,
+        "article": true
+    },
+    "C03":{
+        "dishes_id": "C03",
+        "cate": "chicken",
+        "dishes_name": "Plain Boiled Chicken",
+        "dishes_icon_info": ["cold", "salty", "poach"],
+        "ingredient": ["chicken"],
+        "comic": false,
+        "article": true
+    },
+    "V01":{
+        "dishes_id": "V01",
+        "cate": "veg",
+        "dishes_name": "Fish Fragrance Eggplants",
+        "dishes_icon_info": ["hot", "salty", "fry"],
+        "ingredient": ["eggplant","pork"],
+        "comic": true,
+        "article": true
+    },
+    "V02":{
+        "dishes_id": "V02",
+        "cate": "veg",
+        "dishes_name": "King Oyster Mushrooms with Salted Eggs",
+        "dishes_icon_info": ["hot", "salty", "fry"],
+        "ingredient": ["king_oyster_mushrooms","salted_eggs","garlic","green_onion"],
+        "comic": false,
+        "article": false
+    },
+    "V03":{
+        "dishes_id": "V03",
+        "cate": "veg",
+        "dishes_name": "Salted Eggs with Bitter Mellon",
+        "dishes_icon_info": ["hot", "salty", "fry"],
+        "ingredient": ["bitter_melon","salted_eggs","garlic","green_onion"],
+        "comic": false,
+        "article": false
+    },
+    "V04":{
+        "dishes_id": "V04",
+        "cate": "veg",
+        "dishes_name": "Stir-Fried White Water Snowflake",
+        "dishes_icon_info": ["hot", "salty", "fry"],
+        "ingredient": ["white_water_snowflake","pork","ginger","garlic"],
+        "comic": true,
+        "article": true
+    },
+    "V05":{
+        "dishes_id": "V05",
+        "cate": "veg",
+        "dishes_name": "Cabbage with Fermented Bean Curd",
+        "dishes_icon_info": ["hot", "salty", "fry"],
+        "ingredient": ["cabbage","fermented_bean_curd"],
+        "comic": false,
+        "article": false
+    },
+    "S01":{
+        "dishes_id": "S01",
+        "cate": "sea",
+        "dishes_name": "Steamed Cod with Bean Crisp",
+        "dishes_icon_info": ["hot", "salty", "fry"],
+        "ingredient": ["cod","bean_crisp","green_onion","ginger","rice_wine"],
+        "comic": false,
+        "article": false
+    },
+    "S02":{
+        "dishes_id": "S02",
+        "cate": "sea",
+        "dishes_name": "Fried Squid",
+        "dishes_icon_info": ["hot", "salty", "fry"],
+        "ingredient": ["squid","green_onion"],
+        "comic": true,
+        "article": true
+    },
+    "S03":{
+        "dishes_id": "S03",
+        "cate": "sea",
+        "dishes_name": "Deep-fried Dragon Balls",
+        "dishes_icon_info": ["hot", "salty", "deep"],
+        "ingredient": ["dragon_ball","chili","garlic","pepper","green_onion"],
+        "comic": true,
+        "article": true
+    },
+    "S04":{
+        "dishes_id": "S04",
+        "cate": "sea",
+        "dishes_name": "Sweet Vinegar Fish",
+        "dishes_icon_info": ["hot", "sweet", "deep"],
+        "ingredient": ["sweet_vinegar_sauce","fish","garlic"],
+        "comic": false,
+        "article": false
+    },
+    "S05":{
+        "dishes_id": "S05",
+        "cate": "sea",
+        "dishes_name": "Fried Short-necked Clams",
+        "dishes_icon_info": ["hot", "sweet", "fry"],
+        "ingredient": ["short_necked_clams","ginger","chili","green_onion","garlic"],
+        "comic": false,
+        "article": false
+    },
+    "S06":{
+        "dishes_id": "S06",
+        "cate": "sea",
+        "dishes_name": "Fried Shrimps",
+        "dishes_icon_info": ["hot", "sweet", "deep"],
+        "ingredient": ["big_shrimps","garlic","green_onion","pepper"],
+        "comic": true,
+        "article": true
+    },
+    "MD01":{
+        "dishes_id": "MD01",
+        "cate": "main",
+        "dishes_name": "Shrimp Fried Rice",
+        "dishes_icon_info": ["hot", "salty", "fry"],
+        "ingredient": ["shrimps","garlic","rice","eggs","green_onion"],
+        "comic": false,
+        "article": false
+    },
+    "MD02":{
+        "dishes_id": "MD02",
+        "cate": "main",
+        "dishes_name": "Chaomian with pork",
+        "dishes_icon_info": ["hot", "salty", "fry"],
+        "ingredient": ["pork","onion","carrot","green_onion","noodles"],
+        "comic": false,
+        "article": false
+    },
+    "SD01":{
+        "dishes_id": "SD01",
+        "cate": "side",
+        "dishes_name": "Ma Po Tofu",
+        "dishes_icon_info": ["hot", "spicy", "fry"],
+        "ingredient": ["tofu","pork","green_onion","spicy_bean_paste","soy_sauce"],
+        "comic": false,
+        "article": false
+    },
+    "SD02":{
+        "dishes_id": "SD02",
+        "cate": "side",
+        "dishes_name": "Tofu with Thousand-year Eggs",
+        "dishes_icon_info": ["cold", "salty", "poach"],
+        "ingredient": ["thousand_year_eggs","tofu","green_onion","thick_soy_sauce","dried_bonito_flakes"],
+        "comic": true,
+        "article": true
+    },
+    "SD03":{
+        "dishes_id": "SD03",
+        "cate": "side",
+        "dishes_name": "Egg Fuyang Tofu",
+        "dishes_icon_info": ["hot", "salty", "deep"],
+        "ingredient": ["tofu_eggs","soy_sauce","green_onion"],
+        "comic": true,
+        "article": true
+    }
+}

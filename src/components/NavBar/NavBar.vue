@@ -2,15 +2,13 @@
 import {mapState} from 'vuex'
 export default {
     computed:{
-        totalNum(){
-            return 2;
-        },
-        ...mapState(['lang',])
+        ...mapState(['lang','navcolor','cart_num'])
     },
     methods:{
-        langToogle(new_lang){
-            console.log(new_lang);
+        langToogle(new_lang, lang_message){
             this.$store.commit('langChange', new_lang)
+            this.$i18n.locale = new_lang
+            this.$store.commit('infoMessage', lang_message)
         }
     }
 }

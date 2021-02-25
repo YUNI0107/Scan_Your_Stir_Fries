@@ -1,7 +1,25 @@
 <div class="oreder_section mt-5 mt-lg-0">
     <div class="big_button mx-auto mb-4" @click="soundPlay($refs.odersound)">
-        <audio ref="odersound" src="../../assets/sound/order_dishes/order-C02.mp3" class="d-none"></audio>
-        <div class="orange w-100 h-100"></div>
+        <audio ref="odersound" :src="require(`../../assets/sound/order_dishes/order-${dishes_id}.mp3`)" class="d-none"></audio>
+        <div class="orange w-100 h-100 position-relative">
+            <h3 class="order_ani_title position-absolute top-50 start-50 translate-middle">{{$t('dishes_element.order')}}</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="306" height="306" viewBox="0 0 306 306">
+                <defs>
+                  <clipPath id="clip-path">
+                    <circle id="outline" cx="153" cy="153" r="153" transform="translate(-800 -728)" fill="#ff7a00"/>
+                  </clipPath>
+                </defs>
+                <g id="oder_section" transform="translate(800 728)">
+                  <g id="mask" clip-path="url(#clip-path)">
+                    <circle id="orange_back" cx="235" cy="235" r="235" transform="translate(-882 -741)" fill="#ff7a00"/>
+                    <circle id="yellow_order" cx="235" cy="235" r="235" transform="translate(-882 -741)" fill="#ffc832"/>
+                    <circle id="green_order" cx="235" cy="235" r="235" transform="translate(-882 -741)" fill="#00c7a4"/>
+                    <circle id="orange_order" cx="235" cy="235" r="235" transform="translate(-882 -741)" fill="#ff7a00"/>
+                  </g>
+                  <image id="hand" width="81" height="101" transform="translate(-682 -523)" xlink:href="data:image/png;base64,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"/>
+                </g>
+              </svg>
+        </div>
     </div>
     <div class="hot_section d-flex justify-content-between ps-4 pe-4">
         <div class="hot_item d-flex justify-content-center d-flex justify-content-center">
@@ -11,7 +29,7 @@
                 <div class="item_pic mx-auto" @click="soundPlay($refs.nhot)">
                     <img src="../../assets/Dishes_element/n-hot.png" class="w-100">
                 </div>
-                <p class="text-center">Not spicy</p>
+                <p class="text-center">{{$tc('dishes_element.order_arr', 0)}}</p>
             </label>
         </div>
         <div class="hot_item d-flex justify-content-center">
@@ -21,7 +39,7 @@
                 <div class="item_pic mx-auto" @click="soundPlay($refs.mhot)">
                     <img src="../../assets/Dishes_element/m-hot.png" class="w-100">
                 </div>
-                <p class="text-center">Mild</p>
+                <p class="text-center">{{$tc('dishes_element.order_arr', 1)}}</p>
             </label>
         </div>
         <div class="hot_item d-flex justify-content-center">
@@ -31,15 +49,13 @@
                 <div class="item_pic mx-auto" @click="soundPlay($refs.vhot)">
                     <img src="../../assets/Dishes_element/v-hot.png" class="w-100">
                 </div>
-                <p class="text-center">Spicy</p>
+                <p class="text-center">{{$tc('dishes_element.order_arr', 2)}}</p>
             </label>
         </div>
     </div>
-    <div class="text_section ms-4 me-4">
+    <div class="text_section ms-3 me-3" data-aos="fade-in" data-aos-offset="100" data-aos-duration="1200">
         <div class="orange_line"></div>
-        <h2 class="order_title mt-2">Order Section</h2>
-        <p>Click the button above to order in Chinese!
-            <br>
-            Click the button below to adjust the spiciness.</p>
+        <h2 class="order_title mt-3">{{$t('dishes_element.order_title')}}</h2>
+        <p v-html="$t('dishes_element.order_info')"></p>
     </div>
 </div>

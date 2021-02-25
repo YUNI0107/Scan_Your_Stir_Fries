@@ -1,0 +1,28 @@
+<div class="menulist">
+    <div class="menu_bar container mt-5">
+        <div class="cate_block m-2 p-2" v-for="item in catelist" :class="{ 'click': id == item.name}">
+            <router-link :to="{name: 'menulist', params:{id: item.name}}" class="w-100 h-100">
+                <div class="cate_content h-100 d-flex flex-column justify-content-center align-items-center">
+                    <div class="cate_img">
+                        <img :src="require(`../../assets/MenuList/${item.name}.png`)" alt="cate" class="w-100">
+                    </div>
+                    <h2>{{ $t(`menu.${item.name}`) }}</h2>
+                </div>
+            </router-link>
+        </div>
+    </div>
+    <AddModal :id="infoOpenID" :dishesList="dishesList"/>
+    <div class="container grow_list">
+        <p class="m-2">{{ $t("menu.menulist_text") }}</p>
+        <div class="spinner_block d-flex justify-content-center"  v-if="loading">
+            <div class="spinner-border" role="status" style="width: 3rem; height: 3rem; border-width: 7px;">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+        <div class="dishes_list">
+            <MenuDishesList :cate_id="id" :dishesList="dishesList" class="item" @openInfoID="openInfoID"/>
+        </div>
+    </div>
+    <Footer_section />
+
+</div>
