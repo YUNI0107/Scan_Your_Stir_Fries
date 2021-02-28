@@ -39,9 +39,9 @@
       "name": "Sesame oil",
       "info": "Sesame oil is abstracted from either white sesame or black sesame. The common sesame oil (“Ma yo”) widely used in making various dishes is made from black sesame, while “Hsiang yo” is made with white sesame oil and salad oil."
     },
-    "fagara":{
-      "name": "Fagara",
-      "info": "Fagara shapes like tiny balls, and it contains volatile that gives off a strong fragrance. It tastes minty and makes your tongue vibrate. They are often used as spice in many dishes."
+    "sichuan_pepper":{
+      "name": "Sichuan pepper",
+      "info": "Sichuan pepper shapes like tiny balls, and it contains volatile that gives off a strong fragrance. It tastes minty and makes your tongue vibrate. They are often used as spice in many dishes."
     },
     "taiwanese_satay_sauce":{
       "name": "Taiwanese Satay Sauce",
@@ -405,5 +405,104 @@
     "chi_hot": " 不辣 | 小辣 | 大辣",
     "title": "I want to order",
     "title_info": "Click the button order in Chinese sound"
+  },
+  "question":{
+    "element":{
+      "continue": "Continue",
+      "dishes": "Dishes",
+      "lottery_title": "Trivia Lottery game",
+      "lottery_text": "Play the stir-fry trivia game! <br> Answer each following questions about stir-fry in 10 seconds.",
+      "lottery_play": "Press “Play” to start the game!"
+    },
+    "1":{
+      "title": "What do the “dragon balls” in stir-fry actually refer to?",
+      "a1": "The mouth of squid and cuttlefish",
+      "a2": "The mouth of clams",
+      "a3": "Fish balls",
+      "a4": "Fish",
+      "info_title": "The mouth of squid and cuttlefish",
+      "info_text": "Dragon balls are the mouths pouch of Mollusca animals. It is the mouths of cuttlefish and squid."
+    },
+    "2":{
+      "title": "Which one is white water snowflake?",
+      "a1": "Green onions",
+      "a2": "Chinese leek",
+      "a3": "White water snowflakes",
+      "a4": "Water spinach",
+      "info_title": "White water snowflakes",
+      "info_text": "White water snowflake is aqua plants. We usually eat the stalk of the plant, not the leaves or stems."
+    },
+    "3":{
+      "title": "What is the “Golden sand” made of in “Fried King Oyster Mushrooms with Golden sand” ?",
+      "a1": "Braised eggs",
+      "a2": "Salted duck eggs",
+      "a3": "Hundred-year eggs",
+      "a4": "Glittering sand",
+      "info_title": "Salted duck eggs",
+      "info_text": "The salted eggs would scatter and turn golden when fried in a pan, and the texture resembles sand. That’s why it’s called golden sand!"
+    },
+    "4":{
+      "title": "Tofu eggs is mainly made of......?",
+      "a1": "Eggs",
+      "a2": "Fish",
+      "a3": "Milk",
+      "a4": "Green beans",
+      "info_title": "Eggs",
+      "info_text": "Tofu egg is a kind of Japanese food. Its main ingredient is egg, but some of the tofu eggs in Taiwan are added with soybeans."
+    },
+    "5":{
+      "title": "Which of the following ingredients is not one of the ingredients in three-cup dishes?",
+      "a1": "Soy sauce",
+      "a2": "Rice wine",
+      "a3": "Sesame oil",
+      "a4": "Black vinegar",
+      "info_title": "Black vinegar",
+      "info_text": "“Three cups” refers to three different spices and sauce used for seasoning, which are soy sauce, rice wine and sesame oil."
+    },
+    "6":{
+      "title": "Which of the following plants grow on trees?",
+      "a1": "Watermelon seed",
+      "a2": "Sichuan pepper",
+      "a3": "Peanuts",
+      "a4": "Skittles",
+      "info_title": "Sichuan pepper",
+      "info_text": "Sichuan pepper trees is a member in the deciduous shrubs."
+    },
+    "7":{
+      "title": "Which of the following ingredients are not included in the “fish-fragrance eggplants?”",
+      "a1": "Eggplants",
+      "a2": "Fish",
+      "a3": "Pork mince",
+      "a4": "Soy sauce",
+      "info_title": "Fish",
+      "info_text": "There was a frugal old lady who used the leftover sauce used to make a fish dish to make new dishes. To her surprise, the new dish was amazing, so “fish fragrance” is later used to describe the leftover sauce in new dishes."
+    },
+    "8":{
+      "title": "Which of the following picture shows Basil leaves?",
+      "a1": "Basil leaves",
+      "a2": "Peppermint",
+      "a3": "Lemon Balm",
+      "a4": "Rosemary",
+      "info_title": "Basil leaves",
+      "info_text": "Basil leaves(Jiu Tsen Ta) is a kind of herb from Fujian Dialect. It belongs to the basil family. The leaves have very strong scent, and it adds flavor to different dishes."
+    },
+    "9":{
+      "title": "Green garlic is the sprout of which plant?",
+      "a1": "Green onions",
+      "a2": "Onions",
+      "a3": "Garlic",
+      "a4": "Bok Choy",
+      "info_title": "Garlic",
+      "info_text": "Green garlic sprout is the sprout of garlic."
+    },
+    "10":{
+      "title": "Which of the following pictures shows “thousand-year eggs”?",
+      "a1": "Duck eggs",
+      "a2": "Pig blood cake",
+      "a3": "Preserved duck egg",
+      "a4": "Tea Eggs",
+      "info_title": "Preserved duck egg",
+      "info_text": "Thousand-year egg was once listed as the most revolting food around the world by CNN, but it’s by no means the eggs that are preserved for way too long. They are ducks eggs soaked in a mixture made with sodium hydroxide, black tea powder and salt."
+    }
   }
 }

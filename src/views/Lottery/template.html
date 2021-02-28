@@ -1,0 +1,33 @@
+<div class="lottery">
+    <div class="container">
+        <div class="row lottery_section ps-2 pe-2">
+            <div class="text_section col-12 col-lg-5 d-flex justify-content-start justify-content-lg-center flex-column">
+                <h2>{{ $t("question.element.lottery_title") }}</h2>
+                <p class="" v-html="$t('question.element.lottery_text')"></p>
+                <div class="button_section mt-3">
+                    <button class="big_button play_button" @click="gameStart" :class="{'dis': start }">
+                        <span v-if="!start">PLAY</span> 
+                         <span v-else>Let's Go</span>
+                    </button>
+                </div>
+            </div>
+            <div class="mobile_ani col-12 col-lg-7 d-flex justify-content-center position-relative">
+                <div class="ani_section">
+                    <div class="ani_lottery">
+                        <LotteryAnimation class="w-100 h-100" :start="start"/>
+                    </div>
+                    <div class="s_button_section mt-3" >
+                        <button @click="gameStart" class="small_button play_button mb-2" :class="{'dis': start }">
+                         <span v-if="!start">PLAY</span> 
+                         <span v-else>Let's Go</span>
+                        </button>
+                        <p>{{ $t("question.element.lottery_play") }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom_floor w-100 d-flex justify-content-center align-items-end">
+        
+    </div>
+</div>

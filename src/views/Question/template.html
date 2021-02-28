@@ -1,0 +1,71 @@
+<div class="question" >
+    <div class="container d-flex align-items-center position-relative justify-content-between justify-content-lg-start">
+        <div class="count_section order-2 order-lg-1">
+            <div class="count_img">
+                <svg x="0px" y="0px" viewBox="0 0 200 200" class="w-100">
+                    <circle class="" stroke="#00c7a4" fill="none" stroke-width="20" cx="100" cy="100" r="50"/>
+                    <circle class="path" stroke="#f97700" fill="none" stroke-width="20" cx="100" cy="100" r="50" />
+                </svg>
+            </div>
+            <h2 class="position-absolute count_num">{{counting}}</h2>
+        </div>
+        <div class="text_section order-1 oder-lg-2">
+            <div class="title">
+                <h2 class="id">{{q_number}}</h2>
+                <h2>Qestion</h2>
+            </div>
+            <p class="q_text" >{{ $t(`question.${q_id}.title`) }}</p>
+        </div>
+    </div>
+    <div class="container bottom d-flex justify-content-center">
+        <div class="row q_row">
+            <div class="p-0 col-6 col-lg-3 d-flex justify-content-center align-items-center">
+                <div class="anibox position-relative" :style="{height: boxheight}" :class="{a1: ans == 'a1'}" ref="box" @click="checkAns('a1')">
+                    <p class="q_text position-absolute">A. <span :class="{text_fade: text_fade}">{{ $t(`question.${q_id}.a1`) }}</span></p>
+                    <div class="q_img w-100">
+                        <img :src="require(`../../assets/Question/Q${q_id}/a1.jpg`)" class="w-100">
+                    </div>
+                </div>
+            </div>
+            <div class="p-0 col-6 col-lg-3 d-flex justify-content-center align-items-center">
+                <div class="anibox position-relative" :style="{height: boxheight}" :class="{a2: ans == 'a2'}" ref="box" @click="checkAns('a2')">
+                    <p class="q_text position-absolute">B. <span :class="{text_fade: text_fade}">{{ $t(`question.${q_id}.a2`) }}</span></p>
+                    <div class="q_img w-100">
+                        <img :src="require(`../../assets/Question/Q${q_id}/a2.jpg`)" class="w-100">
+                    </div>
+                </div>
+            </div>
+            <div class="p-0 col-6 col-lg-3 d-flex justify-content-center align-items-center">
+                <div class="anibox position-relative" :style="{height: boxheight}" :class="{a3: ans == 'a3'}" ref="box" @click="checkAns('a3')">
+                    <p class="q_text position-absolute">C. <span :class="{text_fade: text_fade}">{{ $t(`question.${q_id}.a3`) }}</span></p>
+                    <div class="q_img w-100">
+                        <img :src="require(`../../assets/Question/Q${q_id}/a3.jpg`)" class="w-100">
+                    </div>
+                </div>
+            </div>
+            <div class="p-0 col-6 col-lg-3 d-flex justify-content-center align-items-center">
+                <div class="anibox position-relative" :style="{height: boxheight}" :class="{a4: ans == 'a4'}" ref="box" @click="checkAns('a4')">
+                    <p class="q_text position-absolute">D. <span :class="{text_fade: text_fade}">{{ $t(`question.${q_id}.a4`) }}</span></p>
+                    <div class="q_img w-100">
+                        <img :src="require(`../../assets/Question/Q${q_id}/a4.jpg`)" class="w-100">
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    <div class="modal fade"  id="timeoutModal" tabindex="-1" aria-labelledby="timeoutModalLabel" aria-hidden="true" ref="timeoutModal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content position-relative">
+            <div class="modal-body">
+              <div class="time_img mx-auto">
+                  <img class="w-100" src="../../assets/Question/timeout.jpg" alt="time">
+              </div>
+              <h2>Time is up!</h2>
+              <button type="button" class="close_btn" data-bs-dismiss="modal"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <AnsInfo :state="modalState" :ans="ans" :q_id="q_id" :dishes_id="dishes_id" @changeState="changeState" @goGame="goGame"/>
+</div>

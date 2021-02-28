@@ -1,0 +1,36 @@
+<div class="modal fade" tabindex="-1" ref="ansinfo" :class="state">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header position-relative">
+            <div class="title d-flex align-items-center justify-content-center mx-auto">
+                <div class="icon_img">
+                    <img :src="require(`../../assets/Question/${state}-icon.png`)" alt="icon" class="w-100">
+                </div>
+                <div class="title_img ms-3">
+                    <img :src="require(`../../assets/Question/${state}-title.png`)" alt="icon" class="w-100">
+                </div>
+            </div>
+            <div class="tri position-absolute top-100 start-50 "></div>
+        </div>
+        <div class="modal-body">
+          <div class="body_section d-flex align-items-center">
+            <div class="ans_img position-relative">
+                <h3 class="position-absolute">{{right_ans}}</h3>
+                <img :src="require(`../../assets/Question/Q${q_id}/${ans}.jpg`)">
+            </div>
+            <div class="info_section ms-3 me-3">
+                <h2>{{ $t(`question.${q_id}.info_title`) }}</h2>
+                <p>{{ $t(`question.${q_id}.info_text`) }}</p>
+                <div class="btn_section">
+                    <button @click="goGame">{{ $t(`question.element.continue`) }}</button>
+                    <button @click="goDishes">{{ $t(`question.element.dishes`) }}</button>
+                </div>
+            </div>
+          </div>
+          <audio ref="audio_no" src="../../assets/sound/no.mp3"></audio>
+          <audio ref="audio_yes" src="../../assets/sound/yes.mp3"></audio>
+        </div>
+        <button type="button" class="close_btn" data-bs-dismiss="modal"></button>
+      </div>
+    </div>
+  </div>

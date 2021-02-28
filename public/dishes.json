@@ -4,7 +4,7 @@
         "cate": "pork",
         "dishes_name": "Chitterlings in Pot",
         "dishes_icon_info": ["hot", "spicy", "boil"],
-        "ingredient": ["pork_intestines", "duck_blood_cubes","pickled_cabbage","chili","garlic","garlic_sprout","fagara"],
+        "ingredient": ["pork_intestines", "duck_blood_cubes","pickled_cabbage","chili","garlic","garlic_sprout","sichuan_pepper"],
         "comic": true,
         "article": true
     },
@@ -94,7 +94,7 @@
         "cate": "beef",
         "dishes_name": "Spicy Braised Beef Tripe",
         "dishes_icon_info": ["hot", "spicy", "braise"],
-        "ingredient": ["beef_tripe","ginger","garlic","green_onion","fagara"],
+        "ingredient": ["beef_tripe","ginger","garlic","green_onion","sichuan_pepper"],
         "comic": false,
         "article": false
     },

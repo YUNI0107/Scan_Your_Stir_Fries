@@ -5,6 +5,8 @@ import Dishes from '../views/Dishes/Dishes.vue'
 import Menu from '../views/Menu/Menu.vue'
 import MenuList from '../views/MenuList/MenuList.vue'
 import Cart from '../views/Cart/Cart.vue'
+import Lottery from '../views/Lottery/Lottery.vue'
+import Question from '../views/Question/Question.vue'
 
 
 Vue.use(VueRouter)
@@ -39,6 +41,24 @@ const routes = [
     path: '/cart',
     name: 'cart',
     component: Cart
+  },
+  {
+    path: '/lottery',
+    name: 'lottery',
+    component: Lottery
+  },
+  {
+    path: '/question/:id',
+    name: 'question',
+    component: Question,
+    beforeEnter: (to, from, next) => {
+      if(to.params.id == 0 || to.params.id > 10){
+        let q_id = Math.floor(Math.random() * 10 + 1);
+        next({ name: "question", params: { id: q_id } });
+      }else{
+        next()
+      }
+    }
   },
 ]
 

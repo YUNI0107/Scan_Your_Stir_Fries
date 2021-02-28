@@ -1,0 +1,169 @@
+.lottery {
+    position: relative;
+    height: 100vh;
+    background-color: #00C7A4;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.lottery_section {
+    margin-top: -100px;
+    height: 100vh;
+}
+
+.text_section h2 {
+    font-weight: bolder;
+    letter-spacing: 1px;
+    font-size: 35px;
+}
+
+.play_button {
+    border: none;
+    outline: none;
+    background-color: #FFC832;
+    padding: 5px 35px;
+    font-size: 30px;
+    font-weight: bolder;
+    box-shadow: 0px 2px 10px rgba(51, 51, 51, 0.267);
+}
+
+.play_button.dis{
+    pointer-events: none;
+    filter: brightness(1.1);
+}
+.big_button.dis,.small_button.dis{
+    animation: none;
+}
+
+.big_button{
+    animation: bigger 1s alternate infinite;
+}
+
+.s_button_section{
+    display: none;
+}
+
+@keyframes bigger {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.text_section .play_button:hover {
+    filter: brightness(1.2);
+}
+
+.mobile_ani{
+    align-items: flex-end;
+}
+
+.ani_section{
+    transform-origin: center bottom;
+    width: 100%;
+    max-width: 550px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15vh;
+}
+
+.ani_lottery{
+    width: 100%;
+    height: 100%;
+}
+
+.bottom_floor {
+    position: absolute;
+    height: 30vh;
+    background-color: #FFF4E8;
+    bottom: 0;
+}
+
+@media(max-width:992px){
+    .lottery{
+        align-items: flex-start;
+    }
+
+    .lottery_section {
+        margin-top: 80px;
+    }
+
+    .big_button{
+        display: none;
+    }
+
+    .s_button_section{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .s_button_section p{
+        font-size: 15px;
+    }
+
+    .small_button{
+        margin: auto;
+        transform-origin: center center;
+        animation: small_bigger 1s alternate infinite;
+    }
+
+    .play_button {
+        padding: 5px 35px;
+        font-size: 20px;;
+    }
+
+    @keyframes small_bigger {
+        from {
+            transform: scale(1);
+        }
+    
+        to {
+            transform: scale(1.05);
+        }
+    }
+
+    .ani_section{
+        position: absolute;
+        bottom: 5vh;
+    }
+
+    .ani_lottery{
+        z-index: 2;
+        width: 90%;
+        height: auto;
+        max-width: 400px;
+    }
+
+}
+
+@media (max-width: 576px){
+    .text_section h2 {
+        font-size: 30px;
+    }
+
+    .text_section p{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 350px){
+    .lottery_section {
+        margin-top: 110px;
+    }
+
+    .text_section h2 {
+        font-size: 25px;
+    }
+
+    .text_section p{
+        display: none;
+    }
+}

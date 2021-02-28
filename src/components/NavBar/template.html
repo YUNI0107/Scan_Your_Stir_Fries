@@ -32,7 +32,9 @@
                         <div class="chart_img">
                             <img src="../../assets/NavBar/chart.png" class="w-100">
                         </div>
-                        <div class="num position-absolute bottom-0 " v-if="cart_num !== 0">{{cart_num}}</div>
+                        <transition name="numbig">
+                            <div class="num position-absolute bottom-0" ref="num" v-if="cart_num !== 0">{{cart_num}}</div>
+                        </transition>
                     </div>
                 </router-link>
             </div>
@@ -60,13 +62,13 @@
                         </div>
                         <p class="m-0 ps-lg-2">{{$t('nav.dishes')}}</p>
                     </router-link> 
-                    <a class="nav-link ms-3 me-3 m-lg-2 d-flex align-items-center justify-content-center flex-column flex-lg-row" aria-current="page" href="#">
+                    <router-link :to="{name: 'lottery'}" class="nav-link ms-3 me-3 m-lg-2 d-flex align-items-center justify-content-center flex-column flex-lg-row" aria-current="page" href="#">
                         <div class="nav_img">
                             <img src="../../assets/NavBar/game.png" class="w-100 img_normal">
                             <img src="../../assets/NavBar/gamechange.gif" class="w-100 img_active">
                         </div>
                         <p class="m-0 ps-lg-2">{{$t('nav.game')}}</p>
-                    </a>
+                    </router-link> 
                     <a class="nav-link ms-3 me-3 m-lg-2 d-flex align-items-center justify-content-center flex-column flex-lg-row" aria-current="page" href="#">
                         <div class="nav_img">
                             <img src="../../assets/NavBar/about.png" class="w-100 img_normal">

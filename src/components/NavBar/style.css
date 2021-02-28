@@ -1,93 +1,98 @@
-.nav.cream{
+.nav.cream {
     background-color: #FFF4E8;
 }
-.nav.yellow{
+
+.nav.yellow {
     background-color: #FFC832;
 }
-.nav.green{
+
+.nav.green {
     background-color: #00C7A4;
 }
-.nav.orange{
+
+.nav.orange {
     background-color: #FF7A00;
 }
 
 
-.logo{
+.logo {
     width: 150px;
 }
 
-.navbar-toggler{
+.navbar-toggler {
     width: 60px;
 }
 
-.navbar-toggler:focus{
+.navbar-toggler:focus {
     box-shadow: none;
     animation: bigger .5s;
     transition: .5s;
 }
 
-.chart:hover .chart_img{
+.chart:hover .chart_img {
     animation: bigger .5s;
 }
 
-@keyframes bigger{
-    0%{
+@keyframes bigger {
+    0% {
         transform: scale(1);
     }
-    70%{
+
+    70% {
         transform: scale(1.2);
     }
-    100%{
+
+    100% {
         transform: scale(1);
     }
 }
 
-.navbar-collapse{
+.navbar-collapse {
     width: auto;
 }
 
-.nav-link p{
+.nav-link p {
     color: #242424;
     letter-spacing: 1px;
 }
 
-.nav_img{
+.nav_img {
     width: 40px;
 }
 
-.nav_img .img_active{
+.nav_img .img_active {
     display: none;
 }
 
-.nav-link:hover .img_normal{
+.nav-link:hover .img_normal {
     display: none;
 }
 
-.nav-link:hover .img_active{
+.nav-link:hover .img_active {
     display: block;
 }
 
-.nav-link:hover p{
+.nav-link:hover p {
     color: #525252;
 }
 
 /* 右側欄位 */
-.lang_item{
+.lang_item {
     outline: none;
     border: none;
     background-color: transparent;
     width: 30px;
 }
 
-.chart{
+.chart {
     position: relative;
 }
 
-.chart_img{
+.chart_img {
     width: 45px;
 }
 
-.chart .num{
+.chart .num {
     width: 15px;
     height: 15px;
     padding: 12px;
@@ -102,28 +107,52 @@
     right: -5px;
 }
 
+.numbig-enter-active {
+    animation: numbig .5s;
+}
 
-@media (max-width: 992px) { 
-    .navbar-collapse{
+.numbig-leave-active {
+    animation: numbig .5s reverse;
+}
+
+.chart .num.ani{
+    animation: numbig .5s;
+}
+
+@keyframes numbig {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+@media (max-width: 992px) {
+    .navbar-collapse {
         width: 100%;
     }
 
 }
 
 @media (max-width: 576px) {
-    .nav_img{
+    .nav_img {
         width: 35px;
     }
 
-    .nav-link p{
+    .nav-link p {
         font-size: 15px;
     }
 }
 
 @media (max-width: 350px) {
-    .nav-link p{
+    .nav-link p {
         font-size: 12px;
     }
 }
-
-

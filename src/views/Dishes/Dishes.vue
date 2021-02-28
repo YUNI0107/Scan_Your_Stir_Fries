@@ -20,6 +20,13 @@ export default {
       comic: false,
       article: false,
       ingredient_list: [],
+      eng_name: "",
+      // ball
+      scrollTop: 0,
+      ball_total_top: 0,
+      ball_right: 0,
+      ball_height: 0,
+      cart_fix: 10,
     };
   },
   computed: {
@@ -56,8 +63,10 @@ export default {
       let match = window.matchMedia("(max-width: 576px)");
       if (match.matches) {
         this.img_top = this.img_top_data[0] + "px";
+        this.cart_fix = 10;
       } else {
         this.img_top = this.img_top_data[1] + "px";
+        this.cart_fix = 25;
       }
     },
     replayGif() {
@@ -66,9 +75,29 @@ export default {
     dishesSoundPlay() {
       this.$refs.dishes_name.play();
     },
+    getBall() {
+      this.ball_total_top =
+        this.$refs.order.$refs.ball.offsetTop + this.$refs.order.$el.offsetTop;
+      this.ball_height = this.ball_total_top - this.scrollTop;
+      this.ball_right = this.$refs.order.$refs.ball.offsetLeft + this.$refs.order.$refs.orange.offsetLeft
+      if (this.ball_height > 60) {
+        this.$refs.order.$refs.ball.style.opacity = 1;
+        this.$refs.order.$refs.ball.style.transform = `translate(${this.ball_right - (this.$refs.order.$el.offsetLeft + 25)}px , -${this.ball_height - this.cart_fix}px)`;
+        this.$refs.order.$refs.ball.classList.add('ani');
+        setTimeout(()=>{
+          this.$refs.order.$refs.ball.style.opacity = 0;
+          this.$refs.order.$refs.ball.style.transform= "translate(-50%,-50%)"
+          this.$refs.order.$refs.ball.classList.remove('ani');
+        },800)
+      }
+    },
+    getScroll() {
+      this.scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop || 0;
+    },
   },
   mounted() {
-    this.$store.commit('navColor', 'cream')
+    this.$store.commit("navColor", "cream");
     this.replayGif();
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
@@ -79,6 +108,7 @@ export default {
       this.ingredient = data.ingredient;
       this.comic = data.comic;
       this.article = data.article;
+      this.eng_name = data.dishes_name;
       this.checkMatch();
       // 判斷食材
       this.$nextTick(() => {
@@ -95,10 +125,11 @@ export default {
     });
 
     window.addEventListener("resize", this.checkMatch);
-    
+    window.addEventListener("scroll", this.getScroll);
   },
   destroyed() {
     window.removeEventListener("resize", this.checkMatch);
+    window.removeEventListener("scroll", this.getScroll);
   },
 };
 </script>

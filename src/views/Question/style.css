@@ -1,0 +1,186 @@
+.question {
+    min-height: 100vh;
+    padding-top: 100px;
+    background-color: #FFC832;
+    overflow-x: hidden;
+    padding-bottom: 20px;
+}
+
+.count_section{
+    position: relative;
+}
+
+.count_img{
+    width: 180px;
+}
+
+.count_img svg {
+    transform: rotate(-90deg);
+}
+
+.count_img .path {
+    transition: stroke-dashoffset .5s;
+    animation: run 10s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes run {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.count_num{
+    left: 50%;
+    top: 50%;
+    font-size: 35px;
+    font-weight: bolder;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+}
+
+.text_section .title h2{
+    font-size: 40px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+.text_section .title .id{
+    font-size: 50px;
+    margin-bottom: 0;
+}
+
+.text_section .q_text{
+    color: rgb(43, 43, 43);
+    font-weight: 600;
+}
+
+.bottom{
+    height: 50vh;
+}
+
+.anibox{
+    width: 30vh;
+    margin: 20px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: .5s;
+    box-shadow: 0px 0px 10px rgba(51, 51, 51, 0.26);
+}
+
+.anibox:hover{
+    filter: brightness(.9);
+    transform: translateY(-10px);
+    box-shadow: 0px 5px 10px rgba(51, 51, 51, 0.26);
+}
+
+.anibox.a1,.anibox.a2,.anibox.a3,.anibox.a4{
+    transition: .5s;
+    animation: ans_ani .5s 10s forwards;
+}
+
+@keyframes ans_ani{
+    to{
+        filter: brightness(.85);
+    }
+}
+
+.anibox .q_text span.text_fade{
+    opacity: 0;
+    animation: text_fade .5s forwards 10s;
+}
+
+@keyframes text_fade{
+    to{
+        opacity: 1;
+    }
+}
+
+.anibox .q_text{
+    top: 0;
+    left: 0;
+    padding: 5px;
+}
+
+.modal-body{
+    position: relative;
+    background-color: #FFC832;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.modal-body h2{
+    font-weight: 700;
+}
+
+.modal-body .time_img{
+    width: 140px;
+}
+
+.modal-body .close_btn{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,50%);
+    outline: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    background-color: #FF7A00;
+    border-radius: 50%;
+    background-image: url(../../assets/Dishes_element/close_orange.png);
+    background-size: cover;
+    cursor: pointer;
+}
+
+@media(max-width: 992px){
+    .question {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .bottom{
+        height: auto;
+    }
+
+    .q_row{
+        width: 500px;
+    }
+}
+
+@media(max-width: 576px){
+    .question{
+        padding-top: 60px;
+    }
+
+    .count_section{
+        position: absolute;
+        right: -10px;
+        top: -25px;
+    }
+
+    .count_img{
+        width: 150px;
+    }
+
+    .anibox{
+        width: 30vh;
+        margin: 10px;
+        background-color: #fff;
+    }
+
+    .anibox .q_text{
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 280px){
+    .question{
+        padding-top: 100px;
+    }
+}
