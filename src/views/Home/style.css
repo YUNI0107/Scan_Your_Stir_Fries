@@ -1,18 +1,20 @@
-.home{
+.home {
     overflow: hidden;
 }
 
-.top_section{
+.top_section {
     height: 100vh;
     min-height: 100vh;
     background-color: #FFC832;
+    overflow: hidden;
 }
 
-.top_section .left,.top_section .right{
+.top_section .left,
+.top_section .right {
     min-height: 100vh;
 }
 
-.top_section .left{
+.top_section .left {
     z-index: 1;
 }
 
@@ -20,47 +22,453 @@
     flex: 3;
 } */
 
-.top_section .logo_img{
+.top_section .logo_img {
     width: 300px;
     margin-left: -30px;
 }
 
-.top_section .top_text{
+.top_section .top_text {
     margin-top: -10px;
     width: 90%;
 }
 
-.top_section .top_btn{
+.top_section .top_btn {
     border: none;
+    width: 200px;
     background-color: #FFF4E8;
     padding: 10px 20px;
     font-size: 20px;
     font-weight: 700;
+    letter-spacing: 1px;
     box-shadow: 0px 1px 5px rgba(51, 51, 51, 0.267);
     cursor: pointer;
     outline: none;
 }
 
-.top_section .top_btn:nth-child(1){
+.top_section .top_btn:hover{
+    background-color: #f1e5d9;
+}
+
+.top_section .top_btn:nth-child(1) {
     margin-right: 20px;
 }
 
-.top_section .right .hold_item{
+.top_section .right .hold_item {
     bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.top_section .right .back_img{
+.top_section .right .back_img {
     width: 500px;
+    height: 500px;
     z-index: 1;
     top: 50%;
     left: 50%;
-    transform: translate(-70%,-50%);
+    transform: translate(-70%, -50%);
 }
 
-.top_section .right .boss-img{
+.top_section .right .back_img .green {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #00C7A4;
+}
+
+.top_section .right .boss-img {
     height: 85vh;
+    max-height: 1000px;
     position: relative;
     z-index: 2;
+}
+
+/* 第二塊 連結部分 */
+.link_section {
+    background-color: #FFF4E8;
+    overflow: hidden;
+}
+
+.link-top {
+    margin: auto;
+    height: 100%;
+}
+
+.link_section a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.link_block {
+    position: relative;
+    margin: 80px 0;
+    z-index: 5;
+}
+
+.link_block .link_left {
+    width: 100px;
+    min-width: 100px;
+    height: 100px;
+    min-height: 100px;
+    padding: 10px;
+    background-color: #FFC832;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+.link_block .link_left:hover{
+    transform: scale(1.1);
+    padding: 20px;
+}
+
+.link_block .link_left .show {
+    display: block;
+}
+
+.link_block .link_left:hover .show {
+    display: none;
+}
+
+.link_block .link_left .hide {
+    display: none;
+}
+
+.link_block .link_left:hover .hide {
+    display: block;
+}
+
+.link_block .link_right {
+    width: 80%;
+}
+
+.link_bottom {
+    height: 60vh;
+    min-height: 40vw;
+}
+
+.link_bottom .circle {
+    position: absolute;
+    transform: translateY(65%);
+}
+
+.link_bottom .circle .people_img {
+    position: relative;
+    width: 1500px;
+    bottom: -70px;
+    z-index: 2;
+    transition: .8s;
+}
+
+.link_bottom .back_circle {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 45%);
+    border-radius: 50%;
+    width: 600px;
+    height: 600px;
+    background-color: #00C7A4;
+    transition: .5s;
+}
+
+.link_bottom .back_circle.orange{
+    background-color: #FF7A00;
+}
+
+.toggle_section {
+    z-index: 10;
+    bottom: 2vh;
+    left: 50%;
+    transform: translate(-50%);
+    width: 500px;
+}
+
+.left_toogle {
+    position: relative;
+    z-index: 3;
+    width: 50px;
+    cursor: pointer;
+}
+
+/* 第三部分 顧客 */
+.visitors_section{
+    background-color: #FFC832;
+    padding: 50px 0;
+}
+
+.visitors_section p{
+    font-size: 15px;
+}
+
+.comic_img{
+    width: 100%;
+}
+
+/* 第四部分 老闆 */
+.boss_section{
+    background-color: #FF7A00;
+    padding: 50px 0;
+}
+
+.boss_section p{
+    font-size: 15px;
+}
+
+/* 第五部分 菜單生成 */
+.menu_section{
+    min-height: 40vh;
+    background-color: #00C7A4;
+    overflow: hidden;
+    padding: 30px 0;
+}
+
+.menu_row{
+    position: relative;
+    z-index: 2;
+    min-height: 40vh;
+}
+
+.menu_section .title p{
+    font-size: 15px;
+}
+
+.menu_button button{
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: #FFF4E8;
+    padding: 10px 40px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    box-shadow: 0px 1px 5px rgba(51, 51, 51, 0.267);
+}
+
+.menu_button button:hover{
+    background-color: #f1e5d9;
+}
+
+.yellow_ball{
+    z-index: 1;
+    width: 40vh;
+    height: 40vh;
+    background-color: #FFC832;
+    top: 50%;
+    right: 0;
+    border-radius: 50%;
+    transform: translate(50%, -50%);
+}
+
+@media(max-width: 992px) {
+    .top_section .left {
+        position: absolute;
+        padding: 60px 0 20px 0;
+    }
+
+    .top_section .right .hold_item {
+        bottom: 0px;
+        left: 100%;
+        transform: translateX(-100%);
+    }
+
+
+    .top_section .right .back_img {
+        transform: translate(-55%, -50%);
+    }
+
+    .top_section .top_text {
+        margin-top: none;
+        width: 40%;
+    }
+
+    .top_section .top_text p {
+        margin: 0;
+        font-size: 16px;
+    }
+
+    .top_section .top_btn {
+        font-size: 18px;
+        padding: 5px 10px;
+        width: 180px;
+    }
+
+    .top_section .top_btn:nth-child(1) {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+
+    .top_button_section {
+        position: absolute;
+        bottom: 20px;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .top_section .right .back_img {
+        width: 450px;
+        height: 450px;
+    }
+
+    .top_section .right .boss-img {
+        height: 75vh;
+    }
+
+    /* 第二塊 連結部分 */
+    .link-top {
+        padding-top: 5vh;
+        margin: auto;
+        height: 100%;
+    }
+
+    .link_bottom {
+        height: 50vw;
+        min-height: 400px;
+    }
+
+    .link_block {
+        margin: 40px 0;
+    }
+
+    .link_block .link_left {
+        width: 85px;
+        min-width: 85px;
+        height: 85px;
+        min-height: 85px;
+    }
+
+    .link_block p{
+        font-size: 15px;
+    }
+
+    .link_bottom .back_circle {
+        transform: translate(-50%, 50%);
+        width: 600px;
+        height: 600px;
+    }
+
+    .toggle_section {
+        width: 500px;
+    }
+
+}
+
+
+@media(max-width: 576px) {
+    .top_section .left {
+        padding: 50px 0 20px 0;
+    }
+
+    .top_section .logo_img {
+        width: 250px;
+        margin-left: -10px;
+    }
+
+    .top_section .right .hold_item {
+        bottom: 0px;
+        left: 100%;
+        transform: translateX(-90%);
+    }
+
+
+    .top_section .right .back_img {
+        transform: translate(-60%, -50%);
+    }
+
+    .top_section .top_text {
+        margin-top: none;
+        width: 50%;
+    }
+
+    .top_section .top_text p {
+        font-size: 12px;
+    }
+
+    .top_section .top_btn {
+        font-size: 15px;
+        padding: 5px 10px;
+        width: 120px;
+    }
+
+
+    .top_button_section {
+        position: absolute;
+        bottom: 20px;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .top_section .right .back_img {
+        width: 90vw;
+        height: 90vw;
+    }
+
+    .top_section .right .boss-img {
+        height: 150vw;
+        max-height: 75vh;
+    }
+
+    /* 第二塊 連結部分 */
+    .link_section a {
+        padding: 0 5vw;
+    }
+
+    .link_bottom {
+        height: 90vw;
+        min-height: 0px;
+        max-height: 60vw;
+    }
+
+    .link_bottom .circle {
+        transform: translateY(65%);
+    }
+    
+    .link_bottom .circle .people_img {
+        position: relative;
+        width: 250vw;
+        max-width: 190vh;
+    }
+    
+    .link_bottom .back_circle {
+        width: 90vw;
+        height: 90vw;
+    }
+    
+    .toggle_section {
+        width: 80vw;
+    }
+    
+    .left_toogle {
+        width: 35px;
+    }
+
+    /* 第五部分 菜單生成 */
+
+    .yellow_ball{
+        width: 40vw;
+        height: 40vw;
+        top: 100%;
+        bottom: 0px;
+        right: -20px;
+        transform: translate(0, -110%);
+    }
+
+}
+
+@media(max-width: 280px) {
+    .top_section .left {
+        padding: 100px 0 20px 0;
+    }
+
+    .top_section .logo_img {
+        width: 200px;
+    }
+
+    .link_bottom{
+        height: 50vw;
+        max-height: 100px;
+    }
+
 }

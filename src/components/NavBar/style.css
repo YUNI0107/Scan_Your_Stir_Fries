@@ -1,3 +1,7 @@
+.nav.trans{
+    transition: .5s;
+}
+
 .nav.cream {
     background-color: #FFF4E8;
 }

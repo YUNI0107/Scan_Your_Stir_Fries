@@ -3,7 +3,11 @@
     "home": "Home",
     "dishes": "Dishes",
     "game": "Games",
-    "about": "About"
+    "about": "About",
+    "cart": "Cart",
+    "lottery": "Trivia Lottery game",
+    "question": "Q",
+    "name": "來點熱炒"
   },
   "dishes_element": {
     "temp": "Temp",
@@ -504,5 +508,24 @@
       "info_title": "Preserved duck egg",
       "info_text": "Thousand-year egg was once listed as the most revolting food around the world by CNN, but it’s by no means the eggs that are preserved for way too long. They are ducks eggs soaked in a mixture made with sodium hydroxide, black tea powder and salt."
     }
+  },
+  "home":{
+    "top_info": "It is an online menu that is designed to help foreigners to order in local restaurants in Taiwan.",
+    "visitors": "Visitors",
+    "restaurants": "Restaurants",
+    "dishes":"Dishes",
+    "dishes_text": "So what can you expect from these awesome food? Click here to learn more about the dishes!",
+    "game": "Games",
+    "game_text":"Feeling bored or awkward at the table? Join us with the stir-fries games!",
+    "v_title": "For Visitors",
+    "v_info": "So how do I use this website?",
+    "v_1": "Stir-fries are one of the cultural experiences you can’t miss in Taiwan. What if you are a stranger to Chinese and you have no clue how to order food in local restaurants?",
+    "v_2": "All you have to do is ask for the menu in your language, and access the websites by scanning the QR-Code on the menu to learn more about the dishes.",
+    "v_3": "You’ll have an overview of the dishes from the menu while the website provides more details and interesting background stories about the dishes.",
+    "r_title": "For Restaurants",
+    "r_info": "How do I communicate with foreign visitors?",
+    "r_1": "Are there awkward moments where you can’t communicate eﬀectively with your foreign customers?",
+    "r_2": "Enter the “download” section, and you’ll see all the templates for diﬀerent dishes in English, Japanese and Korean menus.",
+    "r_3": "Whenever a foreign customer comes visiting your restaurant, this menu would come inhandy and help the order be easy and pleasant!"
   }
 }

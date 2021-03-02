@@ -15,6 +15,9 @@ export default {
     CartBlock,
   },
   computed: {
+    metatitle(){
+      return this.$i18n.t('nav.cart') +"-"+ this.$i18n.t('nav.name')
+    },
     ...mapState(["cart", "cart_num"]),
   },
   methods: {
@@ -35,6 +38,11 @@ export default {
       this.$refs.num.play();
     //   console.log(1, this.playing_count);
     },
+  },
+  watch:{
+    metatitle(){
+      document.title = this.metatitle
+    }
   },
   mounted() {
     this.$refs.num.addEventListener("ended", () => {
@@ -60,6 +68,9 @@ export default {
 
     this.$store.commit("navColor", "yellow");
     this.$store.commit("cartNumTotal");
+  },
+  created(){
+    document.title = this.metatitle
   },
 };
 </script>

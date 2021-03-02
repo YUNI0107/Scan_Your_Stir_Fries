@@ -49,6 +49,9 @@ export default {
         },
       ];
     },
+    metatitle(){
+      return this.$i18n.t(`dishes.${this.dishes_id}.dishes_name`) +"-"+ this.$i18n.t('nav.name')
+    },
     ...mapState(["lang"]),
   },
   components: {
@@ -57,6 +60,11 @@ export default {
     IngredientBlock,
     IngredientInfo,
     Footer_section,
+  },
+  watch:{
+    metatitle(){
+      document.title = this.metatitle
+    }
   },
   methods: {
     checkMatch() {
@@ -126,6 +134,9 @@ export default {
 
     window.addEventListener("resize", this.checkMatch);
     window.addEventListener("scroll", this.getScroll);
+  },
+  created(){
+    document.title = this.metatitle
   },
   destroyed() {
     window.removeEventListener("resize", this.checkMatch);

@@ -9,6 +9,7 @@
 <script>
 import NavBar from './components/NavBar/NavBar'
 import InfoModal from './components/InfoModal/InfoModal'
+
 export default {
   components:{
     NavBar,

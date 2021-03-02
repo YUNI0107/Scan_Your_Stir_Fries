@@ -27,6 +27,14 @@ export default {
         return this.q_id;
       }
     },
+    metatitle() {
+      return this.$i18n.t("nav.question") + this.q_number + "-" + this.$i18n.t("nav.name");
+    },
+  },
+  watch:{
+    metatitle(){
+      document.title = this.metatitle
+    }
   },
   methods: {
     changeQuestion() {
@@ -99,6 +107,9 @@ export default {
 
     this.getQuestion();
     this.$store.commit("navColor", "yellow");
+  },
+  created(){
+    document.title = this.metatitle
   },
   destroyed() {
     removeEventListener("resize", this.boxHeightSize);

@@ -9,7 +9,8 @@ export default new Vuex.Store({
     info_message: "語言切換中",
     cart: [],
     cart_num: 0,
-    navcolor: 'cream'
+    navcolor: 'cream',
+    trans: false,
   },
   mutations: {
     langChange(state,playload){
@@ -51,6 +52,13 @@ export default new Vuex.Store({
     deleteCart(state,playload){
       let check_place = state.cart.findIndex( item => item.id == playload )
       state.cart.splice(check_place,1)
+    },
+    toogleTrans(state,playload){
+      if(playload == 'add'){
+        state.trans = true
+      }else if(playload == 'remove'){
+        state.trans = false
+      }
     }
   },
   actions: {

@@ -15,7 +15,7 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: Home
+    component: Home,
   },
   {
     path: '/menu',
@@ -67,5 +67,12 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 })
+
+// router.beforeEach((to, from, next) => {
+//   if (to.meta.title) {
+//       document.title = to.meta.title
+//   }
+//   next();
+// })
 
 export default router
