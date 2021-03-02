@@ -1,0 +1,66 @@
+.home{
+    overflow: hidden;
+}
+
+.top_section{
+    height: 100vh;
+    min-height: 100vh;
+    background-color: #FFC832;
+}
+
+.top_section .left,.top_section .right{
+    min-height: 100vh;
+}
+
+.top_section .left{
+    z-index: 1;
+}
+
+/* .top_section .right{
+    flex: 3;
+} */
+
+.top_section .logo_img{
+    width: 300px;
+    margin-left: -30px;
+}
+
+.top_section .top_text{
+    margin-top: -10px;
+    width: 90%;
+}
+
+.top_section .top_btn{
+    border: none;
+    background-color: #FFF4E8;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 700;
+    box-shadow: 0px 1px 5px rgba(51, 51, 51, 0.267);
+    cursor: pointer;
+    outline: none;
+}
+
+.top_section .top_btn:nth-child(1){
+    margin-right: 20px;
+}
+
+.top_section .right .hold_item{
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.top_section .right .back_img{
+    width: 500px;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-70%,-50%);
+}
+
+.top_section .right .boss-img{
+    height: 85vh;
+    position: relative;
+    z-index: 2;
+}

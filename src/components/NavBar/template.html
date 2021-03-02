@@ -47,29 +47,29 @@
                     </router-link>
                 </div>
                 <div class="navbar-nav flex-row justify-content-between mt-3 mt-lg-0">
-                    <a class="nav-link ms-3 me-3 m-lg-2  d-flex align-items-center justify-content-center flex-column flex-lg-row"
-                        aria-current="page" href="#">
+                    <router-link :to="{name: 'home'}" class="nav-link ms-3 me-3 m-lg-2  d-flex align-items-center justify-content-center flex-column flex-lg-row"
+                        aria-current="page">
                         <div class="nav_img">
                             <img src="../../assets/NavBar/home.png" class="w-100 img_normal">
                             <img src="../../assets/NavBar/homechange.gif" class="w-100 img_active">
                         </div>
                         <p class="m-0 ps-lg-2">{{$t('nav.home')}}</p>
-                    </a>
-                    <router-link :to="{name:'menu'}" class="nav-link ms-3 me-3 m-lg-2 d-flex align-items-center justify-content-center flex-column flex-lg-row" aria-current="page" href="#">
+                    </router-link>
+                    <router-link :to="{name:'menu'}" class="nav-link ms-3 me-3 m-lg-2 d-flex align-items-center justify-content-center flex-column flex-lg-row" aria-current="page">
                         <div class="nav_img">
                             <img src="../../assets/NavBar/all dishes.png" class="w-100 img_normal">
                             <img src="../../assets/NavBar/disheschange.gif" class="w-100 img_active">
                         </div>
                         <p class="m-0 ps-lg-2">{{$t('nav.dishes')}}</p>
                     </router-link> 
-                    <router-link :to="{name: 'lottery'}" class="nav-link ms-3 me-3 m-lg-2 d-flex align-items-center justify-content-center flex-column flex-lg-row" aria-current="page" href="#">
+                    <router-link :to="{name: 'lottery'}" class="nav-link ms-3 me-3 m-lg-2 d-flex align-items-center justify-content-center flex-column flex-lg-row" aria-current="page">
                         <div class="nav_img">
                             <img src="../../assets/NavBar/game.png" class="w-100 img_normal">
                             <img src="../../assets/NavBar/gamechange.gif" class="w-100 img_active">
                         </div>
                         <p class="m-0 ps-lg-2">{{$t('nav.game')}}</p>
                     </router-link> 
-                    <a class="nav-link ms-3 me-3 m-lg-2 d-flex align-items-center justify-content-center flex-column flex-lg-row" aria-current="page" href="#">
+                    <a class="nav-link ms-3 me-3 m-lg-2 d-flex align-items-center justify-content-center flex-column flex-lg-row" aria-current="page">
                         <div class="nav_img">
                             <img src="../../assets/NavBar/about.png" class="w-100 img_normal">
                             <img src="../../assets/NavBar/aboutchange.gif" class="w-100 img_active">
