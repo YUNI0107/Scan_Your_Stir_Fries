@@ -1,0 +1,219 @@
+.about {
+    padding-top: 100px;
+    min-height: 100vh;
+    background-color: #FFF4E8;
+    overflow: hidden;
+}
+
+.about_container{
+    min-height: calc(100vh - 100px);
+}
+.top_col{
+    z-index: 2;
+}
+
+.bottom_col{
+    padding: 0 50px;
+}
+
+.top_img {
+    position: relative;
+    width: 100%;
+    height: 20vw;
+}
+
+.top_img img {
+    position: absolute;
+    object-fit: cover;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 1s;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+
+.logo_img{
+    width: 200px;
+}
+
+.awards .awards_img{
+    width: 80px;
+    display: inline-block;
+    margin: 10px 10px 10px 0;
+}
+
+.awards h3{
+    display: inline-block;
+    font-size: 18px;
+    margin: 0;
+}
+
+.awards h3 span{
+    font-size: 28px;
+    padding-right: 10px;
+}
+
+.yellow_circle{
+    width: 230px;
+    height: 230px;
+    background-color: #FFC832;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    transform: translate(-20%,-20%);
+    z-index: 1; 
+}
+
+.title h2{
+    position: relative;
+    z-index: 2;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.title p{
+    z-index: 1;
+}
+
+.people_mt{
+    padding-top: 30px;
+}
+
+.people_row{
+    position: relative;
+    z-index: 2;
+}
+
+
+.speak_block{
+    width: 150px;
+    right: 10%;
+    filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.2));
+}
+
+.people_block .people_img{
+    width: 140px;
+}
+
+.people_block .name{
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+.people_block .speak{
+    margin: 0;
+    font-size: 15px;
+    opacity: 0;
+}
+
+.people_block:hover .speak{
+    opacity: 1;
+}
+
+@media(max-width: 992px){
+    .bottom_col{
+        margin-top: 80px;
+        margin-bottom: 20px;
+    }
+
+    .top_img {
+        height: 40vw;
+    }
+
+    .yellow_circle{
+        transform: translate(-40%,-30%);
+    }
+}
+
+
+@media(max-width: 768px){
+    .logo_img{
+        width: 180px;
+    }
+    
+    .awards .awards_img{
+        width: 80px;
+        display: inline-block;
+    }
+
+    
+    .awards h3{
+        display: inline-block;
+        font-size: 15px;
+        margin: 0;
+    }
+    
+    .awards h3 span{
+        font-size: 25px;
+        padding-right: 10px;
+    }
+
+    .top_col p{
+        font-size: 15px;
+    }
+
+    .people_block .people_img{
+        width: 120px;
+    }
+}
+
+@media(max-width: 576px){
+    .about {
+        padding-top: 60px;
+    }
+
+    .top_img {
+        width: 100vw;
+        height: 40vh;
+        margin-left: calc(var(--bs-gutter-x,.75rem)* -0.5);
+    }
+
+    .logo_img{
+        width: 160px;
+    }
+    
+    .awards .awards_img{
+        width: 80px;
+        display:block;
+    }
+    
+    .awards h3{
+        display:block;
+        font-size: 15px;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .top_col p{
+        font-size: 13px;
+    }
+
+    .bottom_col{
+        margin-top: 100px;
+    }
+
+    .people_block .people_img{
+        width: 120px;
+    }
+    
+    .people_block .name{
+        font-size: 18px;
+    }
+    
+    .people_block .speak{
+        font-size: 12px;
+    }
+    
+    .people_block:hover .speak{
+        opacity: 1;
+    }
+
+    .speak_block{
+        width: 120px;
+    }
+}

@@ -5,6 +5,7 @@ import Dishes from '../views/Dishes/Dishes.vue'
 import Menu from '../views/Menu/Menu.vue'
 import MenuList from '../views/MenuList/MenuList.vue'
 import Cart from '../views/Cart/Cart.vue'
+import About from '../views/About/About.vue'
 import Lottery from '../views/Lottery/Lottery.vue'
 import Question from '../views/Question/Question.vue'
 
@@ -21,6 +22,11 @@ const routes = [
     path: '/menu',
     name: 'menu',
     component: Menu
+  },
+  {
+    path: '/about',
+    name: 'about',
+    component: About
   },
   {
     path: '/menulist',

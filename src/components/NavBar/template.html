@@ -69,13 +69,13 @@
                         </div>
                         <p class="m-0 ps-lg-2">{{$t('nav.game')}}</p>
                     </router-link> 
-                    <a class="nav-link ms-3 me-3 m-lg-2 d-flex align-items-center justify-content-center flex-column flex-lg-row" aria-current="page">
+                    <router-link :to="{name: 'about'}" class="nav-link ms-3 me-3 m-lg-2 d-flex align-items-center justify-content-center flex-column flex-lg-row" aria-current="page">
                         <div class="nav_img">
                             <img src="../../assets/NavBar/about.png" class="w-100 img_normal">
                             <img src="../../assets/NavBar/aboutchange.gif" class="w-100 img_active">
                         </div>
                         <p class="m-0 ps-lg-2">{{$t('nav.about')}}</p>
-                    </a>
+                    </router-link>
                 </div>
             </div>
         </nav>

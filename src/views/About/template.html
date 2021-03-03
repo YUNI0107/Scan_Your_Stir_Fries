@@ -1,0 +1,65 @@
+<div class="about">
+    <div class="container about_container d-flex align-items-center">
+        <div class="row">
+            <div class="top_col col-12 col-lg-6 d-flex flex-column justify-content-center">
+                <div class="top_img">
+                    <transition-group name="fade" mode="out-in">
+                        <img tag="img" class="w-100 h-100" :src="require(`../../assets/About/${index+1}.jpg`)" v-for="(item,index) in 3" :key="index"
+                            v-show="runindex == index">
+                    </transition-group>
+                </div>
+                <div class="info_text" data-aos="fade-zoom-in"
+                data-aos-duration="1200">
+                    <div class="logo_img mt-3 mb-1">
+                        <img src="../../assets/Footer/logo.png" alt="logo" class="w-100">
+                    </div>
+                    <div class="awards d-flex align-items-sm-center align-items-stare flex-column flex-sm-row">
+                        <div class="awards_img">
+                            <img src="../../assets/About/young.png" alt="awards" class="w-100">
+                        </div>
+                        <h3><span>2019</span>金點新秀設計獎-數位多媒體設計類</h3>
+                    </div>
+                    <p v-html="$t('about.intro')"></p>
+                </div>
+            </div>
+            <div class="bottom_col col-12 col-lg-6 d-flex flex-column justify-content-center">
+                <div class="title position-relative">
+                    <h2>{{ $t(`about.member`) }}</h2>
+                    <div class="yellow_circle position-absolute"></div>
+                </div>
+                <div class="row people_row">
+                    <div class="col-12 position-relative">
+                        <div class="speak_block position-absolute">
+                            <img :src="require(`../../assets/About/${lang}/say.gif`)" alt="say" class="w-100">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div v-for="(item,index) in 3" :key="index" class="people_block d-flex flex-column align-items-center" data-aos="fade-right"
+                        data-aos-duration="1200">
+                            <div class="people_img">
+                                <img :src="require(`../../assets/About/p-0${index+1}.png`)" alt="people" class="w-100">
+                            </div>
+                            <h3 class="name">{{ $t(`about.m${index+1}`) }}</h3>
+                            <p class="speak">
+                                {{ $t(`about.m${index+1}_text`) }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-6 justify-content-center align-items-center d-flex flex-column">
+                        <div v-for="(item,index) in 2" :key="index" class="people_block d-flex flex-column align-items-center" data-aos="fade-right"
+                        data-aos-duration="1200">
+                            <div class="people_img">
+                                <img :src="require(`../../assets/About/p-0${index+4}.png`)" alt="people" class="w-100">
+                            </div>
+                            <h3 class="name">{{ $t(`about.m${index+4}`) }}</h3>
+                            <p class="speak">
+                                {{ $t(`about.m${index+4}_text`) }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <FooterSection/>
+</div>

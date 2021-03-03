@@ -28,369 +28,369 @@
     "order_info": "Click the button above to order in Chinese!<br>Click the button below to adjust the spiciness",
     "order_arr": " Not spicy | Mild | Spicy"
   },
-  "ingredients":{
+  "ingredients": {
     "FYI": "FYI",
     "pickled_cabbage": {
       "name": "Pickled cabbage",
       "info": "Pickled cabbage has a slightly sour flavor. It is fermented from mustard cabbage."
     },
-    "garlic_sprout":{
+    "garlic_sprout": {
       "name": "Garlic sprout",
       "info": "The seedling of garlic that is less than 5 months old, it tastes a bit spicy.",
       "FYI": "The heat from the garlic sprout prevents colds and flu, it’s a great for health!"
     },
-    "sesame_oil":{
+    "sesame_oil": {
       "name": "Sesame oil",
       "info": "Sesame oil is abstracted from either white sesame or black sesame. The common sesame oil (“Ma yo”) widely used in making various dishes is made from black sesame, while “Hsiang yo” is made with white sesame oil and salad oil."
     },
-    "sichuan_pepper":{
+    "sichuan_pepper": {
       "name": "Sichuan pepper",
       "info": "Sichuan pepper shapes like tiny balls, and it contains volatile that gives off a strong fragrance. It tastes minty and makes your tongue vibrate. They are often used as spice in many dishes."
     },
-    "taiwanese_satay_sauce":{
+    "taiwanese_satay_sauce": {
       "name": "Taiwanese Satay Sauce",
       "info": "Satay sauce is a well-known spice and dipping sauce. It appears to be brown and gooey, and it is made with white sesame, green onion, mustard, pepper and turmeric",
       "FYI": "Taiwanese or Chinese Satay sauce is modified from the Malaysian and Indonesian Satay. Taiwanese Satay sauce is a bit sweeter than the original Satay sauce from Southeastern Asia."
     },
-    "spicy_bean_paste":{
+    "spicy_bean_paste": {
       "name": "Spicy bean paste",
       "info": "Spicy bean paste is made with soybean, salt and fresh chili. It tastes rich and has strong fragrance."
     },
-    "wolfberry":{
+    "wolfberry": {
       "name": "Wolfberry",
       "info": "It shapes like a small red oval with wrinkled surface. The bigger it is, the sweeter it gets!",
       "FYI": "Wolfberries are good for kidneys. It improves the health of our kidneys. "
     },
-    "sweet_vinegar_sauce":{
+    "sweet_vinegar_sauce": {
       "name": "Sweet vinegar sauce",
-      "info":"Sweet vinegar sauce is made with ketchup, water, sugar and white vinegar. It’s needs to be boiled to evaporate the excess water to reach the proper consistency."
+      "info": "Sweet vinegar sauce is made with ketchup, water, sugar and white vinegar. It’s needs to be boiled to evaporate the excess water to reach the proper consistency."
     },
-    "bean_crisp":{
-      "name":"Bean crisp",
-      "info": "Bean crisp is made from soybean. The soybeans are dried, and then fried with ginger paste, sugar and soy sauce until it softens and become golden." 
+    "bean_crisp": {
+      "name": "Bean crisp",
+      "info": "Bean crisp is made from soybean. The soybeans are dried, and then fried with ginger paste, sugar and soy sauce until it softens and become golden."
     },
-    "thick_soy_sauce":{
+    "thick_soy_sauce": {
       "name": "Thick soy sauce",
       "info": "The soybean is added with brown sugar. Soybean sauce is usually used as dipping sauce or dressing for many Chinese dishes."
     },
-    "basil_leaves":{
+    "basil_leaves": {
       "name": "Basil leaves",
       "info": "He name “jiou-ceng-ta” originates from FuKien Dialect. It is a kind of basil that has a strong scent; it adds extra layer of taste to different dishes."
     },
-    "pork":{
+    "pork": {
       "name": "Pork Belly",
       "info": "Pigs are important livestock in Taiwan. Pork produced in Taiwan tastes great, and its quality is always guaranteed. Pork came in all different taste and texture according to the variety of their farming process and environment."
     },
-    "pork_intestines":{
+    "pork_intestines": {
       "name": "Pork Intestines",
       "info": "Pork Intestines help to alleviate heat stroke, strengthen human body, prevent thirst and improve blood circulation.Most of the restaurants in Taiwan put “pork large intestines” on the menu. However, some of the cooks would actually use pork small intestines in the dishes instead.",
       "FYI": "Pork Intestines help to alleviate heat stroke, strengthen human body, prevent thirst and improve blood circulation."
     },
-    "pork_liver":{
+    "pork_liver": {
       "name": "Pork liver",
-      "info":"Pig liver is rich in protein and iron.  It tastes tender if poached or boiled properly.",
+      "info": "Pig liver is rich in protein and iron.  It tastes tender if poached or boiled properly.",
       "FYI": "Pork liver is rich in iron and Vitamin A, it’s a common health supplement and traditional medicine in China. It is said to be good for human eyes."
     },
-    "duck_blood_cubes":{
+    "duck_blood_cubes": {
       "name": "Duck blood cubes",
       "info": "Duck blood pudding is one of the most popular supplement for human blood circulation since it’s rich in protein and iron.",
       "FYI": "Duck blood consists iron 19 times more than pig blood. Meanwhile, the cholesterol in duck blood is significantly higher than pig blood, so moderate consumption is advised."
     },
-    "chicken":{
+    "chicken": {
       "name": "Chicken breast",
       "info": "Chicken breast is known for being low-fat and relatively dry texture.  The chicken tenderloin is also a part of the chicken breast."
     },
-    "lamb":{
+    "lamb": {
       "name": "Lamb",
       "info": "Local Taiwanese lamb doesn’t taste gamy at all, and it is usually made from goat or sheep. Taiwanese lamb is retailed at a higher price than imported lamb. Most of the imported lamb in Taiwan is from Australia and New Zeeland."
     },
-    "beef":{
+    "beef": {
       "name": "Beef",
       "info": "Taiwan local beef only takes up 6% of the market share. The U.S., Australia and New Zeeland dominate the beef market in Taiwan.",
       "FYI": "Traditionally, Taiwanese honored cow and ox as the symbol of diligence, and they are great helpers for the farmers. To pay the homage to cows, the senior farming families doesn’t really consume beef."
     },
-    "beef_tripe":{
+    "beef_tripe": {
       "name": "Beef tripe",
       "info": "It is a well-known fact that cows have 4 stomach chambers, but which one is the beef tripe that we often see on the menu?  The answer is the first stomach chamber! It can be divided into the blanket tripe and the flat tripe.  Flat tripe has smooth surface while blanket tripe has the texture like rug.Flat tripe tastes tender while blanket tripe releases more fragrance.",
       "FYI": "Beef tripe is quite nutritious, and helps people with stomach problems and make our body stronger."
     },
-    "squid":{
+    "squid": {
       "name": "Squid",
       "info": "Massive in size, the squid’s fin is usually half the size of its body. They are transparent under water, but they turn pink once they are out of the water.",
       "FYI": "How can we tell these look-alike squid apart? From large to small, they are squid, cuttlefish, neritic squid.  You are able to separate them by looking at their tails:  a neritic squid’s tail is pointy. Cuttlefish have round tails. Octopuses have tails shape like balls."
     },
-    "dragon_ball":{
+    "dragon_ball": {
       "name": "Dragon ball",
       "info": "“Dragon balls” are actually the mouth pouches of the Mollusca animals. They are the mouths of squid and cuttlefish. The plastic-like chip you chew when you eat the “dragon ball” is the teeth of these sea animals."
     },
-    "short_necked_clams":{
+    "short_necked_clams": {
       "name": "Short-necked clams",
       "info": "The shell of the clam has lumpy stripes, and it has large and red pelecypod (the flesh of the clam). Short-necked clams taste crunchy, and it’s less gamy than other types of shellfish.",
       "FYI": "Short-necked clams are usually more expensive than lovely venus. Some of the restaurants in Taiwan use the lovely venus to replace short-necked clams since they look very similar."
     },
-    "shrimps":{
+    "shrimps": {
       "name": "Shrimps",
       "info": "succulent; they add another layer of texture to many dishes. They are often served de-shelled, and some of the chefs would even devein the shrimps to make is taste better."
     },
-    "eggplant":{
+    "eggplant": {
       "name": "Eggplant",
       "info": "Eggplants are full of fiber, and they are made up with 90% of water. They make you feel full with only few pieces, so they are great choices are people who are on diet."
     },
-    "white_water_snowflake":{
+    "white_water_snowflake": {
       "name": "White water snowflake",
       "info": "White water snowflake is a type of aquatic plants. The white water snowflake we are eating are not stems or leaves, but the stalks of the plant. They are often rolled into the shape of a circuit and sold on the market.",
       "FYI": "White water snowflake contains more fiber than apples, they help people avoid constipation. Consuming moderate amount of white water snowflake improves sleep quality and combat anxiety problems."
     },
-    "bitter_melon":{
+    "bitter_melon": {
       "name": "Bitter melon",
       "info": "Bitter melon might not be everyone’s favorite food, but they are certainly healthy vegetables. They can be eaten straight away raw or cooked. Once the bitter melon is boiled or cooked, it lost a part of its vitamin C and becomes less bitter."
     },
-    "salted_eggs":{
+    "salted_eggs": {
       "name": "Salted eggs",
       "info": "“The golden sand” is actually made from fermented duck eggs. The salted eggs scatter when it’s fried, and it appears to be golden and tastes a bit dry. That’s how it got the name “golden sand.”"
     },
-    "fermented_bean_curd":{
+    "fermented_bean_curd": {
       "name": "Fermented bean curd",
       "info": "Fermented bean curd is a fairly salty bean product. Soybeans are grinded into pieces and they become soymilk. The soymilk is added with plaster to harden up and become tofu. The tofu is dried, and it turns into bean curd. Bean curd is often used as a spice in cooking and dipping sauce when enjoying hot pot."
     },
-    "tofu_eggs":{
+    "tofu_eggs": {
       "name": "Tofu eggs",
       "info": "Egg tofu is also called Japanese tofu. It’s made from eggs, but it shapes like tofu. Some of the egg tofu is actually mixed with soybeans, make sure you always get the authentic one in the supermarket!"
     },
-    "thousand_year_eggs":{
+    "thousand_year_eggs": {
       "name": "Thousand-year eggs",
       "info": "Thousand-year eggs are mostly duck eggs fermented with to solidify the egg liquid. They look pitch- dark and shinny, and they taste",
       "FYI": "Thousand-year eggs were once voted one of the most disgusting food worldwide on CNN, but they are by no means that have been preserved for too long."
     },
-    "ginger":{
+    "ginger": {
       "name": "Ginger"
     },
-    "rice_wine":{
+    "rice_wine": {
       "name": "Rice Wine"
     },
-    "chili":{
+    "chili": {
       "name": "Chili"
     },
-    "garlic":{
+    "garlic": {
       "name": "Garlic"
     },
-    "dried_squid":{
+    "dried_squid": {
       "name": "Dried Squid"
     },
-    "dried_tofu":{
+    "dried_tofu": {
       "name": "Dried tofu"
     },
-    "celery":{
+    "celery": {
       "name": "Celery"
     },
-    "scallion":{
+    "scallion": {
       "name": "Scallion"
     },
-    "pepper":{
+    "pepper": {
       "name": "Pepper"
     },
-    "water_spinach":{
+    "water_spinach": {
       "name": "Water spinach"
     },
-    "soy_sauce":{
+    "soy_sauce": {
       "name": "Soy sauce"
     },
-    "green_onion":{
+    "green_onion": {
       "name": "Green onion"
     },
-    "black_pepper":{
+    "black_pepper": {
       "name": "Black pepper"
     },
-    "onion":{
+    "onion": {
       "name": "Onion"
     },
-    "butter":{
+    "butter": {
       "name": "Butter"
     },
-    "peanuts":{
+    "peanuts": {
       "name": "Peanuts"
     },
-    "king_oyster_mushrooms":{
+    "king_oyster_mushrooms": {
       "name": "King oyster mushrooms"
     },
-    "cabbage":{
+    "cabbage": {
       "name": "Cabbage"
     },
-    "cod":{
+    "cod": {
       "name": "Cod"
     },
-    "fish":{
+    "fish": {
       "name": "Fish"
     },
-    "big_shrimps":{
+    "big_shrimps": {
       "name": "Shrimps"
     },
-    "eggs":{
+    "eggs": {
       "name": "Eggs"
     },
-    "rice":{
+    "rice": {
       "name": "Rice"
     },
-    "carrot":{
+    "carrot": {
       "name": "Carrot"
     },
-    "noodles":{
+    "noodles": {
       "name": "Noodles"
     },
-    "tofu":{
+    "tofu": {
       "name": "Tofu"
     },
-    "dried_bonito_flakes":{
+    "dried_bonito_flakes": {
       "name": "Dried bonito flakes"
     }
   },
-  "dishes":{
-    "P01":{
+  "dishes": {
+    "P01": {
       "chi_name": "五更腸旺",
       "dishes_name": "Chitterlings in Pot",
       "comic_title": "A Dish Symbolizes the Peace and Soundness It Gives People Blessing for the Future!",
       "comic_text": "There are actually 5 spices used in the dish, including pickled cabbage, chili, garlic, ginger and garlic green. In ancient Chinese tradition, a day was divided into 12 different periods every day (2 hour for each period). “Wu Gung” refers the fifth period from 3 a.m. to 5 a.m., which is the time just before dawn. “Chong Wong” is a pun which sounds like lasting luck in Chinese. Therefore, the dish represents soundness and peace from daytime to nighttime every day. It’s truly a blissful dish!"
     },
-    "P02":{
+    "P02": {
       "chi_name": "蒜泥白肉",
       "dishes_name": "Sliced Pork Belly with Garlic Sauce"
     },
-    "P03":{
+    "P03": {
       "chi_name": "客家小炒",
       "dishes_name": "The Hakka Stir-fries",
       "comic_title": "To Be Frugal! Turning Leftovers into Brand New Hakka Taste! ",
       "comic_text": "Hakka is one of the ethnical groups in modern Taiwan. This dish got its name by the reputation of Hakka’s being frugal. It is said that a Hakka lady used the leftover pork that was used as the tributes for their ancestors to make dishes. The next day, her sister in law added dried tofu to the leftover of the pork dishes. The third day, madame again added squid, celery and green onions to the leftover, and the dish became so delicious that it was finished in no time."
     },
-    "P04":{
+    "P04": {
       "chi_name": "麻油炒豬肝",
       "dishes_name": "Pork Liver with Sesame Oil"
     },
-    "P05":{
+    "P05": {
       "chi_name": "脆皮肥腸",
       "dishes_name": "Crispy Intestines"
     },
-    "L01":{
+    "L01": {
       "chi_name": "空心菜炒羊肉",
       "dishes_name": "Water Spinach with Lamb"
     },
-    "L02":{
+    "L02": {
       "chi_name": "麻油薑絲炒羊肉",
       "dishes_name": "Fried lamb with sesame oil and ginger"
     },
-    "L03":{
+    "L03": {
       "chi_name": "烤羊肉串",
       "dishes_name": "Lamb Kebab"
     },
-    "B01":{
+    "B01": {
       "chi_name": "蔥爆牛",
       "dishes_name": "Fried Beef with Green Onions"
     },
-    "B02":{
+    "B02": {
       "chi_name": "鐵板牛柳",
       "dishes_name": "Pan-fried Beef Strips"
     },
-    "B03":{
+    "B03": {
       "chi_name": "香辣滷牛肚",
       "dishes_name": "Spicy Braised Beef Tripe"
     },
-    "C01":{
+    "C01": {
       "chi_name": "宮保雞丁",
       "dishes_name": "Gong Bao Chicken",
       "comic_title": "From High-class to Common Delicacy",
       "comic_text": "Legend has it that there was a governor in China who was really into spicy dishes. His household caterer created a new dish for his master with diced chicken, chili and peanuts. “Gong Bao” refers to the position that the officer was offered by the government, so the dish actually indicates that it was only served in the upper class."
     },
-    "C02":{
+    "C02": {
       "chi_name": "三杯雞",
       "dishes_name": "Three-cup Chicken",
       "comic_title": "The Secret is in the Golden Ratio of the Three Magic Ingredients",
       "comic_text": "As the dish reveals in its name, the “three cup” refers to soy sauce, rice wine and sesame oil. It’s a traditional dish from Jiangxi, but it was then fried with basil leaves by Taiwanese chefs. It is the most common three-cup chicken that you can find in Taiwan."
     },
-    "C03":{
+    "C03": {
       "chi_name": "白斬雞",
       "dishes_name": "Plain Boiled Chicken",
       "comic_title": "A Story About a Bunch of Bachelors Who Had Very Little Talent in Cooking",
       "comic_text": "During the early period of Qing Dynasty, women were forbidden to sail to Taiwan from mainland China. Only male trailblazers are allowed to come to the island. However, men always faced great trouble when they needed food to pay tribute to their ancestors, because no one knew how to cook properly. It is said that one of the members suggested simply raising chickens in the backyard, and boiling them once needed. To our surprise, it has become one of the most common dishes in Taiwanese families."
     },
-    "V01":{
+    "V01": {
       "chi_name": "魚香茄子",
       "dishes_name": "Fish Fragrance Eggplants",
       "comic_title": "Why’s There no Fish in the “Fish-fragrance” Eggplant?",
       "comic_text": "Legend has it that there was a frugal old lady who used the leftover sauce that was used to make fish dishes to make the other dishes. To her surprise, the sauce made other dishes even more delicious! People then name the leftover sauce “fish sauce.” Therefore, people tend to name their dishes with “fish-fragrance” even there’s no actual fish."
     },
-    "V02":{
+    "V02": {
       "chi_name": "金沙杏苞菇",
       "dishes_name": "King Oyster Mushrooms with Salted Eggs"
     },
-    "V03":{
+    "V03": {
       "chi_name": "苦瓜鹹蛋",
       "dishes_name": "Salted Eggs with Bitter Mellon"
     },
-    "V04":{
+    "V04": {
       "chi_name": "清炒水蓮",
       "dishes_name": "Stir-Fried White Water Snowflake",
       "comic_title": "The Slender Angels That Dance in Crystal Clear Water",
       "comic_text": "White water snowflake can only be found in clean water area. They grow all seasons round. Farmers need to literally dive under the water to reap the vegetable. Since they are grown underwater, they are often metaphorically called the “hard-working public servants” of vegetables who are never bothered by any kind of extreme weather conditions."
     },
-    "V05":{
+    "V05": {
       "chi_name": "腐乳高麗菜",
       "dishes_name": "Cabbage with Fermented Bean Curd"
     },
-    "S01":{
+    "S01": {
       "chi_name": "豆酥鱈魚",
       "dishes_name": "Steamed Cod with Bean Crisp"
     },
-    "S02":{
+    "S02": {
       "chi_name": "生炒透抽",
       "dishes_name": "Fried Squid",
       "comic_title": "Know Your Squid! This is How Order Squid Right in Taiwan!",
       "comic_text": "“Xiao Juan,” “Zhong Juan” and “Tou chou” are actually the same species, but they indicates different phase of the squid’s lifespan. In Chinese, “Xiao Juan” refers to the squid at its early age. “Zhong Juan” refers to the squid at its older age which have not yet reach the adulthood."
     },
-    "S03":{
+    "S03": {
       "chi_name": "炸龍珠",
       "dishes_name": "Deep-fried Dragon Balls",
       "comic_title": "Turning Waste into the Best!  A Seafood Luxury on the Table",
       "comic_text": "The dragon ball is actually the mouth of cuttlefish and squid. People used to get rid the mouth since it’s not considered a tasty part of the animal. Not until a vender tried to use the dragon ball as an ingredient did people start to love the dish. It didn’t take long to become one of the classics."
     },
-    "S04":{
+    "S04": {
       "chi_name": "糖醋魚",
       "dishes_name": "Sweet Vinegar Fish"
     },
-    "S05":{
+    "S05": {
       "chi_name": "炒海瓜子",
       "dishes_name": "Fried Short-necked Clams"
     },
-    "S06":{
+    "S06": {
       "chi_name": "鹽酥蝦",
       "dishes_name": "Fried Shrimps",
       "comic_title": "Extra Crispy and Healthy! You Can Actually Enjoy the Entire Shrimp Without Peeling!",
       "comic_text": "Most of the time, we carefully peel off the shell of the shrimps before we enjoy them. However, if the shrimps are deep-fried in hot oil, the shell would become crispy and edible. The shell actually contains chitin which is good for your health, and it helps our body with digestive problems and lower cholesterol. Make sure to always chew up the shell, so you can absorb the nutrition from the shell."
     },
-    "MD01":{
+    "MD01": {
       "chi_name": "蝦仁蛋炒飯",
       "dishes_name": "Shrimp Fried Rice"
     },
-    "MD02":{
+    "MD02": {
       "chi_name": "肉絲炒麵",
       "dishes_name": "Chaomian with pork"
     },
-    "SD01":{
+    "SD01": {
       "chi_name": "麻婆豆腐",
       "dishes_name": "Ma Po Tofu"
     },
-    "SD02":{
+    "SD02": {
       "chi_name": "皮蛋豆腐",
       "dishes_name": "Tofu with Thousand-year Eggs",
       "comic_title": "Nothing Goes Better with Tofu Than Glittering Thousand-year Eggs",
       "comic_text": "If there are tiny white frosts covered on your thousand-year eggs, it means you’ve picked the great ones. The reason way tofu and thousand-year eggs are often put together is that the bean-products help us remove the lead from the eggs. We don’t need to worry about getting poisoned by consuming too much lead."
     },
-    "SD03":{
+    "SD03": {
       "chi_name": "老皮嫩肉",
       "dishes_name": "Egg Fuyang Tofu",
       "comic_title": "A Traditional Hearty Tofu Snack for Kids",
       "comic_text": "The name “Lao Pi Nen Rou” implies meat in Chinese, but there’s actually no meat but tofu in the dish. The dish wasn’t designed to fool anyone. It was invented because little kids always ask for meat, but hardly any family can afford meat back then. As an alternative, they fried the tofu crispy on the outside and tender inside to make it taste like meat."
     }
   },
-  "menu":{
+  "menu": {
     "title_text_1": "Welcome to the house of Taiwanese stir-fries!",
     "title_text_2": "Please click the icon to go to reach the next page.",
     "menulist_text": "Please check the code on the menu and make sure the restaurant do provide the dish.",
@@ -405,20 +405,20 @@
     "warn": "Limit reached",
     "hot_warn": "Please check the spiciness"
   },
-  "cart":{
+  "cart": {
     "chi_hot": " 不辣 | 小辣 | 大辣",
     "title": "I want to order",
     "title_info": "Click the button order in Chinese sound"
   },
-  "question":{
-    "element":{
+  "question": {
+    "element": {
       "continue": "Continue",
       "dishes": "Dishes",
       "lottery_title": "Trivia Lottery game",
       "lottery_text": "Play the stir-fry trivia game! <br> Answer each following questions about stir-fry in 10 seconds.",
       "lottery_play": "Press “Play” to start the game!"
     },
-    "1":{
+    "1": {
       "title": "What do the “dragon balls” in stir-fry actually refer to?",
       "a1": "The mouth of squid and cuttlefish",
       "a2": "The mouth of clams",
@@ -427,7 +427,7 @@
       "info_title": "The mouth of squid and cuttlefish",
       "info_text": "Dragon balls are the mouths pouch of Mollusca animals. It is the mouths of cuttlefish and squid."
     },
-    "2":{
+    "2": {
       "title": "Which one is white water snowflake?",
       "a1": "Green onions",
       "a2": "Chinese leek",
@@ -436,7 +436,7 @@
       "info_title": "White water snowflakes",
       "info_text": "White water snowflake is aqua plants. We usually eat the stalk of the plant, not the leaves or stems."
     },
-    "3":{
+    "3": {
       "title": "What is the “Golden sand” made of in “Fried King Oyster Mushrooms with Golden sand” ?",
       "a1": "Braised eggs",
       "a2": "Salted duck eggs",
@@ -445,7 +445,7 @@
       "info_title": "Salted duck eggs",
       "info_text": "The salted eggs would scatter and turn golden when fried in a pan, and the texture resembles sand. That’s why it’s called golden sand!"
     },
-    "4":{
+    "4": {
       "title": "Tofu eggs is mainly made of......?",
       "a1": "Eggs",
       "a2": "Fish",
@@ -454,7 +454,7 @@
       "info_title": "Eggs",
       "info_text": "Tofu egg is a kind of Japanese food. Its main ingredient is egg, but some of the tofu eggs in Taiwan are added with soybeans."
     },
-    "5":{
+    "5": {
       "title": "Which of the following ingredients is not one of the ingredients in three-cup dishes?",
       "a1": "Soy sauce",
       "a2": "Rice wine",
@@ -463,7 +463,7 @@
       "info_title": "Black vinegar",
       "info_text": "“Three cups” refers to three different spices and sauce used for seasoning, which are soy sauce, rice wine and sesame oil."
     },
-    "6":{
+    "6": {
       "title": "Which of the following plants grow on trees?",
       "a1": "Watermelon seed",
       "a2": "Sichuan pepper",
@@ -472,7 +472,7 @@
       "info_title": "Sichuan pepper",
       "info_text": "Sichuan pepper trees is a member in the deciduous shrubs."
     },
-    "7":{
+    "7": {
       "title": "Which of the following ingredients are not included in the “fish-fragrance eggplants?”",
       "a1": "Eggplants",
       "a2": "Fish",
@@ -481,7 +481,7 @@
       "info_title": "Fish",
       "info_text": "There was a frugal old lady who used the leftover sauce used to make a fish dish to make new dishes. To her surprise, the new dish was amazing, so “fish fragrance” is later used to describe the leftover sauce in new dishes."
     },
-    "8":{
+    "8": {
       "title": "Which of the following picture shows Basil leaves?",
       "a1": "Basil leaves",
       "a2": "Peppermint",
@@ -490,7 +490,7 @@
       "info_title": "Basil leaves",
       "info_text": "Basil leaves(Jiu Tsen Ta) is a kind of herb from Fujian Dialect. It belongs to the basil family. The leaves have very strong scent, and it adds flavor to different dishes."
     },
-    "9":{
+    "9": {
       "title": "Green garlic is the sprout of which plant?",
       "a1": "Green onions",
       "a2": "Onions",
@@ -499,7 +499,7 @@
       "info_title": "Garlic",
       "info_text": "Green garlic sprout is the sprout of garlic."
     },
-    "10":{
+    "10": {
       "title": "Which of the following pictures shows “thousand-year eggs”?",
       "a1": "Duck eggs",
       "a2": "Pig blood cake",
@@ -509,14 +509,14 @@
       "info_text": "Thousand-year egg was once listed as the most revolting food around the world by CNN, but it’s by no means the eggs that are preserved for way too long. They are ducks eggs soaked in a mixture made with sodium hydroxide, black tea powder and salt."
     }
   },
-  "home":{
+  "home": {
     "top_info": "It is an online menu that is designed to help foreigners to order in local restaurants in Taiwan.",
     "visitors": "Visitors",
     "restaurants": "Restaurants",
-    "dishes":"Dishes",
+    "dishes": "Dishes",
     "dishes_text": "So what can you expect from these awesome food? Click here to learn more about the dishes!",
     "game": "Games",
-    "game_text":"Feeling bored or awkward at the table? Join us with the stir-fries games!",
+    "game_text": "Feeling bored or awkward at the table? Join us with the stir-fries games!",
     "v_title": "For Visitors",
     "v_info": "So how do I use this website?",
     "v_1": "Stir-fries are one of the cultural experiences you can’t miss in Taiwan. What if you are a stranger to Chinese and you have no clue how to order food in local restaurants?",
@@ -527,5 +527,19 @@
     "r_1": "Are there awkward moments where you can’t communicate eﬀectively with your foreign customers?",
     "r_2": "Enter the “download” section, and you’ll see all the templates for diﬀerent dishes in English, Japanese and Korean menus.",
     "r_3": "Whenever a foreign customer comes visiting your restaurant, this menu would come inhandy and help the order be easy and pleasant!"
+  },
+  "about": {
+    "intro": "「Scan Your Stir-Fries」is a website that helps to create menu with QR code. Our mission is to help foreign visitors communicate with local stir-fry restaurants.<br><br> For owners who have trouble creating multi-language menus. The menus introduce a brand new way to sort out the dishes by ingredients and flavor, which is similar to the usual menus shown in Western-style restaurants.",
+    "member": "Our Members",
+    "m1": "Chang,Pei-Lin",
+    "m1_text": "希望哈哈哈畢製就做完了",
+    "m2": "Chen,Yu-Wei",
+    "m2_text": "大家一起來吃熱炒！",
+    "m3": "Huang,Wei",
+    "m3_text": "keep smile forever",
+    "m4": "Chou,Yun-Huei",
+    "m4_text": "熱血極限感覺讚讚",
+    "m5": "Wen,Ching-Wei",
+    "m5_text": "熱炒好好吃～"
   }
 }
