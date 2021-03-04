@@ -7,10 +7,10 @@ export default {
     return {
       counting: 10,
       boxheight: 0 + "px",
-      q_id: this.$route.params.id,
       ans: "a1",
       text_fade: "false",
-      timer: null,
+      modal_timer: null,
+      count_timer: null,
       modalState: "hide",
       myModal: null,
       dishes_id: "P01",
@@ -28,20 +28,32 @@ export default {
       }
     },
     metatitle() {
-      return this.$i18n.t("nav.question") + this.q_number + "-" + this.$i18n.t("nav.name");
+      return (
+        this.$i18n.t("nav.question") +
+        this.q_number +
+        "-" +
+        this.$i18n.t("nav.name")
+      );
+    },
+    q_id() {
+      return this.$route.params.id || 1;
     },
   },
-  watch:{
-    metatitle(){
-      document.title = this.metatitle
-    }
+  watch: {
+    metatitle() {
+      document.title = this.metatitle;
+    },
+    q_id() {
+      this.$forceUpdate();
+    },
   },
   methods: {
     changeQuestion() {
       let q_id = Math.floor(Math.random() * 10 + 1);
       if (q_id !== this.$route.params.id) {
         this.$router.push({ name: "question", params: { id: q_id } });
-        this.$router.go(0)
+        this.countTime();
+        // this.$router.go(0)
       } else {
         this.changeQuestion();
       }
@@ -67,40 +79,50 @@ export default {
     checkAns(click_ans) {
       if (click_ans == this.ans && this.modalState == "hide") {
         this.modalState = "yes";
-        clearTimeout(this.timer);
+        clearTimeout(this.modal_timer);
+        clearTimeout(this.count_timer);
+        this.$refs.path.style.animationPlayState = "paused"
       } else if (this.modalState == "hide") {
         this.modalState = "no";
-        clearTimeout(this.timer);
+        clearTimeout(this.modal_timer);
       }
     },
     changeState() {
       this.modalState = "hide";
     },
+    countTime() {
+      this.clearTime()
+      // 倒數
+      this.counting = 10
+      this.$refs.path.classList.add("ani")
+      this.count_timer = setInterval(() => {
+        if (this.counting > 0) {
+          this.counting--;
+        } else {
+          clearInterval(this.count_timer);
+        }
+      }, 1000);
+      // 倒數結束提示
+      this.$nextTick(() => {
+        this.myModal = new Modal(this.$refs.timeoutModal, {
+          keyboard: false,
+        });
+      });
+      this.modal_timer = setTimeout(() => {
+        this.myModal.show();
+      }, 10000);
+    },
+    clearTime(){
+      clearInterval(this.count_timer);
+      clearTimeout(this.modal_timer);
+    }
   },
   mounted() {
     // 倒數SVG
-    let circle = document.querySelector(".path"),
-      len = 2 * Math.PI * circle.getAttribute("r");
-    circle.style.strokeDasharray = circle.style.strokeDashoffset = len;
-    // 倒數
-    let timer = setInterval(() => {
-      if (this.counting > 0) {
-        this.counting--;
-      } else {
-        clearInterval(timer);
-      }
-    }, 1000);
-
-    // 倒數結束提示
-    this.$nextTick(() => {
-      this.myModal = new Modal(this.$refs.timeoutModal, {
-        keyboard: false,
-      });
-    });
-    this.timer = setTimeout(() => {
-      this.myModal.show();
-    }, 10000);
-
+      let circle = document.querySelector(".path"),
+        len = 2 * Math.PI * circle.getAttribute("r");
+      circle.style.strokeDasharray = circle.style.strokeDashoffset = len;
+    this.countTime();
     // 高度探測
     this.boxHeightSize();
     window.addEventListener("resize", this.boxHeightSize);
@@ -108,13 +130,16 @@ export default {
     this.getQuestion();
     this.$store.commit("navColor", "yellow");
   },
-  created(){
-    document.title = this.metatitle
+  created() {
+    document.title = this.metatitle;
   },
   destroyed() {
     removeEventListener("resize", this.boxHeightSize);
-    clearTimeout(this.timer)
+    this.clearTime();
   },
+  // beforeRouteLeave() {
+  //   this.$forceUpdate();
+  // },
 };
 </script>
 <template src="./template.html"></template>

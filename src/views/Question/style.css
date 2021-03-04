@@ -20,8 +20,10 @@
 
 .count_img .path {
     transition: stroke-dashoffset .5s;
-    animation: run 10s linear;
-    animation-fill-mode: forwards;
+}
+
+.count_img .path.ani{
+    animation: run 10s linear forwards;
 }
 
 @keyframes run {

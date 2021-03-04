@@ -34,7 +34,6 @@ export default {
     changeQuestion() {
       let q_id = Math.floor(Math.random() * 10 + 1);
       if (q_id !== this.q_id) {
-        this.$forceUpdate()
         this.$router.push({ name: "question", params: { id: q_id } });
       } else {
         this.changeQuestion();
