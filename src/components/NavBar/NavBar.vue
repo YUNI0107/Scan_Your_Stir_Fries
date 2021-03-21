@@ -19,7 +19,7 @@ export default {
   watch: {
     cart_num() {
       this.$nextTick(() => {
-        if (this.cart_num !== 1) {
+        if (this.cart_num !== 1 && this.cart_num !== 0) {
           this.$refs.num.classList.add("ani");
           setTimeout(() => {
             this.$refs.num.classList.remove("ani");
