@@ -1,0 +1,19 @@
+<div class="menubuilder">
+    <div class="catch" ref="catch">
+        <div class="catchcontent" ref="catch_content">
+            <div v-for="item in comList[workId]">
+                <h2 v-if="item.title">{{item.title}}</h2>
+                <h2 v-else>{{item.id}}</h2>
+            </div>
+            <!-- <img v-if="workItem" :src="require(`../../assets/Dishes/${workItem}/id.png`)" alt=""> -->
+        </div>
+    </div>
+    <div class="canvas_div w-100 h-100" ref="canvas_div">
+    </div>
+    <button  @click="catchPic"><h1>抓圖片</h1></button>
+   <div class="menu_hold">
+       <h2>標題</h2>
+
+   </div>
+   
+</div>

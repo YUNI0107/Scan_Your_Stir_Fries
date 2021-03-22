@@ -8,6 +8,7 @@ import Cart from '../views/Cart/Cart.vue'
 import About from '../views/About/About.vue'
 import Lottery from '../views/Lottery/Lottery.vue'
 import Question from '../views/Question/Question.vue'
+import MenuBuilder from '../views/MenuBuilder/MenuBuilder.vue'
 
 
 Vue.use(VueRouter)
@@ -17,6 +18,11 @@ const routes = [
     path: '/',
     name: 'home',
     component: Home,
+  },
+  {
+    path: '/menu_builder',
+    name: 'menubuilder',
+    component: MenuBuilder,
   },
   {
     path: '/menu',
