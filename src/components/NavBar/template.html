@@ -10,19 +10,19 @@
             <!-- 右邊欄位 -->
             <div class="nav-left order-10 order-lg-last d-flex align-items-center">
                 <div class="lang">
-                    <button class="lang_item m-1 p-0" @click="langToogle('ch','語言：中文')" data-bs-toggle="modal" data-bs-target="#infoModal">
+                    <button class="lang_item m-1 p-0" @click="langToogle('ch','語言：中文')"  data-bs-toggle="modal" data-bs-target="#infoModal">
                         <img class="w-100" v-if="lang == 'ch'" src="../../assets/NavBar/chinese_active.png">
                         <img class="w-100" v-else src="../../assets/NavBar/chinese.png">
                     </button>
-                    <button class="lang_item m-1 p-0" @click="langToogle('en','Language: English')" data-bs-toggle="modal" data-bs-target="#infoModal">
+                    <button class="lang_item m-1 p-0" @click="langToogle('en','Language: English')" v-if="check_menubuild" data-bs-toggle="modal" data-bs-target="#infoModal">
                         <img class="w-100" v-if="lang == 'en'" src="../../assets/NavBar/english_active.png">
                         <img class="w-100" v-else src="../../assets/NavBar/english.png">
                     </button>
-                    <button class="lang_item m-1 p-0" @click="langToogle('ja','言語: 日本語')" data-bs-toggle="modal" data-bs-target="#infoModal">
+                    <button class="lang_item m-1 p-0" @click="langToogle('ja','言語: 日本語')" v-if="check_menubuild" data-bs-toggle="modal" data-bs-target="#infoModal">
                         <img class="w-100" v-if="lang == 'ja'" src="../../assets/NavBar/japan_active.png">
                         <img class="w-100" v-else src="../../assets/NavBar/japan.png">
                     </button>
-                    <button class="lang_item m-1 p-0" @click="langToogle('ko','언어: 한국어')" data-bs-toggle="modal" data-bs-target="#infoModal">
+                    <button class="lang_item m-1 p-0" @click="langToogle('ko','언어: 한국어')" v-if="check_menubuild" data-bs-toggle="modal" data-bs-target="#infoModal">
                         <img class="w-100" v-if="lang == 'ko'" src="../../assets/NavBar/korea_active.png">
                         <img class="w-100" v-else src="../../assets/NavBar/korea.png">
                     </button>

@@ -541,5 +541,10 @@
     "m4_text": "熱血極限感覺讚讚",
     "m5": "Wen,Ching-Wei",
     "m5_text": "熱炒好好吃～"
+  },
+  "menu_builder":{
+    "info_1": "Scaning this QR Code enter web menu of restaurant.",
+    "info_2": "Add a dish to your shopping cart on your phone.",
+    "info_3": "Give the shopping cart page to the waiter to order dishes."
   }
 }

@@ -6,6 +6,14 @@ export default {
     };
   },
   computed: {
+    check_menubuild(){
+      if(this.$route.name == "menubuilder"){
+        return false
+      }else{
+        return true
+      }
+      
+    },
     ...mapState(["lang", "navcolor", "cart_num","trans"]),
   },
   methods: {

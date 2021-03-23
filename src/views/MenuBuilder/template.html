@@ -1,19 +1,155 @@
 <div class="menubuilder">
     <div class="catch" ref="catch">
-        <div class="catchcontent" ref="catch_content">
-            <div v-for="item in comList[workId]">
-                <h2 v-if="item.title">{{item.title}}</h2>
-                <h2 v-else>{{item.id}}</h2>
+        <div class="catchcontent position-relative" ref="catch_content">
+            <div class="top_sectoion d-flex align-items-center">
+                <div class="menu_container container-fuaild w-100">
+                    <div class="row">
+                        <div class="first_section col-4">
+                            <h1 class="store_name">{{store_name}}</h1>
+                            <p class=" first_info"><span>tel | </span>{{tel}}</p>
+                            <p class="first_info"><span>add | </span>{{add}}</p>
+                        </div>
+                        <div class="col-6 middle_intro">
+                            <h3 class="middle_title"><span>Menu Web - </span>{{store_name}}</h3>
+                            <ul>
+                                <li>
+                                    <span>1.</span> {{ $t("menu_builder.info_1") }}
+                                </li>
+                                <li>
+                                    <span>2.</span>{{ $t("menu_builder.info_2") }}
+                                </li>
+                                <li>
+                                    <span>3.</span>{{ $t("menu_builder.info_3") }}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-2 d-flex justify-content-end">
+                            <div class="qr_img">
+                                <img class="w-100" src="../../assets/MenuBuilder/qr.png" alt="QRCode">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- <img v-if="workItem" :src="require(`../../assets/Dishes/${workItem}/id.png`)" alt=""> -->
+            <div class="dishes_section">
+                <div class="dishes_container">
+                    <div class="dishes_row">
+                        <div class="dishes_item" v-for="item in comList[workId]">
+                            <div class="title" v-if="item.level == 0">
+                                <div class="cate_img">
+                                    <img class="w-100" :src="require(`../../assets/MenuList/${item.id}.png`)">
+                                </div>
+                                <h2>{{ $t(`menu.${item.id}`) }}</h2>
+                            </div>
+                            <div class="dishes" v-else>
+                                <div class="num">
+                                    <div class="recommend_img" v-if="item.recommend">
+                                        <img class="w-100" src="../../assets/MenuBuilder/king.png" alt="">
+                                    </div>
+                                    <h3>{{ item.id }}</h3>
+                                </div>
+                                <div class="name">
+                                    <h3>{{ $t(`dishes.${item.id}.chi_name`) }}</h3>
+                                    <h3>{{ $t(`dishes.${item.id}.dishes_name`) }}</h3>
+                                    <div class="ingredient">
+                                        <p><span v-for="(ing,index) in item.ingredient">{{ $t(`ingredients.${ing}.name`) + (index !== (item.ingredient.length - 1)? " / " : "") }}</span></p>
+                                    </div>
+                                </div>
+                                <div class="box"></div>
+                                <div class="price"><p><span>NT.</span>{{ item.price }}</p></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="bottom_section">
+                <div class="bottom_container d-flex align-items-center">
+                    <div class="logo_img">
+                        <img class="w-100" src="../../assets/NavBar/logo.png" alt="logo">
+                    </div>
+                    <h3>粉絲專頁 | https://www.facebook.com/ScanYourStirFries</h3>
+                    <h3>聯絡信箱 | scanyourstirfries5@gmail.com</h3>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="canvas_div w-100 h-100" ref="canvas_div">
-    </div>
-    <button  @click="catchPic"><h1>抓圖片</h1></button>
-   <div class="menu_hold">
-       <h2>標題</h2>
+    <div class="canvas_div" ref="canvas_div"></div>
+    <button @click="catchPic">
+        <h1>抓圖片</h1>
+    </button>
+    <!-- <div class="menu_hold">
+        <div class="top_sectoion d-flex align-items-center">
+            <div class="menu_container container-fuaild w-100">
+                <div class="row">
+                    <div class="first_section col-4">
+                        <h1 class="store_name">{{store_name}}</h1>
+                        <p class=" first_info"><span>tel | </span>{{tel}}</p>
+                        <p class="first_info"><span>add | </span>{{add}}</p>
+                    </div>
+                    <div class="col-6 middle_intro">
+                        <h3 class="middle_title"><span>Menu Web - </span>{{store_name}}</h3>
+                        <ul>
+                            <li>
+                                <span>1.</span> {{ $t("menu_builder.info_1") }}
+                            </li>
+                            <li>
+                                <span>2.</span>{{ $t("menu_builder.info_2") }}
+                            </li>
+                            <li>
+                                <span>3.</span>{{ $t("menu_builder.info_3") }}
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-2 d-flex justify-content-end">
+                        <div class="qr_img">
+                            <img class="w-100" src="http://qrimgio.appspot.com/images/qrcode-static.png" alt="QRCode">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dishes_section">
+            <div class="dishes_container">
+                <div class="dishes_row">
+                    <div class="dishes_item" v-for="item in comList[0]">
+                        <div class="title" v-if="item.level == 0">
+                            <div class="cate_img">
+                                <img class="w-100" :src="require(`../../assets/MenuList/${item.id}.png`)">
+                            </div>
+                            <h2>{{ $t(`menu.${item.id}`) }}</h2>
+                        </div>
+                        <div class="dishes" v-else>
+                            <div class="num">
+                                <div class="recommend_img">
+                                    <img class="w-100" src="../../assets/MenuBuilder/king.png" alt="">
+                                </div>
+                                <h3>{{ item.id }}</h3>
+                            </div>
+                            <div class="name">
+                                <h3>{{ $t(`dishes.${item.id}.chi_name`) }}</h3>
+                                <h3>{{ $t(`dishes.${item.id}.dishes_name`) }}</h3>
+                                <div class="ingredient">
+                                    <p><span v-for="(ing,index) in item.ingredient">{{ $t(`ingredients.${ing}.name`) + (index !== (item.ingredient.length - 1)? " / " : "") }}</span></p>
+                                </div>
+                            </div>
+                            <div class="box"></div>
+                            <div class="price"><p><span>NT.</span>{{ item.price }}</p></div>
+                        </div>
+                    </div>
 
-   </div>
-   
+                </div>
+            </div>
+        </div>
+        <div class="bottom_section w-100">
+            <div class="bottom_container d-flex align-items-center">
+                <div class="logo_img">
+                    <img class="w-100" src="../../assets/NavBar/logo.png" alt="logo">
+                </div>
+                <h3>粉絲專頁 | https://www.facebook.com/ScanYourStirFries</h3>
+                <h3>聯絡信箱 | scanyourstirfries5@gmail.com</h3>
+            </div>
+        </div>
+    </div> -->
+
 </div>
