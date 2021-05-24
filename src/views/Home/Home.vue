@@ -1,7 +1,6 @@
 <script>
 import FooterSection from "../../components/Footer/Footer";
 import gsap from "gsap";
-import smoothscroll from 'smoothscroll-polyfill';
 import { mapState } from "vuex";
 export default {
   name: "Home",
@@ -108,7 +107,6 @@ export default {
         },
         "-=1"
       );
-      smoothscroll.polyfill();
   },
   created() {
     document.title = this.metatitle;

@@ -9,6 +9,7 @@
 <script>
 import NavBar from './components/NavBar/NavBar'
 import InfoModal from './components/InfoModal/InfoModal'
+import smoothscroll from 'smoothscroll-polyfill'
 
 export default {
   components:{
@@ -16,6 +17,7 @@ export default {
     InfoModal,
   },
   mounted() {
+    smoothscroll.polyfill();
   },
 }
 </script>
