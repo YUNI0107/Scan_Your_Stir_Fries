@@ -6,5 +6,8 @@ module.exports = {
       localeDir: 'locales',
       enableInSFC: false
     }
-  }
+  },
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/Scan_Your_Stir_Fries/'
+    : '/'
 }
