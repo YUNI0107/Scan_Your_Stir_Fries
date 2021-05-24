@@ -13,12 +13,14 @@ import smoothscroll from "smoothscroll-polyfill";
 
 smoothscroll.polyfill();
 
+smoothscroll.polyfill();
+
 export default {
   components: {
     NavBar,
     InfoModal,
   },
-};
+}
 </script>
 
 <style>
