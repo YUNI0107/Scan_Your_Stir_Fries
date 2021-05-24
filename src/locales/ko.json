@@ -408,7 +408,9 @@
   "cart": {
     "chi_hot": " 不辣 | 小辣 | 大辣",
     "title": "주문하고 싶어요",
-    "title_info": "중국어 소리의 버튼 순서를 클릭"
+    "title_info": "중국어 소리의 버튼 순서를 클릭",
+    "no_dishes_1": "주문하지 않았습니다.",
+    "no_dishes_2": "가서 거기 뭐가 있는지 봐 !"
   },
   "question":{
     "element":{

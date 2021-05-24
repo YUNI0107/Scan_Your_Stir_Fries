@@ -1,4 +1,6 @@
 <div class="menubuilder">
+   
+    <!-- 菜單生成區 -->
     <div class="catch" ref="catch">
         <div class="catchcontent position-relative" ref="catch_content">
             <div class="top_sectoion d-flex align-items-center">
@@ -75,81 +77,79 @@
         </div>
     </div>
     <div class="canvas_div" ref="canvas_div"></div>
-    <button @click="catchPic">
-        <h1>抓圖片</h1>
-    </button>
-    <!-- <div class="menu_hold">
-        <div class="top_sectoion d-flex align-items-center">
-            <div class="menu_container container-fuaild w-100">
-                <div class="row">
-                    <div class="first_section col-4">
-                        <h1 class="store_name">{{store_name}}</h1>
-                        <p class=" first_info"><span>tel | </span>{{tel}}</p>
-                        <p class="first_info"><span>add | </span>{{add}}</p>
-                    </div>
-                    <div class="col-6 middle_intro">
-                        <h3 class="middle_title"><span>Menu Web - </span>{{store_name}}</h3>
-                        <ul>
-                            <li>
-                                <span>1.</span> {{ $t("menu_builder.info_1") }}
-                            </li>
-                            <li>
-                                <span>2.</span>{{ $t("menu_builder.info_2") }}
-                            </li>
-                            <li>
-                                <span>3.</span>{{ $t("menu_builder.info_3") }}
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-2 d-flex justify-content-end">
-                        <div class="qr_img">
-                            <img class="w-100" src="http://qrimgio.appspot.com/images/qrcode-static.png" alt="QRCode">
-                        </div>
+     <!-- 菜單勾選區 -->
+     <div class="inro_section">
+         <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-12 d-flex justify-content-center flex-column">
+                    <h1>開始製作外文菜單！</h1>
+                    <h3>歡迎來到菜單生成頁面，只要按照下方的步驟就可以簡單完成！ </h3>
+                    <p><span class="num">1.</span>首先勾選一種語言。</p>
+                    <p><span class="num">2.</span>依照各個分類打開菜色列表，勾選店家菜色。</p>
+                    <p><span class="num">3.</span>點下「菜單生成」鍵，即可下載你的專屬菜單。</p>
+                </div>
+                <div class="col-lg-6 col-12 demo_section d-flex justify-content-center align-items-center">
+                    <div class="demo_img">
+                        <img class="w-100" src="../../assets/MenuBuilder/menu.png" alt="範例圖片">
+                        <p >此為菜單範本</p>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="dishes_section">
-            <div class="dishes_container">
-                <div class="dishes_row">
-                    <div class="dishes_item" v-for="item in comList[0]">
-                        <div class="title" v-if="item.level == 0">
-                            <div class="cate_img">
-                                <img class="w-100" :src="require(`../../assets/MenuList/${item.id}.png`)">
-                            </div>
-                            <h2>{{ $t(`menu.${item.id}`) }}</h2>
-                        </div>
-                        <div class="dishes" v-else>
-                            <div class="num">
-                                <div class="recommend_img">
-                                    <img class="w-100" src="../../assets/MenuBuilder/king.png" alt="">
-                                </div>
-                                <h3>{{ item.id }}</h3>
-                            </div>
-                            <div class="name">
-                                <h3>{{ $t(`dishes.${item.id}.chi_name`) }}</h3>
-                                <h3>{{ $t(`dishes.${item.id}.dishes_name`) }}</h3>
-                                <div class="ingredient">
-                                    <p><span v-for="(ing,index) in item.ingredient">{{ $t(`ingredients.${ing}.name`) + (index !== (item.ingredient.length - 1)? " / " : "") }}</span></p>
-                                </div>
-                            </div>
-                            <div class="box"></div>
-                            <div class="price"><p><span>NT.</span>{{ item.price }}</p></div>
-                        </div>
-                    </div>
-
+         </div>
+     </div>
+     <div class="lang_section">
+         <div class="container mobile_none">
+             <div class="row">
+                <div class="col-lg-4 col-6">
+                    <p>選擇語言</p>
+                    <input type="radio" id="en" value="en" v-model="lang">
+                    <label for="en">英文</label>
+                    <input type="radio" id="js" value="ja" v-model="lang">
+                    <label for="ja">日文</label>
+                    <input type="radio" id="ko" value="ko" v-model="lang">
+                    <label for="ko">韓文</label>
                 </div>
+                <div class="col-lg-4 col-6">
+                    <p class="">輸入店名</p>
+                    <input type="text" v-model="store_name" placeholder="請輸入店名">
+                </div>
+                <div class="col-lg-4 col-6 top_m">
+                    <p class="">輸入電話</p>
+                    <input type="text" v-model="tel" placeholder="請輸入電話">
+                </div>
+                <div class="col-lg-6 col-6 top_m top_m_last">
+                    <p class="">輸入地址</p>
+                    <input class="address" type="text" v-model="add" placeholder="請輸入地址">
+                </div>
+             </div>
+         </div>
+        <div class="container mobile align-items-center">
+            <div class="error_img">
+                <img class="w-100" src="../../assets/MenuBuilder/error.png" alt="">
             </div>
+            <p class="m-0 ps-3">請使用大尺寸之裝置，進行菜單製作</p>
         </div>
-        <div class="bottom_section w-100">
-            <div class="bottom_container d-flex align-items-center">
+     </div>
+     <div class="last_section container">
+        <BuildBlock v-for="(level,index) in 8" :key="index" :level="level" @userListPush="userListPush" @dishesDelete="dishesDelete"/>
+        <button class="catch_btn" @click="scrollToTop">
+            <h1 class="m-0">{{ make_text }}</h1>
+            <div class="make_img">
+                <img src="../../assets/MenuBuilder/download.png" alt="" class="w-100">
+            </div>
+        </button>
+     </div>
+     <!-- 製作菜單時的遮蓋 -->
+     <div class="modal fade" id="makeHideModal" tabindex="-1" aria-labelledby="makeHideModalLabel" aria-hidden="true" ref="makeHideModal">
+        <div class="modal-dialog modal-dialog-centered d-flex justify-content-center">
+            <div class="spinner_secion d-flex justify-content-center">
+                <div class="spinner-border" role="status">
+                </div>
                 <div class="logo_img">
-                    <img class="w-100" src="../../assets/NavBar/logo.png" alt="logo">
+                    <img src="../../assets/MenuBuilder/logo.png"  class="w-100">
                 </div>
-                <h3>粉絲專頁 | https://www.facebook.com/ScanYourStirFries</h3>
-                <h3>聯絡信箱 | scanyourstirfries5@gmail.com</h3>
-            </div>
+              </div>
         </div>
-    </div> -->
-
+      </div>
+     <FooterSection/>
 </div>

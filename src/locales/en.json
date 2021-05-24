@@ -408,7 +408,9 @@
   "cart": {
     "chi_hot": " 不辣 | 小辣 | 大辣",
     "title": "I want to order",
-    "title_info": "Click the button order in Chinese sound"
+    "title_info": "Click the button order in Chinese sound",
+    "no_dishes_1": "You haven't ordered，",
+    "no_dishes_2": "Go and see what's there!"
   },
   "question": {
     "element": {

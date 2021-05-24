@@ -1,0 +1,4 @@
+<svg x="0px" y="0px" viewBox="0 0 200 200" class="w-100" ref="path_svg">
+	<circle class="" stroke="#00c7a4" fill="none" stroke-width="20" cx="100" cy="100" r="50" />
+	<circle ref="path" class="path" stroke="#f97700" fill="none" stroke-width="20" cx="100" cy="100" r="50" />
+</svg>

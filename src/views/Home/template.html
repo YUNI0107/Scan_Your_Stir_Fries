@@ -33,7 +33,7 @@
             <div class="row">
                 <div class="link-top col-12 col-lg-6">
                     <div class="link_block" data-aos="fade-zoom-in" data-aos-duration="1200">
-                        <a class="d-flex align-items-center" href="#">
+                        <router-link :to="{name: 'menu'}" class="d-flex align-items-center" href="#">
                             <div class="link_left me-4">
                                 <img src="../../assets/NavBar/all dishes.png" class="w-100 show">
                                 <img src="../../assets/NavBar/disheschange.gif" class="w-100 hide">
@@ -42,10 +42,10 @@
                                 <h2>{{ $t("home.dishes") }}</h2>
                                 <p data-aos="fade-zoom-in" data-aos-duration="1200">{{ $t("home.dishes_text") }}</p>
                             </div>
-                        </a>
+                        </router-link>
                     </div>
                     <div class="link_block" data-aos="fade-zoom-in" data-aos-duration="1200">
-                        <a href="#" class="d-flex align-items-center">
+                        <router-link :to="{name: 'lottery'}" class="d-flex align-items-center">
                             <div class="link_left me-4">
                                 <img src="../../assets/NavBar/game.png" class="w-100 show">
                                 <img src="../../assets/NavBar/gamechange.gif" class="w-100 hide">
@@ -54,7 +54,7 @@
                                 <h2>{{ $t("home.game") }}</h2>
                                 <p>{{ $t("home.game_text") }}</p>
                             </div>
-                        </a>
+                        </router-link>
                     </div>
                 </div>
                 <div

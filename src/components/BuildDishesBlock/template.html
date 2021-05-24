@@ -1,0 +1,21 @@
+<div class="each_dishes_block">
+   <div class="row">
+    <div class="first_section col-2 d-flex align-items-center">
+        <input type="checkbox" v-model="check">
+        <h3 class="id m-0">{{ item.id }}</h3>
+    </div>
+    <div class="second_section col-lg-5 col-4 d-flex align-items-center">
+        {{ item.name }}
+    </div>
+    <div class="third_section col-4 col-lg-3 d-flex align-items-center">
+        <span>$</span>
+        <input :ref="`price`" type="number" v-model="price" placeholder="輸入價錢" @blur="checkBlur" :class="{'no_price': no_price}">
+    </div>
+    <div class="forth_section col-2 d-flex align-items-center">
+        <div class="recommend_img">
+            <img src="../../assets/MenuBuilder/king.png" alt="推薦">
+        </div>
+        <input type="checkbox" v-model="recommend">
+    </div>
+   </div>
+</div>

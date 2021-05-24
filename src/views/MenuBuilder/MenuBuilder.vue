@@ -3,45 +3,66 @@ import html2canvas from "html2canvas";
 import axios from "axios";
 import JSZip from "jszip";
 import { saveAs } from "file-saver";
+import { Modal } from "bootstrap";
+
+import BuildBlock from "../../components/BuildBlock/BuildBlock";
+import FooterSection from "../../components/Footer/Footer";
 export default {
   data() {
     return {
+      make: false,
       store_name: "來點熱炒熱炒店",
-      tel: "0927735030",
-      add: "新北市三峽區嘉添里3鄰81號",
-      lang: "ja",
-      userList: [
-        { id: "P02", number: 2, level: 1, recommend: true, price: 120 },
-        { id: "L03", number: 3, level: 2, recommend: true, price: 120 },
-        { id: "B01", number: 1, level: 3, recommend: true, price: 120 },
-        { id: "B02", number: 2, level: 3, recommend: true, price: 120 },
-        { id: "B03", number: 3, level: 3, recommend: true, price: 120 },
-        { id: "P03", number: 3, level: 1, recommend: true, price: 120 },
-        { id: "P04", number: 4, level: 1, recommend: false, price: 120 },
-        { id: "P01", number: 1, level: 1, recommend: false, price: 120 },
-        { id: "V01", number: 1, level: 5, recommend: false, price: 120 },
-        { id: "V03", number: 3, level: 5, recommend: false, price: 120 },
-        { id: "V04", number: 4, level: 5, recommend: true, price: 120 },
-        { id: "MD01", number: 1, level: 7, recommend: true, price: 120 },
-        { id: "SD01", number: 1, level: 8, recommend: true, price: 120 },
-        { id: "SD02", number: 2, level: 8, recommend: true, price: 120 },
-        { id: "SD03", number: 3, level: 8, recommend: true, price: 120 },
-        { id: "S01", number: 1, level: 6, recommend: true, price: 120 },
-        { id: "S02", number: 2, level: 6, recommend: true, price: 120 },
-        { id: "S03", number: 3, level: 6, recommend: true, price: 120 },
-        { id: "S04", number: 4, level: 6, recommend: true, price: 120 },
-        { id: "L02", number: 2, level: 2, recommend: true, price: 120 },
-         { id: "MD02", number: 2, level: 7, recommend: true, price: 120 },
-      ],
+      tel: "",
+      add: "",
+      lang: "en",
+      userList: [],
       // 處理截圖的data
       workId: 0,
       workList: [],
       comList: [],
       zip: null,
       zipfolder: null,
+      scrollTimeout: null,
+      myModal: null,
     };
   },
+  computed:{
+    make_text(){
+      if(this.make){
+        return "生成中"
+      }else{
+        return "菜單生成"
+      }
+    },
+    chi_lang(){
+      if(this.lang=="en"){
+        return "英文"
+      }else if(this.lang=="ja"){
+        return "日文"
+      }else{
+        return "韓文"
+      }
+    }
+  },
+  components: {
+    BuildBlock,
+    FooterSection,
+  },
   methods: {
+    async scrollToTop(){
+      window.addEventListener("scroll", this.checkScroll)
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    },
+    checkScroll(){
+      this.make = true;
+      this.myModal.show()
+      clearTimeout(this.scrollTimeout)
+      this.scrollTimeout = setTimeout(()=>{
+        this.catchPic()
+        window.removeEventListener("scroll", this.checkScroll)
+      },100)
+    },
     async catchPic() {
       // 整理陣列
       await this.sortList();
@@ -52,7 +73,7 @@ export default {
       let imgUrlList = [];
       let vue_this = this;
       let catch_content = this.$refs.catch_content;
-      let canvas_div = this.$refs.canvas_div
+      let canvas_div = this.$refs.canvas_div;
 
       // 在設定好的地方創造canvas，然後隱藏包住的元素
       // 創建canvas截好圖後做刪除
@@ -112,7 +133,7 @@ export default {
           id = "side";
         }
         // 把title推到每個分類的最前面
-        if(sortList.length !== 0){
+        if (sortList.length !== 0) {
           this.workList.push({
             id,
             level: 0,
@@ -120,7 +141,7 @@ export default {
         }
         // 再把該分類的菜色推進去
         for (let i = 0; i < sortList.length; i++) {
-           await this.getDishes(sortList[i]);
+          await this.getDishes(sortList[i]);
         }
       }
 
@@ -178,12 +199,15 @@ export default {
     async fileDownload(imgUrlList) {
       imgUrlList.forEach((imgUrl, index) => {
         let baseUrl = imgUrl.replace(/^data:image\/(png|jpg);base64,/, "");
-        this.zipfolder.file(`菜單圖檔A4_${index + 1}.png`, baseUrl, {
+        this.zipfolder.file(`${this.chi_lang}菜單圖檔A4_${index + 1}.png`, baseUrl, {
           base64: true,
         });
       });
+      this.make = false;
+      this.myModal.hide()
       this.zip.generateAsync({ type: "blob" }).then((content) => {
-        saveAs(content, "菜單.zip");
+        saveAs(content, `${this.chi_lang}_菜單.zip`);
+        
       });
       // let link = document.createElement("a");
       // link.style.display = "none";
@@ -193,13 +217,31 @@ export default {
       // link.click();
       // link.remove();
     },
+    userListPush(each_dishes) {
+      let check_index = this.userList.findIndex(
+        (element) => element.id == each_dishes.id
+      );
+      if (check_index == -1) {
+        this.userList.push(each_dishes);
+      } else {
+        this.userList.splice(check_index, 1, each_dishes);
+      }
+    },
+    dishesDelete(id) {
+      let check_index = this.userList.findIndex((element) => element.id == id);
+      this.userList.splice(check_index, 1);
+    },
   },
   mounted() {
     this.$store.commit("navColor", "cream");
-    this.$store.commit("langChange","ch")
+    this.$store.commit("langChange", "ch");
     this.$root.$i18n.locale = "ch";
+    let modal = this.$refs.makeHideModal;
+    this.myModal = new Modal(modal)
   },
-  
+  destroyed(){
+    window.removeEventListener("scroll", this.checkScroll)
+  }
 };
 </script>
 <template src="./template.html"></template>

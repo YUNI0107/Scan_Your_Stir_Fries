@@ -1,0 +1,78 @@
+.each_dishes_block{
+    background-color: #F9F9F9;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 5px rgba(51, 51, 51, 0.226);
+    padding: 30px 30px;
+}
+
+.first_section h3{
+    font-size: 25px;
+}
+
+.third_section span{
+    margin-right: 5px;
+}
+
+input[type="checkbox"]{
+    appearance: none;
+    width: 20px;
+    min-width: 20px;;
+    height: 20px;
+    background-color: #fff;
+    border: solid 1px black;
+    outline: none;
+    position: relative;
+    margin-right: 20px;
+}
+
+input[type="checkbox"]:checked:before{
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #FFC731;
+    display: block;
+}
+
+input[type="number"]{
+    box-sizing: border-box;
+    outline: none;
+    padding-left: 5px;
+}
+
+input[type="number"].no_price{
+    border: solid 2px #FF7A00;
+}
+
+input[type="number"].no_price:focus{
+    border: solid 2px #FF7A00;
+    outline: none;
+}
+
+.recommend_img{
+    width: 50px;
+    min-width: 50px;
+    margin-right: 10px;
+}
+
+.recommend_img img{
+    width: 100%;
+}
+
+@media(max-width: 992px){
+    .first_section h3{
+        font-size: 20px;
+    }
+
+    input[type="number"]{
+        font-size: 14px;
+    }
+
+    .each_dishes_block{
+        padding: 20px 30px;
+    }
+}

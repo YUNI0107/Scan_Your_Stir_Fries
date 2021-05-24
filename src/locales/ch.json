@@ -408,7 +408,9 @@
   "cart":{
     "chi_hot": " 不辣 | 小辣 | 大辣",
     "title": "我要點菜",
-    "title_info": "點選按鈕用中文點菜"
+    "title_info": "點選按鈕用中文點菜",
+    "no_dishes_1": "你還沒有點菜，",
+    "no_dishes_2": "快去看看有什麼菜色吧！"
   },
   "question":{
     "element":{

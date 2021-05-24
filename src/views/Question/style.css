@@ -22,7 +22,7 @@
     transition: stroke-dashoffset .5s;
 }
 
-.count_img .path.ani{
+.ani{
     animation: run 10s linear forwards;
 }
 

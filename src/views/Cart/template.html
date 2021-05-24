@@ -14,6 +14,7 @@
     </div>
     <div class="list position-relative">
         <div class="container">
+            <h3 class="no_dishes" v-if="cart.length == 0">{{ $t("cart.no_dishes_1") }}<router-link to="/menu">{{ $t("cart.no_dishes_2") }}</router-link></h3>
             <div class="row">
                 <CartBlock v-for="item in cart" :item="item" :key="item.id" :sound_id="sound_id" :playing="playing"/>
             </div>

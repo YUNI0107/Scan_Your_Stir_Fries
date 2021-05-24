@@ -53,6 +53,15 @@
     transition: .5s;
 }
 
+.no_dishes{
+    font-size: 18px;
+}
+
+.no_dishes a{
+    color: #02b392;
+    text-decoration: none;
+}
+
 .hold_list{
     top: 0;
     min-height: 65vh;

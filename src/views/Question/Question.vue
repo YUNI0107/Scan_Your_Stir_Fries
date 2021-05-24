@@ -52,6 +52,42 @@ export default {
       let q_id = Math.floor(Math.random() * 10 + 1);
       if (q_id !== this.$route.params.id) {
         this.$router.push({ name: "question", params: { id: q_id } });
+        document.querySelector("#svg_path").remove();
+        let new_svg = document.createElement("div");
+        new_svg.id = "svg_path";
+        new_svg.classList.add("count_img");
+        new_svg.innerHTML = `
+          <svg x="0px" y="0px" viewBox="0 0 200 200" class="w-100">
+                    <circle class="" stroke="#00c7a4" fill="none" stroke-width="20" cx="100" cy="100" r="50"/>
+                    <circle ref="path" class="path" stroke="#f97700" fill="none" stroke-width="20" cx="100" cy="100" r="50" style="stroke-dashoffset: 314.159; stroke-dasharray: 314.159;"/>
+          </svg>
+          <style>
+            .count_img{
+                width: 180px;
+            }
+
+            svg {
+                transform: rotate(-90deg);
+            }
+
+            .count_img .path {
+                transition: stroke-dashoffset .5s;
+            }
+            
+            .ani{
+                animation: run 10s linear forwards;
+            }
+
+            @keyframes run {
+                to {
+                  stroke-dashoffset: 0;
+                  }
+            }          
+          </style>
+        `;
+        this.$refs.count_img.append(new_svg);
+        document.querySelector(".path").classList.add("ani");
+
         this.countTime();
         // this.$router.go(0)
       } else {
@@ -81,7 +117,7 @@ export default {
         this.modalState = "yes";
         clearTimeout(this.modal_timer);
         clearTimeout(this.count_timer);
-        this.$refs.path.style.animationPlayState = "paused"
+        document.querySelector(".path").style.animationPlayState = "paused";
       } else if (this.modalState == "hide") {
         this.modalState = "no";
         clearTimeout(this.modal_timer);
@@ -91,10 +127,10 @@ export default {
       this.modalState = "hide";
     },
     countTime() {
-      this.clearTime()
+      this.clearTime();
       // 倒數
-      this.counting = 10
-      this.$refs.path.classList.add("ani")
+      this.counting = 10;
+      this.$refs.path.classList.add("ani");
       this.count_timer = setInterval(() => {
         if (this.counting > 0) {
           this.counting--;
@@ -112,16 +148,16 @@ export default {
         this.myModal.show();
       }, 10000);
     },
-    clearTime(){
+    clearTime() {
       clearInterval(this.count_timer);
       clearTimeout(this.modal_timer);
-    }
+    },
   },
   mounted() {
     // 倒數SVG
-      let circle = document.querySelector(".path"),
-        len = 2 * Math.PI * circle.getAttribute("r");
-      circle.style.strokeDasharray = circle.style.strokeDashoffset = len;
+    let circle = document.querySelector(".path"),
+      len = 2 * Math.PI * circle.getAttribute("r");
+    circle.style.strokeDasharray = circle.style.strokeDashoffset = len;
     this.countTime();
     // 高度探測
     this.boxHeightSize();

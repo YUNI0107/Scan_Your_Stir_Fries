@@ -1,0 +1,27 @@
+<div class="build_block">
+    <a class="d-flex align-items-center" data-bs-toggle="collapse" :href="`#class_${level}`" role="button" aria-expanded="false" :aria-controls="`#class_${level}`">
+        <div class="icon_img" :class="back_color">
+            <img :src="require(`../../assets/MenuBuilder/icon_${level}.png`)">
+        </div>
+        <h1 v-if="each_title">{{ each_title.chi  }}| {{ each_title.eng }}</h1>
+     </a>
+     <div class="collapse" :id="`class_${level}`">
+            <div class="hold_each">
+                <div class="row">
+                    <div class="col-2">
+                       <p>勾選欄</p>
+                    </div>
+                    <div class="col-lg-5 col-4">
+                       <p>菜色</p>
+                    </div>
+                    <div class="col-lg-3 col-4">
+                       <p>價錢輸入欄</p>
+                    </div>
+                    <div class="col-2">
+                       <p>推薦菜色</p>
+                    </div>
+                </div>
+            <BuildDishesBlock v-for="(item,index) in each_dishesList" :key="index" :item="item" @userListPush="userListPush" @dishesDelete="dishesDelete"/>
+          </div>
+     </div>
+</div>

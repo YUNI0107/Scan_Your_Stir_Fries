@@ -30,6 +30,15 @@ const routes = [
     component: Menu
   },
   {
+    path: '/menu/ja',
+    name: 'menu',
+    component: Menu,
+
+    beforeEnter: () => {
+      this.$root.$i18n.locale = "ja";
+    }
+  },
+  {
     path: '/about',
     name: 'about',
     component: About
