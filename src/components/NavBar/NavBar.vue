@@ -3,6 +3,7 @@ import { mapState } from "vuex";
 export default {
   data() {
     return {
+      mobile: false,
     };
   },
   computed: {
@@ -23,7 +24,10 @@ export default {
       this.$store.commit("infoMessage", lang_message);
     },
     changePage(){
-      this.$refs.nav_btn.click()
+      if(this.mobile) this.$refs.nav_btn.click();
+    },
+    screenChange(e){
+      this.mobile = e.matches;
     }
   },
   watch: {
@@ -38,6 +42,11 @@ export default {
       });
     },
   },
+  mounted(){
+    let mql = window.matchMedia('(max-width: 992px)');
+    mql.addEventListener('change', this.screenChange);
+    this.mobile = window.matchMedia('(max-width: 992px)').matches;
+  }
 };
 </script>
 <template src="./template.html"></template>

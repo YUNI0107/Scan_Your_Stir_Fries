@@ -11,13 +11,12 @@ import NavBar from './components/NavBar/NavBar'
 import InfoModal from './components/InfoModal/InfoModal'
 import smoothscroll from 'smoothscroll-polyfill'
 
+smoothscroll.polyfill();
+
 export default {
   components:{
     NavBar,
     InfoModal,
-  },
-  mounted() {
-    smoothscroll.polyfill();
   },
 }
 </script>
