@@ -188,7 +188,7 @@ export default {
       }
     },
     async getDishes(item) {
-      await axios.get("/dishes.json").then((res) => {
+      await axios.get("dishes.json").then((res) => {
         item.ingredient = res.data[item.id].ingredient;
         this.workList.push(item);
       });

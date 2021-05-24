@@ -39,7 +39,7 @@ export default {
     getDishesList() {
       this.dishesList = [];
       this.loading = true;
-      axios.get("../dishes.json").then((res) => {
+      axios.get("dishes.json").then((res) => {
         for (let i in res.data) {
           if (res.data[i].cate == this.id) {
             this.dishesList.push(res.data[i]);

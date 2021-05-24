@@ -100,7 +100,7 @@ export default {
     },
     getQuestion() {
       // 獲得題目
-      axios.get("/question.json").then((res) => {
+      axios.get("question.json").then((res) => {
         let item = res.data.filter((item) => item.q_id == this.q_id);
         this.ans = item[0].ans;
         this.text_fade = item[0].fade;

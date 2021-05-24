@@ -7,9 +7,11 @@
                     <h2 class="dishes_id position-absolute top-0 start-0">{{item.dishes_id}}</h2>
                     <div class="left d-flex align-items-center flex-grow-1 ">
                         <div class="pic">
-                            <img :src="require(`../../assets/MenuList/${item.dishes_id}.png`)" class="w-100">
+                            <router-link :to="{name: 'dishes', params:{ id: item.dishes_id } }">
+                                <img :src="require(`../../assets/MenuList/${item.dishes_id}.png`)" class="w-100">
+                            </router-link>
                         </div>
-                        <div class="info  ms-3 me-3">
+                        <div class="info  ms-2 me-1">
                             <h2 class="info_title">{{ $t(`dishes.${item.dishes_id}.dishes_name`) }}</h2>
                             <router-link class="info_btn" :to="{name: 'dishes', params:{ id: item.dishes_id } }">Learn more</router-link>
                         </div>

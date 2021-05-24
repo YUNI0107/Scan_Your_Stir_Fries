@@ -18,6 +18,13 @@
 .pic{
     width: 150px;
     min-width: 150px;
+    max-width: 150px;
+    flex: 9;
+}
+
+
+.info{
+    flex: 10;
 }
 
 .info_title{
@@ -80,8 +87,9 @@
     }
 
     .pic{
-        width: 150px;
-        min-width: 150px;
+        width: 100%;
+        max-width: 120px;
+        min-width: auto;
     }
 
     .info_title{
@@ -99,10 +107,10 @@
         padding: 10px;
     }
 
-    .pic{
+    /* .pic{
         width: 50%;
         min-width: 50%;
-    }
+    } */
 
     .left{
         display: flex;

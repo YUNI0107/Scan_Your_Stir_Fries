@@ -22,7 +22,9 @@ export default {
       this.$root.$i18n.locale = new_lang;
       this.$store.commit("infoMessage", lang_message);
     },
-    
+    changePage(){
+      this.$refs.nav_btn.click()
+    }
   },
   watch: {
     cart_num() {

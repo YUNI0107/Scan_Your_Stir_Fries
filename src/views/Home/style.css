@@ -28,8 +28,14 @@
 }
 
 .top_section .top_text {
+    position: relative;
+    z-index: 10;
     margin-top: -10px;
     width: 90%;
+}
+
+.top_section .top_text p{
+    text-shadow: #FFC832 1px 0px;
 }
 
 .top_section .top_btn {

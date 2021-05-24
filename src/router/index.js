@@ -30,15 +30,6 @@ const routes = [
     component: Menu
   },
   {
-    path: '/menu/ja',
-    name: 'menu',
-    component: Menu,
-
-    beforeEnter: () => {
-      this.$root.$i18n.locale = "ja";
-    }
-  },
-  {
     path: '/about',
     name: 'about',
     component: About
@@ -84,7 +75,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   base: process.env.BASE_URL,
   routes
 })

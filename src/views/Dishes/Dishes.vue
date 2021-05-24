@@ -110,7 +110,7 @@ export default {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     //匯入菜色
-    axios.get("../dishes.json").then((res) => {
+    axios.get("dishes.json").then((res) => {
       let data = res.data[this.dishes_id];
       this.dishes_icon_info = data.dishes_icon_info;
       this.ingredient = data.ingredient;
@@ -120,7 +120,7 @@ export default {
       this.checkMatch();
       // 判斷食材
       this.$nextTick(() => {
-        axios.get("../ingredient_test.json").then((res) => {
+        axios.get("ingredient_test.json").then((res) => {
           this.ingredient.forEach((ingredient_name) => {
             this.ingredient_list.push(
               res.data.filter(

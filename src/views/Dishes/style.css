@@ -104,9 +104,16 @@
     margin-left: -135px;
 }
 
+.comic_section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
 .comic_title {
     width: 550px;
-    margin-right: -135px;
+    margin-right: -120px;
+    margin-bottom: -80px;
 }
 
 .comic_title.nocomic {
@@ -133,6 +140,11 @@
     .top_dishes .back {
         transform: translateX(-72%);
     }
+
+    /* .comic_title {
+        margin-bottom: -50px;
+    } */
+    
 }
 
 
@@ -176,10 +188,10 @@
         margin-left: -105px;
     }
 
+
     .comic_title {
         width: 450px;
-        transform: translateX(-50%);
-        margin-right: -320px;
+        margin-right: -80px;
     }
 
     .comic_title.nocomic {
