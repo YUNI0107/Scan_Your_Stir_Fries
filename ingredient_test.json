@@ -1,0 +1,385 @@
+[
+  {
+    "ingredient_name": "chicken",
+    "plus_info": true,
+    "info": {
+      "plus_lang": true,
+      "FYI": false,
+      "color": "green"
+    }
+  },
+  {
+    "ingredient_name": "ginger",
+    "plus_info": false
+  },
+  {
+    "ingredient_name": "garlic",
+    "plus_info": false
+  },
+  {
+    "ingredient_name": "basil",
+    "plus_info": true,
+    "info": {
+      "plus_lang": false,
+      "FYI": false,
+      "color": "yellow"
+    }
+  },
+  {
+    "ingredient_name": "rice_wine",
+    "plus_info": false
+  },
+  {
+    "ingredient_name": "sesame_oil",
+    "plus_info": true,
+    "info": {
+      "plus_lang": false,
+      "FYI": false,
+      "color": "green"
+    }
+  },
+  {
+    "ingredient_name": "wolfberry",
+    "plus_info": true,
+    "info": {
+      "plus_lang": true,
+      "FYI": true,
+      "color": "yellow"
+    }
+  },
+  {
+    "ingredient_name": "soy_sauce",
+    "plus_info": false
+  },
+  {
+    "ingredient_name": "thousand_year_eggs",
+    "plus_info": true,
+    "info": {
+      "plus_lang": false,
+      "FYI": true,
+      "color": "green"
+    }
+  },
+  {
+    "ingredient_name": "pork_intestines",
+    "plus_info": true,
+    "info": {
+      "plus_lang": true,
+      "FYI": true,
+      "color": "orange"
+    }
+  },
+  {
+    "ingredient_name": "duck_blood_cubes",
+    "plus_info": true,
+    "info": {
+      "plus_lang": false,
+      "FYI": true,
+      "color": "yellow"
+    }
+  },
+  {
+    "ingredient_name": "pickled_cabbage",
+    "plus_info": true,
+    "info": {
+      "plus_lang": false,
+      "FYI": false,
+      "color": "orange"
+    }
+  },
+  {
+    "ingredient_name": "garlic_sprout",
+    "plus_info": true,
+    "info": {
+      "plus_lang": true,
+      "FYI": true,
+      "color": "yellow"
+    }
+  },
+  {
+    "ingredient_name": "sichuan_pepper",
+    "plus_info": true,
+    "info": {
+      "plus_lang": false,
+      "FYI": false,
+      "color": "yellow"
+    }
+  },
+  {
+    "ingredient_name": "taiwanese_satay_sauce",
+    "plus_info": true,
+    "info": {
+      "plus_lang": false,
+      "FYI": true,
+      "color": "yellow"
+    }
+  },
+  {
+    "ingredient_name": "soy_sauce",
+    "plus_info": false
+  },
+  {
+    "ingredient_name": "thick_soy_sauce",
+    "plus_info": true,
+    "info": {
+      "plus_lang": false,
+      "FYI": false,
+      "color": "yellow"
+    }
+  },
+  {
+    "ingredient_name": "tofu_eggs",
+    "plus_info": true,
+    "info": {
+      "plus_lang": false,
+      "FYI": false,
+      "color": "orange"
+    }
+  },
+  {
+    "ingredient_name": "pork",
+    "plus_info": true,
+    "info": {
+      "plus_lang": true,
+      "FYI": false,
+      "color": "orange"
+    }
+  },
+  {
+    "ingredient_name": "pork_liver",
+    "plus_info": true,
+    "info": {
+      "plus_lang": true,
+      "FYI": true,
+      "color": "orange"
+    }
+  },
+  {
+    "ingredient_name": "beef",
+    "plus_info": true,
+    "info": {
+      "plus_lang": false,
+      "FYI": true,
+      "color": "green"
+    }
+  },
+  {
+    "ingredient_name": "lamb",
+    "plus_info": true,
+    "info": {
+      "plus_lang": false,
+      "FYI": false,
+      "color": "orange"
+    }
+  },
+  {
+    "ingredient_name": "eggplant",
+    "plus_info": true,
+    "info": {
+      "plus_lang": false,
+      "FYI": false,
+      "color": "yellow"
+    }
+  },
+  {
+    "ingredient_name": "beef_tripe",
+    "plus_info": true,
+    "info": {
+      "plus_lang": false,
+      "FYI": true,
+      "color": "yellow"
+    }
+  },
+  {
+    "ingredient_name": "bitter_melon",
+    "plus_info": true,
+    "info": {
+      "plus_lang": false,
+      "FYI": false,
+      "color": "yellow"
+    }
+  },
+  {
+    "ingredient_name": "salted_eggs",
+    "plus_info": true,
+    "info": {
+      "plus_lang": false,
+      "FYI": false,
+      "color": "orange"
+    }
+  },
+  {
+    "ingredient_name": "white_water_snowflake",
+    "plus_info": true,
+    "info": {
+      "plus_lang": false,
+      "FYI": true,
+      "color": "yellow"
+    }
+  },
+  {
+    "ingredient_name": "fermented_bean_curd",
+    "plus_info": true,
+    "info": {
+      "plus_lang": false,
+      "FYI": false,
+      "color": "yellow"
+    }
+  },
+  {
+    "ingredient_name": "bean_crisp",
+    "plus_info": true,
+    "info": {
+      "plus_lang": false,
+      "FYI": false,
+      "color": "green"
+    }
+  },
+  {
+    "ingredient_name": "squid",
+    "plus_info": true,
+    "info": {
+      "plus_lang": true,
+      "FYI": true,
+      "color": "green"
+    }
+  },
+  {
+    "ingredient_name": "dragon_ball",
+    "plus_info": true,
+    "info": {
+      "plus_lang": false,
+      "FYI": false,
+      "color": "yellow"
+    }
+  },
+  {
+    "ingredient_name": "sweet_vinegar_sauce",
+    "plus_info": true,
+    "info": {
+      "plus_lang": false,
+      "FYI": false,
+      "color": "yellow"
+    }
+  },
+  {
+    "ingredient_name": "short_necked_clams",
+    "plus_info": true,
+    "info": {
+      "plus_lang": true,
+      "FYI": true,
+      "color": "green"
+    }
+  },
+  {
+    "ingredient_name": "shrimps",
+    "plus_info": true,
+    "info": {
+      "plus_lang": false,
+      "FYI": false,
+      "color": "green"
+    }
+  },
+  {
+    "ingredient_name": "spicy_bean_paste",
+    "plus_info": true,
+    "info": {
+      "plus_lang": false,
+      "FYI": false,
+      "color": "yellow"
+    }
+  },
+  {
+    "ingredient_name": "chili",
+    "plus_info": false
+  },
+  {
+    "ingredient_name": "dried_squid",
+    "plus_info": false
+  },
+  {
+    "ingredient_name": "dried_tofu",
+    "plus_info": false
+  },
+  {
+    "ingredient_name": "celery",
+    "plus_info": false
+  },
+  {
+    "ingredient_name": "scallion",
+    "plus_info": false
+  },
+  {
+    "ingredient_name": "pepper",
+    "plus_info": false
+  },
+  {
+    "ingredient_name": "water_spinach",
+    "plus_info": false
+  },
+  {
+    "ingredient_name": "green_onion",
+    "plus_info": false
+  },
+  {
+    "ingredient_name": "black_pepper",
+    "plus_info": false
+  },
+  {
+    "ingredient_name": "onion",
+    "plus_info": false
+  },
+  {
+    "ingredient_name": "butter",
+    "plus_info": false
+  },
+  {
+    "ingredient_name": "peanuts",
+    "plus_info": false
+  },
+  {
+    "ingredient_name": "king_oyster_mushrooms",
+    "plus_info": false
+  },
+  {
+    "ingredient_name": "cabbage",
+    "plus_info": false
+  },
+  {
+    "ingredient_name": "cod",
+    "plus_info": false
+  },
+  {
+    "ingredient_name": "fish",
+    "plus_info": false
+  },
+  {
+    "ingredient_name": "big_shrimps",
+    "plus_info": false
+  },
+  {
+    "ingredient_name": "rice",
+    "plus_info": false
+  },
+  {
+    "ingredient_name": "eggs",
+    "plus_info": false
+  },
+  {
+    "ingredient_name": "carrot",
+    "plus_info": false
+  },
+  {
+    "ingredient_name": "noodles",
+    "plus_info": false
+  },
+  {
+    "ingredient_name": "tofu",
+    "plus_info": false
+  },
+  {
+    "ingredient_name": "dried_bonito_flakes",
+    "plus_info": false
+  }
+
+]
